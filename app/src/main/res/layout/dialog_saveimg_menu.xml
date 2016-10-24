@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white"
+    android:minWidth="280dip"
+    android:orientation="vertical"
+   android:gravity="bottom"
+     >
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    
+    >
+    <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" 
+        android:padding="15dp"
+        android:id="@+id/ll_hurry_call"
+        android:gravity="center"
+        >
+
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="18dp"
+		    android:textColor="@color/gray_1"
+		    android:text="打电话"
+		   android:layout_gravity="center"
+		    />
+    </LinearLayout> -->
+	<View 
+	    android:layout_width="match_parent"
+	    android:layout_height="1dp"
+	    android:background="@color/gray_3"
+	    />
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" 
+        android:padding="15dp"
+        android:id="@+id/ll_save_img"
+         android:gravity="center"
+        >
+
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="18dp"
+		     android:textColor="@color/gray_1"
+		    android:text="保存图片"
+		    />
+		
+    </LinearLayout>
+    <View 
+	    android:layout_width="match_parent"
+	    android:layout_height="4dp"
+	    android:background="#e0000000"
+	    />
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" 
+        android:padding="15dp"
+        android:id="@+id/ll_hurry_cancel"
+         android:gravity="center"
+        >
+
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="18dp"
+		     android:textColor="@color/gray_1"
+		    android:text="取消"
+		    />
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

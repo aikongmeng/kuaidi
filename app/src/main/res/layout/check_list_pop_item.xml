@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <FrameLayout 
+        android:id="@+id/item_center_body"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        >
+        
+    	<TextView
+            android:id="@+id/item_content"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_top"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="取派范围"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+    	
+    	 <ImageView
+            android:id="@+id/tab_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="25dp"
+            android:layout_gravity="right|top"
+            android:src="@drawable/business_red_circle"
+            android:visibility="gone"
+             />
+
+    	</FrameLayout>
+
+	<View
+		android:id="@+id/split_line"
+		android:layout_width="140dp"
+		android:layout_height="1dp"
+		android:layout_below="@id/item_center_body"
+		android:layout_alignLeft="@id/item_center_body"
+		android:background="@color/item_bg" />
+		
+</RelativeLayout>

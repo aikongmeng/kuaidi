@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_list_exception"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_content_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_excepress_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/rl_common_title"
+            layout="@layout/comm_title" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_notverified"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_excepress_title"
+        layout="@layout/comm_notverified"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/exception_nonet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_excepress_title"
+        layout="@layout/comm_isnetwork"
+        android:visibility="gone" />
+
+    <com.kuaibao.skuaidi.activity.view.PullToRefreshView
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_excepress_title"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_exception_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_excepress_title"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/order_list_divider"
+            android:dividerHeight="0.5dp"
+            android:listSelector="#00000000" />
+    </com.kuaibao.skuaidi.activity.view.PullToRefreshView>
+
+</RelativeLayout>

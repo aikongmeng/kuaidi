@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_content_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/comm_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_overarea_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll_overarea_tab"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_outofrange"
+                android:layout_width="130dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/shape_left_selectbg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/outofrande"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_sendrange"
+                android:layout_width="130dip"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/shape_right_select_white_bg"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/inrange"
+                android:textColor="@color/text_green_one"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/ll_overarea_tab"
+            android:background="@color/text_green_one" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_shadow"
+            android:background="@color/theme_content_bg" >
+
+            <TextView
+                android:id="@+id/tv_sendrange_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.5"
+                android:padding="10dp"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

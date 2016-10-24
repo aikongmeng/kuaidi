@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_content_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/comm_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_qrcode_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/rl_qrcode"
+            android:layout_width="65dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center" >
+
+            <!-- 确定按钮 -->
+
+            <Button
+                android:id="@+id/bt_get_qrcode"
+                android:layout_width="65dp"
+                android:layout_height="48dp"
+                android:background="@drawable/selector_shape_right_blue_hover"
+                android:text="@string/certain"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+            <!-- 扫条码图标 -->
+
+            <ImageView
+                android:id="@+id/iv_get_qrcode"
+                android:layout_width="65dp"
+                android:layout_height="48dp"
+                android:background="@drawable/selector_shape_right_pai"
+                android:padding="6dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/pai_saotiaoma" />
+        </RelativeLayout>
+        <!-- 编辑单号框 -->
+
+        <EditText
+            android:id="@+id/et_order_number"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/rl_qrcode"
+            android:background="@drawable/shape_left_white_with_stroke"
+            android:drawableLeft="@drawable/pai_icon_bi"
+            android:drawablePadding="8dp"
+            android:hint="@string/mannul_input_tip"
+            android:padding="5dp"
+            android:textColor="@color/gray_1"
+            android:textSize="18sp" />
+       
+        
+        <!-- 删除XX图片 -->
+
+        <ImageView  
+            android:id="@+id/iv_delete_ordernum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/et_order_number"
+			android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/selector_icon_close"
+            android:visibility="gone" />
+    </RelativeLayout>
+	 <TextView 
+            android:id="@+id/input_notice"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="14dp"
+            android:paddingLeft="10dp"
+           android:textColor="@color/red"
+           android:background="@drawable/shape_left_white_with_stroke"
+           android:visibility="gone"
+           android:gravity="center_vertical|left"
+            android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        
+            />
+	 <View 
+	     android:layout_width="match_parent"
+	     android:layout_height="0.5dp"
+	     android:paddingTop="2dp"
+	     android:background="#cccccc"
+	     android:layout_marginTop="10dp"
+	     />
+    <ListView
+        
+        android:id="@+id/lv_findexpress_history"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="#cccccc"
+        android:background="#f2f2f2"
+        android:dividerHeight="0.5dip" />
+     <View 
+	     android:layout_width="match_parent"
+	     android:layout_height="0.5dp"
+	     android:paddingTop="2dp"
+	     android:background="#cccccc"
+	     />
+   
+</LinearLayout>

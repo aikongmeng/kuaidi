@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_rectangle_stroke"
+    android:orientation="vertical" >
+
+    <ExpandableListView
+        android:id="@+id/exlist_reply"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:childDivider="@color/fast_reply_divider"
+        android:divider="@color/fast_reply_divider"
+        android:dividerHeight="0.5dp"
+        android:groupIndicator="@null"
+        android:listSelector="#00000000" />
+
+</LinearLayout>

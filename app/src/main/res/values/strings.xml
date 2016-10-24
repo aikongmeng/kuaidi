@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--手机号码正则-->
+    <string name="mobile_pattern">(13\\d|14[57]|15[^4,\\D]|17[678]|18\\d)\\d{8}|170[059]\\d{7}</string>
+    <!-- 通用 -->
+    <string name="app_name">快递员</string>
+    <string name="action_settings">Settings</string>
+    <string name="logo_text">&#160;&#160;&#160;&#160;快递员&#160;&#160;&#160;&#160;</string>
+    <string name="back">&#160;&#160;返回</string>
+    <string name="delete">删除</string>
+    <string name="select">筛选</string>
+    <string name="commit">提交</string>
+    <string name="certain">确定</string>
+    <string name="share">分享</string>
+    <string name="phone_list">通讯录</string>
+
+
+    <!-- 登录注册相关 -->
+    <string name="login">登录</string>
+    <string name="order">订单</string>
+    <string name="message">消息</string>
+    <string name="more">我的</string>
+
+    <!-- 留言中心 -->
+    <string name="liuyan_center">留言中心</string>
+    <string name="liuyan_search">搜索</string>
+
+    <!-- 提示信息 -->
+    <string name="start_end_time_hint">例如 2014-07-11</string>
+    <string name="input_phonenumber_hint">请输入手机号</string>
+    <string name="input_oddnumber_hint">请输入运单号</string>
+    <string name="start_time_text">起始时间\n(必填)</string>
+    <string name="end_time_text"> 截止时间</string>
+    <string name="start_time_tv_tag">*</string>
+
+    <!-- 登陆注册（new） -->
+    <string name="regist">注册</string>
+    <string name="mobile_tip">请输入手机号码</string>
+    <string name="mobile_tip2">手机号仅用于账号登陆和账户保护</string>
+    <string name="mobile_tip3">手机号</string>
+    <string name="mobile_tip4">注册时，使用公司业务手机号更容易通过审核，订单也可以直接下达</string>
+    <string name="mobile_error_tip">请输入业务手机号码</string>
+    <string name="check_code_tip1">验证码</string>
+    <string name="get_check_code1">获取验证码</string>
+    <string name="get_check_code2">重新获取</string>
+    <string name="check_code_tip2">验证码已发送至</string>
+    <string name="pwd_tip">密码</string>
+    <string name="pwd1_tip">6-16位字符，由数字和字母组成</string>
+    <string name="pwd1_error_tip">密码长度应为6-16位</string>
+    <string name="pwd2_tip">再次设置登录密码</string>
+    <string name="pwd2_error_tip">密码不一致</string>
+    <string name="next">下一步</string>
+    <string name="vetify_mobile">验证公司业务手机</string>
+    <string name="vetify">验证</string>
+    <string name="vetify_mobile_tip1">请输入公司手机号</string>
+    <string name="vetify_mobile_tip2">输入公司业务手机号用于审核您的业务员身份</string>
+    <string name="vetify_mobile_tip3">如果你不想验证公司手机号，请直接点击跳过</string>
+    <string name="step_over">跳过></string>
+    <string name="login_username">快递员</string>
+    <string name="regist_account">立即注册</string>
+    <string name="find_pwd">修改密码/忘记密码？</string>
+    <string name="input_mobile">公司业务手机号</string>
+    <string name="input_pwd">请输入密码</string>
+    <string name="select_expressfirm">请选择您所在的快递公司</string>
+    <string name="select_area">请选择您所在的地区</string>
+    <string name="select_branch">请选择你的网点名称</string>
+    <string name="input_branch">请输入你的网点名称</string>
+    <string name="choose_branch">选择网点</string>
+    <string name="fill_name">请输入你的姓名</string>
+    <string name="select_identity">请选择你的身份</string>
+    <string name="input_your_identity">请输入你的身份</string>
+    <string name="edit_identity">编辑身份</string>
+    <string name="free_regist">免费注册&#160;></string>
+    <string name="finish_regist">完成</string>
+    <string name="regist_tag">资料修改后，您将重新进行审核...</string>
+
+    <!-- 业务首页*************************************************************************************************************************** -->
+    <string name="business_btn_txt_yunhu">云&#160;&#160;呼</string>
+    <string name="phone_record_lanjian">&#160;揽件&#160;</string>
+    <string name="phone_record_paijian">&#160;派件&#160;</string>
+    <!-- 云呼界面*************************************************************************************************************************** -->
+
+
+    <!-- 添加语音模板界面********************************************************************************************************************* -->
+    <string name="cloud_call_tv_title">云呼语音模板</string>
+    <string name="cloud_call_tv_model_desc">什么是云呼语音</string>
+    <string name="cloud_call_btn_add_model">长按添加语音模板</string>
+    <string name="cloud_call_btn_add_model_up">松开录音结束</string>
+
+    <!-- 消息模块字符串 -->
+    <string name="welcome">快宝感谢您的支持，我们将是您忠实的工作伴侣。</string>
+    <string name="finished_order">未完成</string>
+    <string name="custom_service">定制服务</string>
+    <string name="sender_info">寄件人信息</string>
+    <string name="sender_phone_tag">电&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;话：</string>
+    <string name="sender_name_tag">姓&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;名：</string>
+    <string name="liuyan_detail_mobile_tag">手机号</string>
+    <string name="liuyan_detail_express_no_tag">运单号</string>
+    <string name="sender_phone">1580173××76</string>
+    <string name="sender_address_tag">地址：</string>
+    <string name="sender_address">上海市长宁区北翟路11号</string>
+    <string name="ps_tag">备&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;注：</string>
+    <string name="ps">下午3点左右取件,加5元</string>
+    <string name="accept">接受</string>
+    <string name="refuse">拒绝</string>
+    <string name="service_accept">接受服务</string>
+    <string name="service_refuse">拒绝服务</string>
+    <string name="pick_info">取件服务</string>
+    <string name="pick_accept">接受取件</string>
+    <string name="pick_refuse">拒绝取件</string>
+    <string name="msg_title">消息</string>
+    <string name="circle_express">快递圈</string>
+    <string name="order_time">下单时间:</string>
+    <string name="order_center">订单  </string>
+    <string name="order_introduce">在线下单，及时受理</string>
+    <string name="issue_center">事务中心</string>
+    <string name="issue_introduce">留言咨询，集中处理</string>
+    <string name="qrcode_center">通知发送中心</string>
+    <string name="qrcode_introduce">扫一扫快递单，免费给客户发送短信通知</string>
+    <string name="message_center">留言</string>
+    <string name="complain_center">投诉</string>
+    <string name="notice_center">通知中心</string>
+    <string name="notice_branch">网点通知</string>
+    <string name="notice_detail">通知详情</string>
+    <string name="list_des">哇喔,么有找到！</string>
+    <string name="invite_colleague">&#160;&#160;邀请同事</string>
+    <string name="sms">短信</string>
+    <string name="qq">QQ好友</string>
+    <string name="weixin">微信</string>
+    <string name="add">添加</string>
+    <string name="cancel">取消</string>
+    <string name="sms_invite_title">邀请好友</string>
+    <string name="select_all">&#160;全选&#160;</string>
+    <string name="finish">&#160;完成&#160;</string>
+    <string name="phone_no_tag">手机号：</string>
+    <string name="phone_num">手机</string>
+    <string name="input_deliver_no">完成取件</string>
+    <string name="liuyan_detail_btn">运单跟踪</string>
+    <string name="reply_customer">回复客户</string>
+    <string name="reply_server">回复客服</string>
+    <string name="fast_reply">快捷回复</string>
+    <string name="record">按住说话</string>
+    <string name="reply_banch">给网点回复</string>
+    <string name="selection">已选择0个</string>
+    <string name="adddeliverno">添加运单号</string>
+    <string name="notice_user">免费通知客户</string>
+    <string name="deliver_no_tag">运单号：</string>
+    <string name="deliver_info">运单详情 </string>
+    <string name="track_info">运单跟踪 </string>
+    <string name="new_tag">new</string>
+    <string name="mannul_input_deliver_no">请输入编号或运单号</string>
+    <string name="liuyan_detail">留言详情</string>
+    <string name="exception_detail">异常详情</string>
+    <string name="complain_detail">投诉详情</string>
+    <string name="choose_model">选择模板</string>
+    <string name="limit_model">最多支持10条模板</string>
+    <string name="add_model">添加模板</string>
+    <string name="paijian_model_operate">我的模板</string>
+    <string name="paijian_model_edit">编辑</string>
+    <string name="message_order_desc">亲爱的快递员你还没有通过审核哦~</string>
+    <string name="message_order_explain">请直接找你的网点：</string>
+    <string name="message_order_help">审核帮助</string>
+    <string name="network_no">网络信号不好，无法打开页面</string>
+    <string name="network_no_">● 网络信号弱、不稳定或服务器故障</string>
+    <string name="network_no_add">重新加载</string>
+    <string name="check_text">审核帮助</string>
+    <string name="page_up">上一页</string>
+    <string name="page_down">下一页</string>
+    <string name="nofinish">未完成</string>
+    <string name="isfinish">已完成</string>
+    <string name="all">全&#160;&#160;&#160;&#160;部</string>
+    <string name="status_sent">已发送</string>
+    <string name="status_get">已收到</string>
+    <string name="status_seen">已查看</string>
+    <string name="status_replied">已回复</string>
+    <string name="status_unsignin">未签收</string>
+    <string name="status_send_failed">失败</string>
+    <string name="status_all">全部</string>
+    <string name="notify_change">点击选择短信模板</string>
+    <string name="lycenter_search_by_all">全&#160;&#160;&#160;&#160;部</string>
+    <string name="lycenter_search_by_time">按时间</string>
+    <string name="lycenter_search_by_phone">按手机</string>
+    <string name="lycenter_search_by_odd_numbers">按号码</string>
+    <string name="lycenter_search_by_unread">未&#160;&#160;&#160;&#160;读</string>
+    <string name="recordsave">保&#160;&#160;&#160;&#160;存</string>
+    <!-- 派件模块字符串 -->
+
+    <string name="scan_desc">请将红线对准快递 运单上的条形码</string>
+    <string name="scan_open">打开闪光灯</string>
+    <string name="scan_off">关闭闪光灯</string>
+    <string name="mannul_input">&#160;&#160;手动输入</string>
+    <string name="by_time_search">按时间搜索</string>
+    <string name="by_phone_search">按手机搜索</string>
+    <string name="by_odd_number_search">请输入编号或运单号</string>
+    <string name="by_number_search">按号码搜索</string>
+    <string name="qrcode_history">扫描记录</string>
+    <string name="about_alarm">巴枪上传提醒</string>
+    <string name="about_alarm_detal">巴枪上传提醒功能，用于提醒快递员保存的扫描数据上传到E3或站点系统中，保证签收率。\n提醒时间为每日18:00。如果数据上传为空，\n则不会做提醒。</string>
+    <string name="notify_deliver">发送派件通知</string>
+    <string name="notify_signin">发送代签收通知</string>
+    <string name="notify_exception">发送问题件通知</string>
+    <string name="model">我的模板</string>
+    <string name="user_phone_number_input">手机号变绿直接输入下个手机号</string>
+    <string name="user_phone_number_input2">请输入手机号</string>
+    <string name="send">发送</string>
+    <string name="save">保存</string>
+    <string name="notify_des">发送前，请认真核对对方手机号</string>
+    <string name="exception_1">收件地址不详</string>
+    <string name="exception_2">送无人，电话联系不上</string>
+    <string name="exception_3">节假日延迟派送</string>
+    <string name="exception_5">超派件，客户自取</string>
+    <string name="sign_1">包裹已放在门卫处，请取件</string>
+    <string name="sign_2">包裹已被前台签收，请取件</string>
+    <string name="sign_3">快件已被代签收，请核实</string>
+    <string name="other">其他</string>
+    <string name="model_size">模板最多为70个字</string>
+    <string name="model_des1">请选择短信模板发送！</string>
+    <string name="model_des">请输入短信内容，支持内容中插入编号，单号&#8230;</string>
+    <string name="model_des2">请输入模板名称</string>
+    <string name="describe_excepiton">问题件描述</string>
+    <string name="describe_excepiton_tip">请在这里描述快递异常问题</string>
+    <string name="no_delivery">扫一扫或输入快递单号\n可以免费发送派件通知~~</string>
+    <string name="point_title">提示声明</string>
+    <string name="point_state">提示声明:</string>
+    <string name="state_1">小费是客户为满足个人需求所提出的,快递费以外的加价请求；</string>
+    <string name="state_2">对于快递员能否满足客户提出的需求与能否拿到小费,请根据自身情况判定,如有疑问请及时联系客户进行确认；
+</string>
+    <string name="state_3">对于重复提交的小费记录,请结合客户的回复确认是单次加价还是累计加价,如有疑问请及时联系客户进行确认；
+</string>
+    <string name="state_4">对于快递员与客户之间因为小费所产生的任何纠纷,快递助手不承担任何责任。</string>
+    <!-- 更多模块字符串 -->
+    <string name="qrcode_button1">预览二维码名片</string>
+    <string name="qrcode_button1_text">二维码信息</string>
+    <string name="qrcode_button2">下载高清二维码</string>
+    <string name="qrcode_button3">我的服务说明</string>
+    <string name="qrcode_button4">我的取派范围</string>
+    <string name="problem_hint">请输入你的问题</string>
+    <string name="selfaudit">自助审核</string>
+    <string name="audittype">审核方式</string>
+    <string name="selfaudit_title">请扫描上传当天的5个派件单号</string>
+    <string name="selfaudit_collect">上传5个揽件的单号</string>
+    <string name="selfaudit_collect2">扫描揽件单号如下:</string>
+    <string name="selfaudit_deliver">上传5个派件的单号</string>
+    <string name="selfaudit_deliver2">扫描派件单号如下:</string>
+    <string name="scan_ordernumber">扫描单号</string>
+    <string name="scan_again">重新扫描</string>
+    <string name="ordernumber_one">单号1</string>
+    <string name="ordernumber_two">单号2</string>
+    <string name="ordernumber_three">单号3</string>
+    <string name="ordernumber_four">单号4</string>
+    <string name="ordernumber_five">单号5</string>
+    <string name="auditing">审核中...</string>
+    <string name="auditing_hint">你已提交自助审核,目前正在审核中,请耐心等待...</string>
+    <string name="audit_submit">提交成功</string>
+    <string name="audit_submit_hint">你已提交自助审核,成功后,会在个人资料里标注已审核状态</string>
+    <string name="audit_success">你已通过审核!</string>
+    <string name="audit_fail">审核未通过!</string>
+    <string name="audit_again">重新审核</string>
+    <string name="audit_do">我要审核</string>
+    <string name="audit_help">审核帮助</string>
+    <string name="my_card_access">我的名片访问量</string>
+    <string name="my_card_collection">我的名片收藏量</string>
+    <string name="scan_lan">扫揽件</string>
+    <string name="scan_pai">扫派件</string>
+    <string name="scan_qian">扫签收</string>
+    <string name="scan_ques">问题件</string>
+    <string name="scan_reject">退件</string>
+    <string name="scan_third_brunch">第三方签收</string>
+    <string name="register_name_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ
+</string>
+
+    <!-- 更多(new) -->
+    <string name="self_vertify">自助审核</string>
+    <string name="more_account">钱包</string>
+    <string name="more_vantages">积分</string>
+    <string name="more_express_shop">快店</string>
+    <string name="more_delivery_fees">派费</string>
+    <string name="more_information">资讯中心</string>
+    <string name="more_notice">通知中心</string>
+    <string name="more_web_version">网页版</string>
+    <string name="more_web_url">http://kdy.kuaidihelp.com/</string>
+    <string name="more_notice_top_title">置顶</string>
+    <string name="more_notice_top_look">看看</string>
+
+    <!--更多-设置-->
+    <string name="more_setting_text_1">来电智能识别设置</string>
+    <string name="more_setting_text_2">快件签收短信设置</string>
+    <string name="more_setting_text_3">账户设置</string>
+    <string name="more_setting_text_4">产品意见反馈</string>
+    <string name="more_setting_text_5">去电显示号码设置</string>
+    <string name="more_setting_tel">通话</string>
+    <!-- VIP特权 -->
+    <string name="vip_privilege_cancel">关闭</string>
+
+    <!-- 个人资料 -->
+    <string name="userinfo_name">姓名</string>
+    <string name="userinfo_phone">电话</string>
+    <string name="userinfo_company">公司</string>
+    <string name="userinfo_distribution">网点</string>
+    <string name="send_area">我的取派范围</string>
+    <string name="e3_info">E3系统个人信息</string>
+    <string name="my_custom">我的客户</string>
+    <string name="tool">工具</string>
+    <string name="help_and_response">反馈与帮助</string>
+    <string name="help_response">使用帮助</string>
+    <string name="vip_privilege">短信VIP特权</string>
+    <string name="score">给快递员评分</string>
+    <string name="check_new_version">检查新版本</string>
+    <string name="aboutus">关于我们</string>
+    <string name="problem_response">使用问题报告</string>
+    <string name="problem_feedback">产品意见反馈</string>
+    <string name="make_help">使用帮助</string>
+    <string name="function">功能介绍</string>
+    <string name="exit_login">退出登录</string>
+    <string name="add_pickup">添加派取范围</string>
+    <string name="et_pickup">请在此完善取派范围，包含：街道/路名/商圈/地标/乡镇村.客户可以在微快递中找到你，并让你获得更多的客户订单！</string>
+    <string name="add_des">取派范围示例：(填写方式以逗号隔开)</string>
+    <string name="add_info">如:北翟路，东方明珠，奉献村，太湖乡，西康路105号-246号，东街道，北街道</string>
+    <string name="pickup_no">暂不添加</string>
+    <string name="pickup_yes">确定添加</string>
+    <string name="call_common">拨打普通电话</string>
+    <string name="call_net">拨打网络电话</string>
+
+    <!-- 工具（new） -->
+    <string name="find_express_menu">快件查询</string>
+    <string name="find_express">查快递</string>
+    <string name="choose_firm">请选择快递公司</string>
+    <string name="fill_ordernumber">输入运单号或扫描条码</string>
+    <string name="query_overarea">超派查询</string>
+    <string name="choose_area">请选择行政区域</string>
+    <string name="fill_adress">村镇\\街道\\街道名称(选填)</string>
+    <string name="query">查 询</string>
+    <string name="query_result">查询结果</string>
+    <string name="query_adress">查询信息</string>
+    <string name="query_adress_info">上海市长宁区北翟路1178号</string>
+    <string name="query_result_yes">可以派送！</string>
+    <string name="query_result_no">不可派送哟！</string>
+    <string name="outofrande">不可派送范围</string>
+    <string name="inrange">可派送范围</string>
+    <string name="get_qrcode">扫描条码</string>
+    <string name="scan_qrcode">扫一扫</string>
+    <string name="mannul_input_tip">手动输入单号</string>
+    <string name="find_exce">异常信息</string>
+    <string name="find_exception">异常原因：</string>
+    <string name="find_Excep_handling">处理异常</string>
+    <string name="find_breach">直接联系网点</string>
+    <string name="find_firm">网点公司:</string>
+    <string name="find_phone">网点电话:</string>
+    <!-- 个人中心 -->
+    <string name="usercenter">个人资料</string>
+    <string name="my_service_state">我的服务说明</string>
+    <string name="baseinfo">基本资料</string>
+    <string name="name_tag">姓名：</string>
+    <string name="username_tag">电话：</string>
+    <string name="expressfirm_tag">公司：</string>
+    <string name="branch_tag">网点：</string>
+    <string name="work_tag">工号：</string>
+    <string name="uploading_from_photo">手机相册上传</string>
+    <string name="no_photo">相册没有图片</string>
+    <string name="uploading_from_camera">拍照上传</string>
+    <string name="service_state_hint">请输入你的服务说明，例如：\n\n(尊敬的客户，你好！我是申通快递员XXX，我专门负责XX小区、XX路段、XX商厦的接单和派送业务！承诺在我司派送范围内有单必应，有货必达！)</string>
+    <string name="service_state_tip">"我的服务说明"会添加到"我的二维码名片"，请认真填写</string>
+    <string name="modify_title">修改个人资料</string>
+    <string name="modify_user_info">修改资料</string>
+
+    <!-- 关于 -->
+
+    <string name="logo_text_about">快递员&#160;&#160;版本：%1$1s</string>
+    <string name="logo_text_qqqun">快递员QQ交流群&#160;&#160;437142617</string>
+    <string name="kefu_weixin_number">软件客服微信号&#160;&#160;kuaidiyuan666</string>
+    <string name="offical_site">官 网&#160;&#160;</string>
+    <string name="separator">|</string>
+    <string name="official_weibo">&#160;&#160;官方微博</string>
+    <string name="copyright_en">Copyright 2012-2016 All Rights reserved.</string>
+    <string name="copyright_ch">快递员 &#169;版权所有</string>
+    <!-- 功能介绍 -->
+    <string name="function_title">快递员  Android 3.8.5&#160;&#160;版功能介绍</string>
+    <string name="function_1">1.群发短信超级改版</string>
+    <string name="function_content_1">不用扫单号，选择已审核的模板火速群发短信！</string>
+    <string name="function_2">2.群发短信功能升级</string>
+    <string name="function_content_2">单号随意添加，编号随意修改，还能批量导入手机号！</string>
+    <string name="function_3">3.资讯中心和快递圈，网罗快递新鲜事</string>
+    <string name="function_content_3">邀请快递员一起评论行业资讯，聊聊新鲜快递生活！</string>
+    <string name="function_4">4.在地图上标记取派范围，建立网上承包区</string>
+    <string name="function_content_4">填写取派范围获得详细推荐地址，让客户准确找到你</string>
+    <string name="function_5">5.快捷收款业务</string>
+    <string name="function_content_5">客户扫描二维码支付快递费，支付有返现~</string>
+    <string name="function_6">6.客户智能来电标记更便捷</string>
+    <string name="function_content_6">支持断网便捷标记订单留言，有网自动同步！</string>
+    <string name="function_7">7.短信不够怎么办？</string>
+    <string name="function_content_7">充值群发短信更优惠~</string>
+    <string name="function_8">8.短信不够怎么办？</string>
+    <string name="function_content_8">充值群发短信更优惠~</string>
+    <string name="sto_function_1">1.群发短信超级改版</string>
+    <string name="sto_function_content_1">不用扫单号，选择已审核的模板火速群发短信！</string>
+    <string name="sto_function_2">2.群发短信功能升级</string>
+    <string name="sto_function_content_2">单号随意添加，编号随意修改，还能批量导入手机号！</string>
+    <string name="sto_function_3">3.手机就是巴枪！申通全国都可用！</string>
+    <string name="sto_function_content_3">签收到派急速扫！随身携带随时扫！</string>
+    <string name="sto_function_4">4.资讯中心和快递圈，网罗快递新鲜事</string>
+    <string name="sto_function_content_4">邀请快递员一起评论行业资讯，聊聊新鲜快递生活！</string>
+    <string name="sto_function_5">5.在地图上标记取派范围，建立网上承包区</string>
+    <string name="sto_function_content_5">填写取派范围获得详细推荐地址，让客户准确找到你</string>
+    <string name="sto_function_6">6.快捷收款业务</string>
+    <string name="sto_function_content_6">客户扫描二维码支付快递费，支付有返现~</string>
+    <string name="sto_function_7">7.客户智能来电标记更便捷</string>
+    <string name="sto_function_content_7">支持断网便捷标记订单留言，有网自动同步！</string>
+    <string name="sto_function_8">8.短信不够怎么办？</string>
+    <string name="sto_function_content_8">充值群发短信更优惠~</string>
+    <string name="title_activity_overarea_result_no_address">OverareaResultNoAddressActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_uploading_header">UploadingHeaderActivity</string>
+    <string name="title_activity_notice_detail">NoticeDetailActivity</string>
+
+    <!-- 下拉刷新 -->
+    <string name="ptr_pull_to_refresh">下拉刷新...</string>
+    <string name="ptr_release_to_refresh">松手即可刷新...</string>
+    <string name="ptr_refreshing">刷新...</string>
+    <string name="ptr_last_updated">Updated: %1$s</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+    <string name="pull_to_refresh_pull_label" translatable="false">向下拉动可以刷新</string>
+    <string name="pull_to_refresh_release_label" translatable="false">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label" translatable="false">加载中&#8230;</string>
+    <string name="pull_to_refresh_tap_label" translatable="false">点击刷新</string>
+    <string name="required_fields">*</string>
+
+    <!-- 快递圈 -->
+    <string name="send_pinglun">发送</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+
+    <!-- 外块 -->
+    <string name="outside_title">跑腿</string>
+    <string name="outside_title_detail">任务详情</string>
+    <!-- 添加留言 -->
+    <string name="add_message_custom_billNum">快递单号（可选）</string>
+    <string name="add_message_custom_content">在这里记录客户留言的内容</string>
+    <string name="history_msg_count">历史留言 ( 0 )</string>
+
+    <!-- 添加模板 -->
+    <string name="tv_show_desc">关于严禁发送违法短信内容的公告</string>
+    <string name="tv_desc">此短信以2条发送</string>
+    <string name="tv_msg_desc">帮助信息</string>
+    <string name="pickup_info">取件信息</string>
+    <string name="xy_et_custom_name">客户姓名（可选）</string>
+    <string name="xy_et_custom_address">请输入取件地址</string>
+    <string name="xy_et_custom_need">客户要求（可选）</string>
+    <string name="history_order_count">历史订单 ( 0 )</string>
+    <string name="tv_tag1">*</string>
+    <string name="et_shop_name">请输入店铺名称</string>
+    <string name="et_shop_address">请输入店铺地址</string>
+    <string name="et_shop_type">店铺类型，如：中式炒菜，五金水暖，4字以内</string>
+    <string name="et_shop_phones">请输入店铺电话</string>
+    <string name="tv_tag4">跑腿收入：</string>
+    <string name="task_radio1">5元+5%(手续费)</string>
+    <string name="task_radio2">10元</string>
+    <string name="method_one">方式一:自助审核</string>
+    <string name="method_two">方式二:通过客服审核</string>
+    <string name="tv_invite_friends_desc">跑腿任务上线啦~~~客户通过微快递可以\n给你下跑腿任务~~~抢到即能赚外快~~~\n快去邀请你的客户安装微快递给你下任务吧~</string>
+    <string name="tv_invite_friends_btn">邀请客户</string>
+    <string name="big_item_content">取派范围</string>
+    <string name="shou_kuan">收款方</string>
+    <string name="goods_info">物品信息</string>
+    <string name="deal_time">交易时间</string>
+    <string name="deal_no">交易号</string>
+    <string name="tv_search_order">查看订单</string>
+    <string name="pay_money">付款金额：</string>
+    <string name="tv_money">¥ 12</string>
+    <string name="tv_bussness">业务</string>
+    <string name="tv_invite_friends">快递店铺</string>
+    <string name="qun_send">群发短信</string>
+    <string name="dan_send">发短信</string>
+    <string name="baqiang">巴枪扫描</string>
+    <string name="manage_cust">管理客户</string>
+    <string name="player">播放</string>
+    <string name="recording_cus_phonenum">12355555555</string>
+    <string name="recording_palying_duration">00 : 00 : 36</string>
+    <string name="recording_date">2014-09-09</string>
+    <string name="recording_duration">00 : 36</string>
+    <string name="take_photo">拍照</string>
+    <string name="tv_capture_num">1</string>
+    <string name="tv_binded_tag">已绑定百度账号：</string>
+    <string name="tv_total_money">总余额 (元)</string>
+    <string name="tv_avail_money">可提现（元）</string>
+    <string name="ice">冻结：</string>
+    <string name="tixian_yu">金额（元）</string>
+    <string name="balance">余额</string>
+    <string name="confirm">确认</string>
+    <string name="btn_xiangce">从相册选取</string>
+    <string name="wonderful_comment">精彩评论</string>
+    <string name="tv_zhuanfa">邀请朋友</string>
+    <string name="tv_comments_num">0</string>
+    <string name="tv_admire_num">0</string>
+    <string name="updata_time">今天  15：30</string>
+    <string name="et_edit_pinglun">我也来说两句...</string>
+    <string name="et_add_content">写下你想说的话~</string>
+    <string name="add_pic">插入图片</string>
+    <string name="tv_online_customer">在线客服</string>
+    <string name="tv_tucao">我要吐槽</string>
+    <string name="administration_area">行政区域</string>
+    <string name="dialog_remark">修改备注</string>
+    <string name="dialog_copy">复制单号</string>
+    <string name="tv_dialog_ethreeinfotype_title">选签收人</string>
+    <string name="tv_e3_sign_takepic">拍照签收</string>
+    <string name="tv_dialog_ethreeinfotype">选问题类型</string>
+    <string name="rb_dialog_ethreeinfotype1">外包装破损,内件破损,短少,丢失</string>
+    <string name="rb_dialog_ethreeinfotype2">外包装完好,内件不符,破损,短少,丢失</string>
+    <string name="rb_dialog_ethreeinfotype3">外包装污染</string>
+    <string name="rb_dialog_ethreeinfotype4">面单详情与实际内件不符</string>
+    <string name="rb_dialog_ethreeinfotype5">地址错误</string>
+    <string name="rb_dialog_ethreeinfotype6">电话错误,空号,停机</string>
+    <string name="rb_dialog_ethreeinfotype7">面单脱落</string>
+    <string name="rb_dialog_ethreeinfotype8">双面单</string>
+    <string name="rb_dialog_ethreeinfotype9">有单无货</string>
+    <string name="rb_dialog_ethreeinfotype10">收货信息不详</string>
+    <string name="rb_dialog_ethreeinfotype11">超派件,客户要求更改地址</string>
+    <string name="rb_dialog_ethreeinfotype12">超派件,客户自取</string>
+    <string name="rb_dialog_ethreeinfotype13">超派件,转发EMS</string>
+    <string name="rb_dialog_ethreeinfotype14">超派件,退回</string>
+    <string name="rb_dialog_ethreeinfotype15">天气,自然灾害等原因导致延误</string>
+    <string name="rb_dialog_ethreeinfotype16">交通事故导致延误</string>
+    <string name="rb_dialog_ethreeinfotype17">突发事件导致延误</string>
+    <string name="rb_dialog_ethreeinfotype18">违禁品,机关查扣</string>
+    <string name="rb_dialog_ethreeinfotype19">大字错写导致错发</string>
+    <string name="rb_dialog_ethreeinfotype20">建包错发件</string>
+    <string name="rb_dialog_ethreeinfotype21">送无人,电话联系明日送</string>
+    <string name="rb_dialog_ethreeinfotype22">送无人,电话联系不上明日送</string>
+    <string name="rb_dialog_ethreeinfotype23">搬家等特殊事件</string>
+    <string name="rb_dialog_ethreeinfotype24">节假日延迟派送</string>
+    <string name="rb_dialog_ethreeinfotype25">客户要求更改地址,时间送</string>
+    <string name="rb_dialog_ethreeinfotype26">客户拒收</string>
+    <string name="rb_dialog_ethreeinfotype27">学校自取件</string>
+    <string name="rb_dialog_ethreeinfotype28">面单注明自取件</string>
+    <string name="rb_dialog_ethreeinfotype29">面单注明自取,客户拒提</string>
+    <string name="rb_dialog_ethreeinfotype30">自取件</string>
+    <string name="rb_dialog_ethreeinfotype31">客户要求自取</string>
+    <string name="rb_dialog_ethreeinfotype32">发件公司要求改地址</string>
+    <string name="rb_dialog_ethreeinfotype33">发件公司要求退回</string>
+    <string name="rb_dialog_ethreeinfotype34">超派,电话联系不上</string>
+    <string name="rb_dialog_ethreeinfotype35">违禁品</string>
+    <string name="rb_dialog_ethreeinfotype36">超规格</string>
+    <string name="rb_dialog_ethreeinfotype37">无面单已认领</string>
+    <string name="rb_dialog_ethreeinfotype38">联系好下午送</string>
+    <string name="rb_dialog_ethreeinfotype39">网络错分件</string>
+    <string name="rb_dialog_ethreeinfotype40">到付费用问题</string>
+    <string name="rb_dialog_ethreeinfotype41">发票问题</string>
+    <string name="grid_detail">网点详情</string>
+    <string name="address">地址:</string>
+    <string name="tv_return">返回</string>
+    <string name="input_remark">输入备注信息</string>
+    <string name="remarks">如:衣服</string>
+    <string name="remark_info">注:备注信息将添加到查件记录</string>
+    <string name="hint">提 示</string>
+    <string name="center">中间</string>
+    <string name="always">总是</string>
+    <string name="cancel_save">删除</string>
+    <string name="exit_message">退出的数据将无法与服务器同步\n确定退出？</string>
+    <string name="scan_certain">温馨提示</string>
+    <string name="courier_phone">你的手机号：</string>
+    <string name="baqiang_no">对应的巴枪账号</string>
+    <string name="certain_message">请确认这是不是你的信息？</string>
+    <string name="choice_certain_message">请选择并确认你的信息！</string>
+    <string name="if_notyou">  如果这不是你？</string>
+    <string name="update_e3">请到你网点的E3系统中修改！</string>
+    <string name="congratulations">恭喜你！通过认证。现在可以进行扫签收、问题件等上传E3系统工作</string>
+    <string name="cant_find">未找到对应的工号，请到你所在网点\n录入你的手机号及个人信息</string>
+    <string name="et_e3_type">手动输入</string>
+    <string name="not_name">暂无姓名显示</string>
+    <string name="not_point">暂无网点显示</string>
+    <string name="upload_e3">审核E3信息请上传以下信息</string>
+    <string name="login_baqiang">1、巴枪已登录界面</string>
+    <string name="paijian_no">2、5个自己的派件单号</string>
+    <string name="shenhe">审核E3个人信息</string>
+    <string name="tiqu_info">我们将提取你的E3系统个人信息</string>
+    <string name="not_info">因为没有E3系统个人信息而导致使用扫签收、扫揽件、扫派件、问题件功能上传失败或影响业务数据，请快递员自行负责！</string>
+    <string name="help">帮助</string>
+    <string name="courier">快递员：</string>
+    <string name="cellphone">手  机  号：</string>
+    <string name="device_id">设  备  ID：</string>
+    <string name="location_point">所在网点：</string>
+    <string name="tv_lanPice">收件</string>
+    <string name="tv_faPice">发件</string>
+    <string name="tv_piePice">派件</string>
+    <string name="tv_daoPice">到件</string>
+    <string name="tv_signedPice">签收件</string>
+    <string name="upload_info">审核E3信息请上传以下信息:</string>
+    <string name="login_surface">1.巴枪已登陆界面;</string>
+    <string name="five_point">2.5个自己的派件单号.</string>
+    <string name="check_state">请在24h后查看你的E3信息审核状态</string>
+    <string name="check_first">第一步:拍照巴枪登陆界面</string>
+    <string name="paizhao">点击拍照s</string>
+    <string name="check_second">第二步:上传5个派件的单号</string>
+    <string name="etc">单号</string>
+    <string name="type">类型</string>
+    <string name="all_select">全选</string>
+    <string name="sign_type">批量输入签收类型</string>
+    <string name="save_data">保存</string>
+    <string name="immediately_upload">上传</string>
+    <string name="upload_send_message">上传并通知客户</string>
+    <string name="update_pass">请输入您要修改的密码(6~16个字符)</string>
+    <string name="immediately_send">立即发送</string>
+    <string name="add_remarks">添加备注</string>
+    <string name="load_data">正在加载数据</string>
+    <string name="tv_findexpress_result_handle">时效预测</string>
+    <string name="speed_no">速度指数</string>
+    <string name="no">暂无</string>
+    <string name="load_info">信息载入中...</string>
+    <string name="no_find">暂无物流信息</string>
+    <string name="reason">可能原因:</string>
+    <string name="jichu">1.您的快递刚刚寄出,还没来得及录入</string>
+    <string name="info_fail">2.您输入的快递公司名称或单号有误</string>
+    <string name="visit">3.或访问 </string>
+    <string name="trial">试试</string>
+    <string name="fuwu">服务</string>
+    <string name="remark_on">点评</string>
+    <string name="input_no">输入运单号</string>
+    <string name="earn">收入</string>
+    <string name="five_yuan">5.00</string>
+    <string name="tv_receive">收货</string>
+    <string name="need">需求</string>
+    <string name="knock">快去最新任务...抢！</string>
+    <string name="tv_finish_shop">新增店铺</string>
+    <string name="finish_target">已完成任务</string>
+    <string name="zidong_record">自动录音</string>
+    <string name="intelligent_hint">智能信息提示</string>
+    <string name="tv_center_item">热门帖子</string>
+    <string name="tv_branch_name">其他网点</string>
+    <string name="try_message">不知道怎么发短信？点我试试！</string>
+    <string name="tv_notify_ok">完成</string>
+    <string name="tv_notify_revise">清除手机</string>
+    <string name="tv_notify_del">  删除</string>
+    <string name="tv_des">点击可以查看提示声明</string>
+    <string name="select_type">选类型</string>
+    <string name="tv_shenhe_status">已审核</string>
+    <string name="catalog">A</string>
+    <string name="tv_notice_firm">畅通总部</string>
+    <string name="tv_notice_dec">虹桥部门将于今天18：00检修虹桥部门将于今天10：00</string>
+    <string name="tv_notice_content">测试通知测试通知</string>
+    <string name="tv_time">今天 00：00：00</string>
+    <string name="yi_pay">完成支付</string>
+    <string name="tv_click_qrcode">收款二维码</string>
+    <string name="text_collection_times">今日收款:%1$1s笔,</string>
+    <string name="text_collection_amount">&#160;%1$1s元</string>
+    <string name="text_online_collection_times">(在线收款:%1$1s笔,</string>
+    <string name="text_online_collection_amount">&#160;%1$1s元)</string>
+    <string name="tv_click_order">回填单号</string>
+    <string name="shanghai">上海市</string>
+    <string name="tv_order_phone">18521322616</string>
+    <string name="invite">邀请</string>
+    <string name="xm_account_customer">发件人</string>
+    <string name="ticket_num">运单编号</string>
+    <string name="real_name_info">实名信息</string>
+    <string name="record_time">采集时间</string>
+
+    <!-- listitem_sms_invite.xml -->
+    <!-- Screen title before and during recording -->
+    <!-- Screen title after recording -->
+    <!-- Screen title while playing back a recording -->
+    <!-- Label shown during recording -->
+    <string name="recording">Recording</string>
+    <!-- Label shown when the recording is stopped for a reason other than the user stopping it (e.g. the sd card was removed) -->
+    <string name="recording_stopped">Recording stopped</string>
+    <!-- label shown when there is not enough space to record something -->
+    <string name="storage_is_full">Storage is full</string>
+    <!-- label shown when the recording has reached maximum allowed file size -->
+    <string name="max_length_reached">Maximum length reached</string>
+    <!-- label shown when there is no sd card available to record to -->
+    <string name="insert_sd_card">SD card is required</string>
+    <!-- label shown when there is more than 1 minute but less than 9 minutes of space left to record -->
+    <!-- label shown when there is less than 1 minute of space left to record -->
+
+
+    <!-- button to accept the current recording and return it to the caller -->
+    <!-- button to discard the current recording and return to the caller -->
+    <!-- acknowlegement button in a number of dialogs -->
+    <string name="button_ok">OK</string>
+    <!-- Do not translate. Format of the timer that shows how much has been recorded so far -->
+    <string name="timer_format"><xliff:g id="format">%02d</xliff:g>:<xliff:g id="format">%02d</xliff:g></string>
+    <!-- label shown before the user has recorded anything -->
+
+
+    <!-- the name under which recordings will be visible in the media database is formatted like this -->
+    <string name="audio_db_title_format"><xliff:g id="format">yyyy-MM-dd HH:mm:ss</xliff:g></string>
+    <!-- all recordings will show up in the media database with this 'artist' name -->
+    <string name="audio_db_artist_name">Your recordings</string>
+    <!-- all recordings will show up in the media database with this 'album' name -->
+    <string name="audio_db_album_name">Audio recordings</string>
+    <!-- all recordings will show up in the media database in a playlist with this name -->
+    <string name="audio_db_playlist_name">My recordings</string>
+    <!-- shown as the message in a dialog when an error occured because of an error accessing the sd card -->
+    <string name="error_sdcard_access">Unable to access external or internal storage</string>
+    <!-- shown as the message in a dialog when the app encountered an unspecified internal error -->
+    <string name="error_app_internal">Internal application error</string>
+    <!-- shown as the message in a dialog when the recording could not be added to the media database -->
+    <string name="error_mediadb_new_record">Unable to save recorded audio</string>
+
+    <!-- add for libra begin -->
+    <string name="default_record_name">untitled record</string>
+    <string name="menu_view_record_list">View record list</string>
+    <string name="menu_setting">Settings</string>
+    <string name="delete_dialog_title">Do you want to delete current record?</string>
+    <string name="overwrite_dialog_title">%s has already existed. Do you want to overwrite it?</string>
+    <string name="preferences_title">Settings</string>
+    <string name="pref_title_record_type">Record file type</string>
+    <string name="prefDialogTitle_recordType">Please select file type</string>
+    <string name="prefDefault_recordType">audio/3gpp</string>
+    <string name="pref_title_enable_high_quality">Enable high quality</string>
+    <string name="pref_summary_enable_high_quality">The audio file with high quality can be larger</string>
+    <string name="pref_title_enable_sound_effect">Enable sound effect</string>
+    <string name="pref_summary_enable_sound_effect">Playing sound effect when the state is changed</string>
+    <string name="notification_recording">Recording...</string>
+    <string name="notification_stopped">Recording is stopped</string>
+    <string name="notification_warning">Low storage(less than %d minutes)...</string>
+    <string name="sd_card_not_available">SD card is not available</string>
+    <string name="open_file_explorer">Open file explorer</string>
+    <string name="alert_message_delete_record">Do you want to delete selected record?</string>
+
+    <string-array name="prefEntries_recordType">
+        <item>amr</item>
+        <item>3gpp</item>
+    </string-array>
+    <string-array name="prefValues_recordType" translatable="false">
+        <item>audio/amr</item>
+        <item>audio/3gpp</item>
+    </string-array>
+    <!-- add for libra end -->
+
+    <string name="title_activity_delete_call_logs">DeleteCallLogsActivity</string>
+    <string name="title_activity_update_addressor">UpdateAddressorActivity</string>
+    <string name="e3_prof_help">上传时请确认所传的内容准确无误，一经上传不可更改。需要查看，请至网点客服查看。</string>
+
+    <!-- wxpay -->
+    <string name="errcode_success">发送成功</string>
+    <string name="errcode_cancel">发送取消</string>
+    <string name="errcode_deny">发送被拒绝</string>
+    <string name="errcode_unknown">发送返回</string>
+    <string name="app_back">返回</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="app_continue">继续</string>
+    <string name="app_tip">提示</string>
+    <string name="app_send">发送</string>
+    <string name="app_set">设置</string>
+    <string name="app_save">保存</string>
+    <string name="app_delete">删除</string>
+    <string name="app_nextstep">下一步</string>
+    <string name="app_prevstep">上一步</string>
+    <string name="app_finish">完成</string>
+    <string name="app_find">查找</string>
+    <string name="app_edit">编辑</string>
+
+    <!-- PayActivity -->
+    <string name="pay_by_wx">通过微信支付</string>
+    <string name="check_pay">检查微信版本是否支持支付</string>
+    <string name="input_reqkey">输入reqkey</string>
+    <string name="input_package_value">输入package value</string>
+    <string name="input_sign">输入sign</string>
+    <string name="getting_access_token">正在获取access token...</string>
+    <string name="get_access_token_succ">获取access token成功</string>
+    <string name="get_access_token_fail" formatted="false">获取access token失败，原因%s</string>
+    <string name="getting_prepayid">正在获取预支付订单...</string>
+    <string name="paying">支付中</string>
+    <string name="get_prepayid_succ">获取prepayid成功</string>
+    <string name="get_prepayid_fail" formatted="false">获取prepayid失败，原因%s</string>
+
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="title_e3proof_sm">上传短信证据</string>
+    <string name="over_area_comment_hint">写点评论吧，对其他小伙伴帮助很大哦~</string>
+
+    <!-- 语音识别 -->
+    <string name="appid">55e4fb78</string>
+    <!-- 中通巴枪重新审核 -->
+    <string name="reAudit">信息提交错误？点此重新审核</string>
+    <!-- 收款金额提示 -->
+    <string name="hint_amount">请输入你要收款的金额</string>
+    <!-- 二维码收款 -->
+    <string name="hint_2d_code">扫描客户的二维码(支持微信,支付宝)</string>
+    <string name="title_activity_collection_by2_dcode">CollectionBy2DCode</string>
+    <string name="title_activity_collection_detail">CollectionDetailActivity</string>
+    <string name="title_activity_collection_add_express_no">CollectionAddExpressNoActivity</string>
+    <string name="title_activity_delivery_fees">DeliveryFeesActivity</string>
+
+    <!-- pickerview -->
+    <string name="pickerview_cancel">取消</string>
+    <string name="pickerview_submit">确定</string>
+    <string name="pickerview_year">年</string>
+    <string name="pickerview_month">月</string>
+    <string name="pickerview_day">日</string>
+    <string name="pickerview_hours">时</string>
+    <string name="pickerview_minutes">分</string>
+    <string name="pickerview_seconds">秒</string>
+    <string name="create_name">发起人 &#160;&#160;&#160;</string>
+
+    <!-- FollowersActivity -->
+    <string name="collect_hint">使用&#160;&#160;收件&#160;&#160;可让客户关注您</string>
+    <!-- activity_send_bulk_sms -->
+    <string name="instruction">1、消息群发不收任何费用，每月最多使用一次；\n2、严禁发送违法消息，否则将封停账号；</string>
+    <string name="title_activity_net_tele_phone">NetTelePhoneActivity</string>
+    <string name="title_activity_skuaidi_vo_ipcall">SKuaidiVoIPCallActivity</string>
+    <string name="ec_voip_calling_refuse">对方拒绝您的呼叫请求</string>
+    <string name="ec_voip_calling_notfound">对方不在线，请稍后重试</string>
+    <string name="ec_voip_calling_timeout">呼叫超时，请稍后再拨</string>
+    <string name="ec_voip_calling_no_answer">无人应答，请稍后再拨</string>
+    <string name="ec_voip_calling_busy">对方正忙，请稍后再拨</string>
+    <string name="ec_voip_call_error">媒体协商失败</string>
+    <string name="ec_voip_call_fail_connection_failed_auth">第三方鉴权地址连接失败</string>
+    <string name="ec_voip_call_fail_not_find_appid">第三方应用ID未找到</string>
+    <string name="ec_voip_call_fail_not_online_only_call">第三方未上线应用仅限呼叫已配置测试号码</string>
+    <string name="ec_voip_call_auth_failed">第三方鉴权失败，子账号余额不足</string>
+    <string name="ec_meeting_not_exist">会议号已解散或不存在</string>
+    <string name="ec_meeting_pass_error">会议号密码验证失败</string>
+    <string name="ec_voip_call_fail_no_pay_account">第三方主账号余额不足</string>
+    <string name="ec_voip_call_fail">呼叫失败，请稍后重试&#8230;</string>
+    <string name="title_activity_skuaidi_net_call_log">SKuaidiNetCallLogActivity</string>
+    <string name="title_activity_skuaidi_delete_net_call_log">SKuaidiDeleteNetCallLogActivity</string>
+    <string name="pull_to_load">上拉加载更多</string>
+    <string name="loading">加载中&#8230;</string>
+    <string name="release_to_load">释放开始加载</string>
+    <string name="pull_to_refresh_start">下拉刷新数据</string>
+    <string name="pull_to_refresh_release_start">释放开始刷新</string>
+    <string name="pull_to_refresh_refreshing_start">正在刷新</string>
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_load</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/release_to_load</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/loading</string>
+    <string name="scan_gun_input">扫描枪输入</string>
+
+    <!-- 发短信界面 -->
+    <string name="send_msg_addmodel">选择短信模板</string>
+    <string name="send_msg_wordcount">0\/129</string>
+    <string name="send_msg_unfold">展开</string>
+    <string name="send_msg_gunscan">巴枪扫描</string>
+    <string name="send_msg_auto_cloudcall">失败自动云呼</string>
+    <string name="send_msg_imgdes_menu_btn">发短信菜单</string>
+    <string name="send_msg_text_no">编号</string>
+    <string name="send_msg_texthint_input_mobile">输入手机号</string>
+    <string name="send_msg_texthint_order_no">单号</string>
+    <string name="send_msg_text_clearall">清空</string>
+    <string name="send_msg_menu_setting_pwd">取件密码设置</string>
+    <string name="send_msg_setting_pwd_activity_warning">发短信时，所用短信模板内包含取件密码时，该功能才生效</string>
+    <string name="send_msg_setting_pwd_activity_random_password">随机密码</string>
+    <string name="send_msg_setting_pwd_activity_sample_password">固定密码</string>
+    <string name="send_msg_setting_pwd_activity_random_fourword">四位随机数字组成    短信记录内可查看密码内容</string>
+    <string name="send_msg_setting_pwd_activity_fourword_byown">自己设置四位数字</string>
+    <string name="send_msg_setting_pwd_activity_initial_password">初始密码</string>
+    <string name="send_msg_setting_pwd_activity_modify_password">修改</string>
+
+    <!--添加短信模板界面-->
+    <string name="add_model_text_hint">点击下方图标插入编号</string>
+    <string name="add_model_text_hint2">此短信以2条发送</string>
+
+    <!-- 云呼界面 -->
+    <string name="send_cloud_selectmodel">选择语音模板</string>
+    <string name="send_cloud_voicetitle">派件专用语音</string>
+    <string name="send_cloud_voice_play">语音播放按钮</string>
+    <string name="send_cloud_voice_time">00:00</string>
+    <string name="send_cloud_voice_unfold">展开</string>
+    <string name="send_cloud_failauto_sendmsg">失败补发短信</string>
+    <string name="send_cloud_imgdes_menu_btn">发短信菜单</string>
+    <string name="send_cloud_text_input_mobileno">输入手机号</string>
+    <string name="send_cloud_text_input_orderno">单号</string>
+    <string name="send_cloud_text_hint_no">编号11111</string>
+
+    <!--选择手机号码界面-->
+    <string name="search_phone_next">下一条</string>
+    <string name="search_phone_text_complate">完成</string>
+    <string name="search_phone_text_send">发送</string>
+    <string name="search_phone_img_clear_number">清除号码</string>
+    <string name="search_phone_talk_mobile_number">语音输入</string>
+    <string name="search_phone_scan_mobile_number">扫描手机号</string>
+
+    <!-- 云呼去电显示设置 -->
+    <string name="yunhu_callphone_showphonenumber_open">开启</string>
+    <string name="yunhu_callphone_showphonenumber_hint">拨号或云呼时，对方来电显示将显示您设置的号码</string>
+    <string name="yunhu_callphone_receive_caller">接听语音来电</string>
+    <string name="yunhu_callphone_operition">按提示操作</string>
+    <string name="yunhu_callphone_no_setting">未设置</string>
+    <string name="yunhu_callphone_setting_success">设置成功</string>
+    <string name="yunhu_callphone_your_telephyon_number">请保持手机通畅\n您将收到400-920-0530的来电</string>
+    <string name="yunhu_callphone_imgdes_circle">进度圈</string>
+    <string name="yunhu_callphone_switch">开关</string>
+    <string name="yunhu_callphone_my_telephyon_number">新去电显示号码</string>
+    <string name="yunhu_callphone_current_telephyon_number">400-920-0530</string>
+    <string name="yunhu_callphone_current_telephyon_number_hint">当前去电显示号码</string>
+    <string name="yunhu_callphone_hint">拨号或云呼时，对方来电显示将显示您设置的号码。</string>
+
+    <!--去电显示手机号码设置-->
+    <string name="make_telephone_modify_edittext_hint_input_newmobile">请输入新的去电显示号码</string>
+
+    <!--发送失败记录界面-->
+    <string name="record_sendfail_show_three_days_content">只显示近3天内的短信发送失败记录</string>
+    <string name="record_sendfail_resend_sms">重发短信</string>
+    <string name="record_sendfail_resend_cloud">重发云呼</string>
+
+    <!-- 图片属性 -->
+    <string name="img_des_arrows">向右箭头</string>
+    <string name="img_des_back">返回</string>
+    <string name="img_des_microphone">麦克风</string>
+    <string name="img_des_delete">删除</string>
+    <string name="img_des_regist_company">公司品牌</string>
+    <string name="img_des_regist_area">地区</string>
+    <string name="img_des_regist_branch">网点</string>
+    <string name="img_des_regist_name">姓名</string>
+    <string name="img_des_circle">圆</string>
+    <string name="img_des_red_point">小红点</string>
+    <string name="img_des_status_sign">签收状态</string>
+
+    <string name="count_record_des">注：统计数据为近2个月内的%1$s数据（不含当天数据）</string>
+    <string name="register_warn_des">温馨提示：使用公司业务手机号更容易通过审核</string>
+    <string name="complete_userinfo_warn_des">修改后，部分功能须重新审核方能使用，请谨慎操作!</string>
+    <string name="package_map_warn_des">只显示半径1.5km内的运单（无地址运单不显示）</string>
+    <string name="auth_user_real_name">实名信息一旦提交，不可更改，请如实填写</string>
+    <string name="count_record_title">%1$s统计</string>
+    <string name="old_record_des">最多可查询近一年内的%1$s记录</string>
+    <string name="old_record_title">%1$s历史</string>
+    <!--有派无签-->
+    <string name="today_count">今日：%1$1s件</string>
+    <string name="yesterday_count">昨日：%1$1s件</string>
+    <string name="latest_five_day_count">前五日(不含今日)：%1$1s件</string>
+    <string name="title_activity_yunhu_out_num_setting_modify">YunhuOutNumSettingModifyActivity</string>
+
+    <!--发送短信或云呼失败重发短信或云呼相关界面-->
+    <string name="record_resend_today">今天</string>
+    <string name="waybill_count">已扫描：%1$d票</string>
+
+    <string name="template_sign_sms">示例：您好，您的XX快递快件，单号3301234567890已被XX签收，如有疑问请联系13800000000，祝您生活愉快。</string>
+    <string name="template_problem_sms">示例：您好，您的XX快递快件，单号3301234567890，暂时无法送达，原因：电话无人接听，详询13800000000。</string>
+
+    <string name="wupinleibie_huoyang">货&#160;&#160;&#160;&#160;样</string>
+    <string name="wupinleibie_feihuoyang">非货样</string>
+
+    <string name="dispatch_selected_count">确定（%1$d）</string>
+
+    <string name="huibo_warn_title">点"确定"后，您将接到系统来电，接通后勿挂断，系统将帮您转接被叫号码</string>
+    <string name="alert_windown_msg">由于系统权限限制，客户来去电自动录音功能需要手动开启悬浮窗权限</string>
+    <string name="huibo_warn_description">接听系统来电后，开始计费，无论被叫是否接通，费用：6分/分钟</string>
+
+    <string name="dispatch_remark">备注：%1$s</string>
+
+    <string name="latest_status">最新状态：%1$s</string>
+    <string name="addressee">收件人：%1$s</string>
+    <string name="addressee_address">收件地址：%1$s</string>
+    <string name="description_banch_weight">未填重量默认为"0.2kg"</string>
+
+    <string name="tab_business_title">业务</string>
+    <string name="tab_circle_title">快递圈</string>
+    <string name="tab_personal_title">我的</string>
+
+    <string name="dispatch_address">%1$s &#160; %2$s</string>
+</resources>

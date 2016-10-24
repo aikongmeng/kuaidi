@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_5"
+    android:orientation="vertical"
+    tools:context="com.kuaibao.skuaidi.sto.ethree2.E3StoChooseAccountActivity">
+    <include layout="@layout/comm_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_show_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="你的手机号：18918115790"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tv_e3account_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:text="请选择并确认你的信息!"
+            android:drawableLeft="@drawable/hint_icon_big"
+            android:textColor="@color/gray_2"
+            android:drawablePadding="4dp"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"/>
+        </LinearLayout>
+    <include layout="@layout/comm_line" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

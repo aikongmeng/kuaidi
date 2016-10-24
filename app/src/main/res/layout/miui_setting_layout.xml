@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/window_is_show_mengban"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	
+    <LinearLayout
+		android:id="@+id/ll_center_content"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/shape_white"
+        android:minWidth="280dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@color/title_bg"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/vi_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/title_bg" />
+	
+        <FrameLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+	        <TextView
+	            android:id="@+id/dialog_content"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="15dp"
+	            android:focusable="true"
+	            android:gravity="center_horizontal"
+	            android:text="开启来电智能识别功能需要对本应用开放显示悬浮窗选项\n是否去设置？"
+	            android:textColor="@color/green"
+            	android:textSize="15sp" />
+	        <EditText 
+	            android:visibility="gone"
+	            android:id="@+id/dialog_et"
+	            android:layout_gravity="center"
+	            android:background="@drawable/selector_shape_search_dialog"
+	            android:padding="10dp"
+	            android:textSize="18sp"
+	            android:textColorHint="@color/text_hint"
+	            android:textColor="@color/text_black"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="15dp"
+	            />
+		</FrameLayout>
+
+		<LinearLayout
+			android:id="@+id/ll_topic_content"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="15dp"
+			android:layout_marginBottom="15dp"
+			android:visibility="gone">
+		    <TextView
+				android:id="@+id/tv_topic_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="网点名称:"
+				android:textColor="@color/text_black"/>
+
+			<TextView
+				android:id="@+id/tv_topic_content"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="8dp"
+				android:text="上海青浦公司"
+				android:textColor="@color/text_black"/>
+
+		</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_pop_sure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_shape_bottom_left_white_blue"
+                android:text="@string/certain"
+                android:textColor="@color/text_green_four"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+            <Button
+                android:id="@+id/btn_pop_cancle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="0.5dp"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_shape_bottom_right_white_blue"
+                android:text="@string/cancel"
+                android:textColor="@color/text_green_four"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

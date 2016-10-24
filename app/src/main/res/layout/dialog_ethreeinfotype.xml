@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white"
+    android:minWidth="280dp"
+    android:orientation="vertical" >
+
+    <com.kuaibao.skuaidi.common.view.SkuaidiTextView
+        android:id="@+id/tv_dialog_ethreeinfotype_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="@string/tv_dialog_ethreeinfotype_title"
+        android:textColor="@color/text_green_four"
+        android:textSize="22sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ListView
+            android:id="@+id/lv_types"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:divider="@color/order_list_divider"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@android:color/transparent" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/ll_qf_bad_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lv_types"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/lv_bad_subject"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:divider="@color/order_list_divider"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@android:color/transparent" >
+            </ListView>
+
+            <ListView
+                android:id="@+id/lv_bad_type"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:divider="@color/order_list_divider"
+                android:dividerHeight="0.5dp"
+                android:listSelector="@android:color/transparent" >
+            </ListView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_user_defined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_qf_bad_type"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_confir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/selector_base_green_qianse1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="保存"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.kuaibao.skuaidi.activity.view.ClearEditText
+                android:id="@+id/edt_user_defined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/tv_confir"
+                android:background="@drawable/shape_white_blackstroke"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="手动输入"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/gray_1"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_split_line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rl_user_defined"
+            android:background="@color/gray_4" />
+
+        <TextView
+            android:id="@+id/tv_e3_sign_takepic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_split_line"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/camera_icon"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:text="@string/tv_e3_sign_takepic"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/v_split_line1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/tv_e3_sign_takepic"
+            android:background="@color/gray_4"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/btn_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_split_line1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_dialog_ethreeinfotype_del"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_shape_bottom_left_white_blue"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/cancel"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line" />
+
+            <TextView
+                android:id="@+id/tv_dialog_ethreeinfotype_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selector_shape_bottom_right_white_blue"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/certain"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

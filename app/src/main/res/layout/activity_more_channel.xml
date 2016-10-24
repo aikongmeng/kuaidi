@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/comm_title" />
+
+    <com.kuaibao.skuaidi.common.view.DragGridView.DragGrid
+        android:id="@+id/dgv_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_content_bg"
+        android:gravity="center"
+        android:horizontalSpacing="0.2dip"
+        android:isScrollContainer="false"
+        android:listSelector="@color/text_gray2"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:verticalSpacing="0.2dip">
+    </com.kuaibao.skuaidi.common.view.DragGridView.DragGrid>
+
+</LinearLayout>

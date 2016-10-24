@@ -1,0 +1,386 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 66
+        versionName "V5.1.0"
+        multiDexEnabled true
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi","x86"
+        }
+
+//        jackOptions {
+//            enabled true
+//        }
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+
+        resConfigs "zh"
+
+        dexOptions {
+            //大工程模式
+            jumboMode true
+            //增加dex时候所占的最大内存
+            javaMaxHeapSize "8G"
+        }
+
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+            ignoreWarnings true
+        }
+
+        signingConfigs {
+            debug {
+                //storeFile file("C:\\skuaibao")
+                storeFile file("skuaibao")
+                storePassword "kuaibao.skuaidi"
+                keyAlias "kuaibao.keystore"
+                keyPassword "kuaibao.skuaidi"
+            }
+            relealse {
+                storeFile file("skuaibao")
+                storePassword "kuaibao.skuaidi"
+                keyAlias "kuaibao.keystore"
+                keyPassword "kuaibao.skuaidi"
+            }
+        }
+
+        buildTypes {
+            debug {
+                //内部测试版AppKey
+                manifestPlaceholders = [UMENG_APPKEY_VALUE: "570332e167e58e8601000ae5"]
+                // 显示Log
+                buildConfigField "boolean", "LOG_DEBUG", "true"
+                versionNameSuffix "-debug"
+                minifyEnabled false
+                zipAlignEnabled true
+                shrinkResources false
+                signingConfig signingConfigs.debug
+            }
+
+            release {
+                //发布版本AppKey
+                manifestPlaceholders = [UMENG_APPKEY_VALUE: "5256526256240bc0df002760"]
+                // 不显示Log
+                buildConfigField "boolean", "LOG_DEBUG", "false"
+                //混淆
+                minifyEnabled true
+                //Zipalign优化
+                zipAlignEnabled true
+                // 移除无用的resource文件
+                shrinkResources true
+                pseudoLocalesEnabled true
+                //是否打开debuggable开关
+                debuggable false
+                //是否打开jniDebuggable开关
+                jniDebuggable false
+                //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                //签名
+                signingConfig signingConfigs.relealse
+                applicationVariants.all { variant ->
+                    variant.outputs.each { output ->
+                        def outputFile = output.outputFile
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                            if(variant.productFlavors[0].name=="kuaibao"){
+                                def fileName = "SKuaidi_${defaultConfig.versionName}_debug.apk"
+                                output.outputFile = new File(outputFile.parent+"\\apk\\release", fileName)
+                            }else{
+                                def fileName = "SKuaidi_${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                                output.outputFile = new File(outputFile.parent+"\\apk\\release", fileName)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+//    dataBinding {
+//        enabled = true
+//    }
+
+//    splits {
+//        abi {
+//            enable true
+//            reset()
+//            include 'armeabi','x86'
+//            universalApk true //generate an additional APK that contains all the ABIs
+//        }
+//    }
+
+    productFlavors {
+        dev {
+            minSdkVersion 21
+        }
+
+        prod {
+            minSdkVersion rootProject.ext.minSdkVersion
+        }
+
+        kuaibao{
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+        }
+        jd {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "jd"]
+        }
+        mumayi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mumayi"]
+        }
+        anzhi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "anzhi"]
+        }
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+        }
+        '360helper' {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "360helper"]
+        }
+        netease {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "netease"]
+        }
+        yingyonghui {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyonghui"]
+        }
+        '91helper' {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "91helper"]
+        }
+        anzhuo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "anzhuo"]
+        }
+        meizu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "meizu"]
+        }
+        suning {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "suning"]
+        }
+        aliyun {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "aliyun"]
+        }
+        jifeng {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "jifeng"]
+        }
+        yingyongbao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+        }
+        uc {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "uc"]
+        }
+        mm {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "mm"]
+        }
+        wo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wo"]
+        }
+        tianyi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "tianyi"]
+        }
+        sougou {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "sougou"]
+        }
+        google {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "google"]
+        }
+        lianxiang {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "lianxiang"]
+        }
+        huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
+        }
+        yiyou {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yiyou"]
+        }
+        shizimao {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "shizimao"]
+        }
+        oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
+        }
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/dependencies'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/README.txt'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude '!META-INF/MANIFEST.MF'
+        exclude 'META-INF/MANIFEST.MF'
+        exclude 'META-INF/maven/com.belerweb/pinyin4j/pom.xml'
+        exclude 'META-INF/maven/com.belerweb/pinyin4j/pom.properties'
+    }
+}
+
+greendao {
+    schemaVersion  40
+    targetGenDir 'src/main/java'
+    daoPackage 'gen.greendao.dao'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.zhaokaiqiang.klog:library:1.5.0'
+    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+
+    //将libs 中开源的jar包替换成一下maven仓库地址,便于统一管理
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.belerweb:pinyin4j:2.5.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.google.code.gson:gson:2.7'
+    //compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'commons-lang:commons-lang:2.6'
+    compile 'org.apache.commons:commons-io:1.3.2'
+    compile 'com.google.zxing:core:3.3.0'
+    //以下为RxJava + Retrofit + Okhttp 封装网络请求所需的库
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.1'
+    // https://github.com/square/retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-jackson:2.1.0'
+    //compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    //compile 'com.zhy:okhttputils:2.6.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    // 使用okhttp3加载图片
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    //log拦截器
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    //greenDAO
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'org.greenrobot:greendao-generator:3.2.0'
+
+    compile 'com.alibaba:fastjson:1.1.54.android'
+    compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    compile 'com.github.wangjiegulu:ShadowViewHelper:1.0.2'
+    //compile 'com.huxq17.xrefreshview:xrefreshview:2.1.9'
+
+    //下载器相关
+    compile 'com.mani:ThinDownloadManager:1.2.5'
+    //支付宝热修复框架
+    //compile 'com.alipay.euler:andfix:0.4.0@aar'
+    compile 'com.facebook.stetho:stetho:1.4.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.4.1'
+
+    //可分组 可展开收起 sticky listview
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    //替换本地library为maven地址,扩展性强的adapter
+    //https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.8'
+    //替换本地library为maven地址,XRecyclerView
+    compile 'com.jcodecraeer:xrecyclerview:1.2.7'
+    //自定义滑动变色的Tab
+    compile 'com.david.gradientuilib:gradientuilibrary:1.0.1'
+
+    //compile 'com.squareup.picasso:picasso:2.5.2'
+    //compile 'cn.bingoogolapple:bga-adapter:1.1.0@aar'
+//##########################################################################################################
+    //compile project(path: ':library-pulltorefresh')
+    compile(name:'library-pulltorefresh-release', ext:'aar')
+    // 自由切换loading+content状态的RelativeLayout
+    //compile project(path: ':library-progresslayout')
+    compile(name:'library-progresslayout-release', ext:'aar')
+    // 轻量级的新手引导操作遮罩提示库
+    //compile project(path: ':library-guideview')
+    compile(name:'library-guideview-release', ext:'aar')
+    //皮肤管理器
+    //compile project(path: ':library-androidskinloader')
+    compile(name:'library-androidskinloader-release', ext:'aar')
+    //IDCard识别库
+    //compile project(path: ':library-idcardocr')
+    compile(name:'library-idcardocr-release', ext:'aar')
+    // 省市区三级联动库
+    //compile project(path: ':library-pickerview')
+    compile(name:'library-pickerview-release', ext:'aar')
+    //compile project(path: ':library-andfix')
+    compile(name:'library-andfix-release', ext:'aar')
+    //compile project(path: ':library-photoviewattacher')
+    //compile(name:'library-photoviewattacher-release', ext:'aar')
+    //compile project(path: ':library-photopicker')
+    //compile(name:'library-photopicker-release', ext:'aar')
+    //compile project(path: ':library-smsobserver')
+    compile(name:'library-smsobserver-release', ext:'aar')
+    //阿里百川反馈
+    compile(name: 'feedbackSdk', ext: 'aar')
+    //compile project(path: ':library-ucropimg')
+    compile(name:'library-ucropimg-release', ext:'aar')
+    //compile project(path: ':library-roundprogress')
+    compile(name:'library-roundprogress-release', ext:'aar')
+    //compile project(path: ':library-bqmm')
+    compile(name:'library-bqmm-release', ext:'aar')
+    //compile project(path: ':library-wximagepicker')
+    compile(name:'library-wximagepicker-release', ext:'aar')
+    //compile project(path: ':library-statusbarutil')
+    compile(name:'library-statusbarutil-release', ext:'aar')
+//##########################################################################################################
+
+    //Android 6.0 运行时权限检查库
+    compile 'pub.devrel:easypermissions:0.2.0'
+    //沉浸化状态栏
+    //compile 'com.jaeger.statusbaruitl:library:1.2.4'
+    // 极致图片压缩库
+    compile 'top.zibin:Luban:1.0.8'
+    //compile 'com.yalantis:ucrop:2.1.2'
+    // 郭霖 大神的数据库litepal
+    compile 'org.litepal.android:core:1.3.2'
+    // 循环加载的loading
+    compile 'com.github.zzz40500:android-shapeLoadingView:1.0.3.2'
+    compile 'com.daasuu:BubbleLayout:1.1.1'
+    //最鲁棒的录音库,Yoohoo客户端总结
+    compile 'com.github.piasy:rxandroidaudio:1.2.5'
+    // 兼容Api21以下的FloatButton 可自由定制样式
+    compile 'com.github.shell-software:fab:1.1.2'
+    compile 'com.lzy.net:okgo:2.0.0'
+    compile 'com.lzy.widget:view-core:0.2.1'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+
+}

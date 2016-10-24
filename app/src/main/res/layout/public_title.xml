@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_5"
+    android:orientation="vertical">
+
+    <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@color/title_bg"
+        skin:enable="true">
+
+        <com.kuaibao.skuaidi.common.view.SkuaidiImageView xmlns:skin="http://schemas.android.com/android/skin"
+            android:id="@+id/left_title_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_icon_back"
+            android:onClick="back"
+            android:paddingBottom="15dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="15dip"
+            android:src="@drawable/icon_back"
+            android:visibility="gone"
+            custom_atts:isClickedChangeBackground="true"
+            skin:enable="true" />
+
+        <TextView
+            android:id="@+id/middle_title_des_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <!-- 右侧按钮-找到设置event -->
+
+        <RelativeLayout
+            android:id="@+id/right_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            skin:enable="true">
+
+            <!-- title右端文字和图片 -->
+
+            <RelativeLayout
+                android:id="@+id/right_more_text_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp">
+
+                <com.kuaibao.skuaidi.common.view.SkuaidiImageView
+                    android:id="@+id/right_more_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/right_more_text"
+                    android:layout_alignTop="@+id/right_more_text"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    custom_atts:isClickedChangeBackground="true"
+                    skin:enable="true" />
+
+                <TextView
+                    android:id="@+id/right_more_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/right_more_image"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <!-- title右端按钮 -->
+
+            <RelativeLayout
+                android:id="@+id/right_morea_btn_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <com.kuaibao.skuaidi.common.view.SkuaidiButton
+                    android:id="@+id/right_more_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_icon_back"
+                    android:clickable="true"
+                    android:paddingBottom="5dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="5dip"
+                    android:textColor="@drawable/selector_title_text"
+                    custom_atts:isClickedChangeBackground="true"
+                    skin:enable="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.smsrecord.RecordSmsSendFailAndNoReceiveActivity">
+    <!--标题-->
+    <include
+        layout="@layout/comm_title2"/>
+    <!--提示-->
+    <TextView
+        android:id="@+id/tv_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_2"
+        android:drawableLeft="@drawable/icon_jinggao"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/icon_jinggao"
+        android:padding="10dp"
+        android:text="@string/record_sendfail_show_three_days_content"
+        android:textColor="@color/gray_1"
+        android:textSize="12sp"/>
+
+    <!--筛选列表-->
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="#00000000"
+        android:scrollbars="none"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="无记录"
+        android:textColor="@color/gray_3"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"/>
+
+    <LinearLayout
+        android:id="@+id/resend_area"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <!--重发短信按钮-->
+        <com.kuaibao.skuaidi.common.view.DrawableLeftWithTextViewCenter
+            android:id="@+id/btn_resend_sms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_chagne_item_gray"
+            android:drawableLeft="@drawable/icon_resend_sms"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/icon_resend_sms"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/record_sendfail_resend_sms"
+            android:textColor="@color/default_green_2"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/gray_4"/>
+        <!--重发云呼按钮-->
+        <com.kuaibao.skuaidi.common.view.DrawableLeftWithTextViewCenter
+            android:id="@+id/btn_resend_cloud"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_chagne_item_gray"
+            android:drawableLeft="@drawable/icon_resend_cloud"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/icon_resend_cloud"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/record_sendfail_resend_cloud"
+            android:textColor="@color/default_green_2"/>
+    </LinearLayout>
+
+</LinearLayout>

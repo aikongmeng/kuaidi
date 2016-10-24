@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp"
+   >
+   
+     <ImageView 
+         android:id="@+id/iv_v"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+          android:src="@drawable/finish_outside_jiantou_right"
+          />
+   <LinearLayout 
+    android:layout_toLeftOf="@id/iv_v"
+    android:layout_marginRight="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+       
+   
+      <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="1234567894561"
+            android:textColor="@color/gray_1"
+            android:textSize="16sp" />
+      
+      <TextView
+                android:id="@+id/tv_tel"
+                android:layout_marginTop="4dp" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_call"
+                android:drawablePadding="4dp"
+               android:text="021-6278746 2922768"
+               android:textColor="@color/gray_3"
+                android:textSize="14sp" />
+      
+      <TextView
+                android:id="@+id/tv_address"
+                 android:layout_marginTop="4dp"
+                 android:drawableLeft="@drawable/icon_location"
+                 android:drawablePadding="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上海市长宁区张虹路168号"
+                android:textColor="@color/gray_3"
+                android:textSize="14sp" />
+</LinearLayout> 
+
+     
+</RelativeLayout>

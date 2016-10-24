@@ -1,0 +1,1 @@
+create table if not exists order_cache(id integer primary key autoincrement,user_name varchar,user_mobile varchar,user_address 						varchar,voice_name varchar,note varchr);

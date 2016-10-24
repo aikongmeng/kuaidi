@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><!--派件列表底部的footerView,页面没有数据是也显示这个footerView-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dispatch_footer_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
+
+    <View
+        android:id="@+id/line_left"
+        android:layout_width="50dp"
+        android:layout_height="0.5dp"
+        android:layout_centerVertical="true"
+        android:alpha="0.8"
+        android:background="@color/green_39b54a"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_yesterday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/line_left"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="点击查看昨日记录"
+        android:textColor="@color/green_39b54a"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/line_right"
+        android:layout_width="50dp"
+        android:layout_height="0.5dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_yesterday"
+        android:alpha="0.8"
+        android:background="@color/green_39b54a" />
+
+</RelativeLayout>

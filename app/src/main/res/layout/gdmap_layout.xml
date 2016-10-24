@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+              xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/ll_online_contracting_srea"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 蒙板 -->
+
+    <RelativeLayout
+        android:id="@+id/GDOnlineMeng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/meng_gd_online_contracting_area"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@color/title_bg" >
+
+        <com.kuaibao.skuaidi.common.view.SkuaidiImageView
+            android:id="@+id/iv_contracting_srea_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+            android:paddingBottom="15dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="15dip"
+            android:src="@drawable/icon_back"
+            custom_atts:isClickedChangeBackground="true" />
+
+        <TextView
+            android:id="@+id/tv_title_contracting_srea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的取派地图"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <com.kuaibao.skuaidi.common.view.SkuaidiImageView
+            android:id="@+id/iv_contracting_srea_more"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_more"
+            custom_atts:isClickedChangeBackground="true" />
+    </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

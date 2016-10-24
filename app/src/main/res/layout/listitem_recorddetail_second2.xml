@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_liuyan_detail_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <!-- 接收时间区域 -->
+
+    <RelativeLayout
+        android:id="@+id/llTimeReceive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <!-- 显示接收时间控件 -->
+
+        <TextView
+            android:id="@+id/tvTimeReceive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_msg_time"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMySend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llTimeReceive"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dip"
+            android:layout_marginTop="20dip"
+            android:paddingLeft="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/rlContentBgSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/imvHeaderSend"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/imvHeaderSend"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <!-- 回复语音时长显示控件 -->
+
+                <TextView
+                    android:id="@+id/tvRecordTimeSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/rlContentText"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:text="0&apos;"
+                    android:textColor="@color/blue_1"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/rlContentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/tvRecordTimeSend"
+                    android:background="@drawable/qipao_bg_green_right1"
+                    android:gravity="right|center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <!-- 回复内容 -->
+
+                    <TextView
+                        android:id="@+id/tvContentSend"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="6dip"
+                        android:paddingTop="4dip"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <!-- 回复语音icon -->
+
+                    <ImageView
+                        android:id="@+id/imvVoiceContentSend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dip"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/y_yuyinbg_bai3"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- 头像 -->
+
+            <ImageView
+                android:id="@+id/imvHeaderSend"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_yonghu" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- 用户回复：接收区域 -->
+
+    <RelativeLayout
+        android:id="@+id/rlCustomReceive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlMySend"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dip"
+            android:layout_marginTop="20dip"
+            android:paddingRight="10dp" >
+
+            <!-- 用户头像 -->
+
+            <ImageView
+                android:id="@+id/imvHeaderReceive"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/icon_yonghu" />
+            <!-- 接收内容区域 -->
+
+            <RelativeLayout
+                android:id="@+id/rlContentBgReceive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imvHeaderReceive"
+                android:background="@drawable/qipao_bg_white_left1"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <!-- 用户语音 -->
+
+                <ImageView
+                    android:id="@+id/imvVoiceContentReceive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/y_yuyinbg3"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imvVoiceContentReceive" >
+
+                    <!-- 回复：回复内容 -->
+
+                    <TextView
+                        android:id="@+id/tvContentReceive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingBottom="3dip"
+                        android:paddingRight="8dip"
+                        android:paddingTop="3dip"
+                        android:text=""
+                        android:textColor="@color/gray_1"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <!-- 客户回复：语音时长控件 -->
+
+            <TextView
+                android:id="@+id/tvRecordTimeReceive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/rlContentBgReceive"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/rlContentBgReceive"
+                android:padding="8dp"
+                android:text="0&apos;"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/ll_poi_list_parent"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:gravity="center_vertical"
+              android:background="@color/white"
+              android:paddingTop="10dp"
+              android:paddingRight="15dp"
+              android:paddingBottom="10dp"
+              android:paddingLeft="15dp"
+              android:layout_height="wrap_content">
+    <com.vlonjatg.progressactivity.ProgressActivity
+        android:id="@+id/progress_pick_poi"
+        progressActivity:loadingProgressBarWidth="26dp"
+        progressActivity:loadingProgressBarHeight="26dp"
+        android:gravity="center"
+        android:layout_width="32dp"
+        android:layout_height="32dp">
+        <ImageView
+            android:id="@+id/iv_pick_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/batch_add_checked"/>
+    </com.vlonjatg.progressactivity.ProgressActivity>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_address_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="虹桥临空.弘基休闲广场"
+        android:paddingBottom="5dp"
+        android:textColor="@color/gray_1"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/tv_address_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="长宁区"
+        android:singleLine="true"
+        android:textColor="@color/gray_3"
+        android:textSize="12sp" />
+</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_liuyan_detail_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <RelativeLayout
+        android:id="@+id/ll_time_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tv_time_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_msg_time"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/recording_center_view_liuyan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ll_time_receive"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/recording_item_liuyan_shape"
+        tools:visibility="visible"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/playorpause_liuyan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/record_play_small" />
+
+        <TextView
+            android:id="@+id/recording_palying_duration_liuyan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/playorpause_liuyan"
+            android:layout_centerVertical="true"
+            tools:text="gggggggggggggg"
+            android:textSize="12sp"
+            android:textColor="@color/gray_2" />
+
+        <TextView
+            android:id="@+id/recording_duration_liuyan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textSize="11sp"
+            android:textColor="@color/gray_3" />
+
+        <View
+            android:id="@+id/view_line_between"
+            android:layout_width="0.5dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/recording_duration_liuyan"
+            android:layout_marginRight="20dp"
+            android:background="@color/gray_4"/>
+
+        <TextView
+            android:id="@+id/tv_file_deleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/view_line_between"
+            android:layout_centerVertical="true"
+            android:text="录音已删除"
+            android:textSize="12sp"
+            android:textColor="@color/red_f74739"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_time_receive"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dip"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/imv_header_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_user_order_px90"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imv_header_receive"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:id="@+id/tv_post_name_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="15202131503"
+                    android:textColor="#989898"
+                    android:textSize="12sp"
+                    android:paddingBottom="4dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/rl_content_bg_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_below="@id/tv_post_name_receive"
+                    android:background="@drawable/qipao_bg_white_left1"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <!-- 用户语音 -->
+
+                    <ImageView
+                        android:id="@+id/imv_voice_content_receive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingBottom="3dip"
+                        android:paddingLeft="8dip"
+                        android:paddingRight="8dip"
+                        android:paddingTop="3dip"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/y_yuyinbg3"
+                        tools:visibility="visible"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/imv_voice_content_receive"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_user_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="3dip"
+                            android:paddingRight="8dip"
+                            android:paddingTop="3dip"
+                            android:text="15202131503"
+                            android:textColor="@color/gray_line"
+                            android:textSize="12sp"
+                            tools:visibility="visible"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_content_receive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_user_info"
+                            android:paddingBottom="5dip"
+                            android:background="@null"
+                            android:paddingRight="8dip"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="5dip"
+                            android:textColor="@color/gray_2"
+                            android:textSize="14sp" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_below="@+id/tv_content_receive"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/gray_4"
+                            tools:visibility="visible"
+                            android:visibility="gone" />
+
+                        <!-- 显示图片 -->
+
+                        <ImageView
+                            android:id="@+id/iv_image_content_receive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view1"
+                            android:layout_centerHorizontal="true"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerInside"
+                            tools:visibility="visible"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_record_time_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/rl_content_bg_receive"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/rl_content_bg_receive"
+                    android:padding="8dp"
+                    android:text="0&apos;"
+                    android:textColor="@color/text_black"
+                    android:textSize="12sp"
+                    tools:visibility="visible"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_receive">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dip"
+            android:paddingLeft="10dp" >
+
+            <ImageView
+                android:id="@+id/imv_header_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_user_order_px90"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/imv_header_send">
+
+                <TextView
+                    android:id="@+id/tv_post_name_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#989898"
+                    android:textSize="12sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="4dp"
+                    />
+
+            <RelativeLayout
+                android:id="@+id/rl_content_bg_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_post_name_send"
+                android:background="@drawable/qipao_bg_green_right1"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <TextView
+                    android:id="@+id/tv_content_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imv_voice_content_send"
+                    android:background="@null"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="15dp"
+                    android:paddingTop="8dip"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+                <!-- 显示图片 -->
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/tv_content_send"
+                    android:background="@color/white"
+                    tools:visibility="visible"
+                    android:visibility="gone" />
+
+                <com.kuaibao.skuaidi.entry.PorterShapeImageView
+                    android:id="@+id/iv_image_content_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view2"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:siShape="@drawable/qipao_bg_green_right1"
+                    app:siSquare="true"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:id="@+id/imv_voice_content_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/y_yuyinbg_bai3"
+                    tools:visibility="visible"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imv_phone_dialog_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_content_send"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="3dip"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_liuyan_tonghua"
+                    tools:visibility="visible"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_record_time_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/rl_content_bg_send"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/rl_content_bg_send"
+                android:padding="8dp"
+                android:text="0&apos;"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                tools:visibility="visible"
+                android:visibility="gone" />
+        </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

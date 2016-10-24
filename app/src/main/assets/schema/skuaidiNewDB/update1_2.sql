@@ -1,0 +1,1 @@
+alter table customer_tobedeleted_id_list add customer_phone varchar;

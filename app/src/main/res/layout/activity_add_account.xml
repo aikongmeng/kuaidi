@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_5"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".personal.setting.accountmanager.AddAccountActivity">
+    <include layout="@layout/comm_title" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:background="@color/gray_4" >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+    <com.kuaibao.skuaidi.activity.view.ClearEditText
+        android:id="@+id/tv_reg_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="账号"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/gray_1"
+        android:textColorHint="@color/gray_3"
+        android:textSize="15sp"
+        android:inputType="phone"
+        android:drawableLeft="@drawable/selector_mobile"
+        android:drawablePadding="10dp"
+        android:background="@drawable/shape_white2"
+        android:longClickable="false"
+        />
+    <include layout="@layout/comm_line" />
+    <com.kuaibao.skuaidi.activity.view.ClearEditText
+        android:id="@+id/et_login_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_white2"
+        android:drawableLeft="@drawable/selector_pwd"
+        android:drawablePadding="10dp"
+        android:hint="@string/pwd_tip"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/gray_1"
+        android:textColorHint="@color/gray_3"
+        android:longClickable="false"
+        android:textSize="15sp" />
+    <include layout="@layout/comm_line" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_base_green_reg_zt"
+            android:padding="10dp"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/bt_forgetPWD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/bt_login"
+            android:layout_marginTop="10dip"
+            android:background="@null"
+            android:gravity="end"
+            android:text="@string/find_pwd"
+            android:textColor="@color/default_green_2"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

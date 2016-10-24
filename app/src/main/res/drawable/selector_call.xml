@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/icon_call_records_dial_active" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/icon_call_records_dial_notactive" android:state_pressed="false"></item>
+    <item android:drawable="@drawable/icon_call_records_dial_active" android:state_enabled="false"></item>
+</selector>

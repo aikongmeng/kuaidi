@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.kuaibao.skuaidi.activity.view.ClearEditText
+        android:id="@+id/edt_user_defined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_white_blackstroke"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:hint="手动输入"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/gray_1"
+        android:textSize="14sp" />
+
+</LinearLayout>

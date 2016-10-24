@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="15dp">
+
+    <!-- 显示接收时间控件 -->
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_msg_time"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/s_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dip"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dip">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/s_header_icon"
+            android:layout_toStartOf="@+id/s_header_icon"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- 回复语音时长显示控件 -->
+
+            <TextView
+                android:id="@+id/s_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:text="0&apos;"
+                android:textColor="@color/gray_2"
+                android:textSize="12sp"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/s_play"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/qipao_bg_green_right1"
+                android:gravity="end|center">
+
+                <!-- 回复内容 -->
+
+                <TextView
+                    android:id="@+id/s_context"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="4dip"
+                    android:text="sadfasfdsafasdfasdfafasfasdfsafdasf"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="visible"/>
+
+                <!-- 回复语音icon -->
+
+                <ImageView
+                    android:id="@+id/s_voice_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/img_des_circle"
+                    android:background="@drawable/y_yuyinbg_bai3"
+                    android:scaleType="centerInside"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 头像 -->
+
+        <ImageView
+            android:id="@+id/s_header_icon"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_yonghu"
+            android:contentDescription="@string/img_des_circle"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/c_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dip"
+        android:layout_marginTop="20dip">
+
+        <!-- 用户头像 -->
+
+        <ImageView
+            android:id="@+id/c_header_icon"
+            android:layout_width="45dip"
+            android:layout_height="45dip"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/icon_yonghu"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/c_header_icon"
+            android:layout_toRightOf="@+id/c_header_icon">
+
+
+            <!-- 接收内容区域 -->
+
+            <LinearLayout
+                android:id="@+id/c_play"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/qipao_bg_white_left1"
+                android:clickable="true"
+                android:focusable="true">
+
+                <!-- 用户语音 -->
+
+                <ImageView
+                    android:id="@+id/c_voice_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/y_yuyinbg3"
+                    android:contentDescription="@string/img_des_circle"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:scaleType="centerInside"
+                    android:visibility="visible"/>
+
+                <!-- 回复：回复内容 -->
+
+                <TextView
+                    android:id="@+id/c_context"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="3dip"
+                    android:text="adfsafafsadasdfasdfasfdasfafdsafasdfadsfasdff"
+                    android:textColor="@color/gray_2"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <!-- 客户回复：语音时长控件 -->
+
+            <TextView
+                android:id="@+id/c_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="0&apos;"
+                android:layout_gravity="center"
+                android:textColor="@color/gray_2"
+                android:textSize="12sp"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

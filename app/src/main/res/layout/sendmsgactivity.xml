@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/comm_title6" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <!-- 短信编辑和短信模板点击按钮区 -->
+
+            <RelativeLayout
+                android:id="@+id/rl_new_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                android:background="@color/white" >
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/gray_4" />
+
+                <RelativeLayout
+                    android:id="@+id/selectModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" >
+
+                    <!-- 按钮说明 -->
+
+                    <TextView
+                        android:id="@+id/hint_addModel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/send_msg_addmodel"
+                        android:textColor="@color/default_green_2"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_sendmsg_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/sendmsg_next"
+                        android:contentDescription="@string/img_des_arrows" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@+id/selectModel"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@color/gray_4" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_desc_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/line3"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white" >
+
+
+                    <EditText
+                        android:id="@+id/et_notify_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/rl_send_message_count_down"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:gravity="top|center_vertical"
+                        android:hint="@string/model_des1"
+                        android:lineSpacingMultiplier="1.2"
+                        android:maxLength="129"
+                        android:textColor="@color/gray_1"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvClearAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/send_msg_text_clearall"
+                        android:gravity="center_vertical"
+                        android:layout_below="@+id/et_notify_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_7"
+                        android:layout_alignParentBottom="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_send_message_count_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_toRightOf="@+id/tvClearAll"
+                        android:gravity="end"
+                        android:paddingBottom="14dp"
+                        android:visibility="visible" >
+
+                        <!-- 发送短信字数 -->
+
+                        <TextView
+                            android:id="@+id/tv_msgWordCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/send_msg_wordcount"
+                            android:textColor="@color/gray_3"
+                            android:textSize="12sp" />
+
+                        <!-- 发送短信条数计费说明控件 -->
+
+                        <TextView
+                            android:id="@+id/send_total_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/tv_msgWordCount"
+                            android:layout_toRightOf="@+id/tv_msgWordCount"
+                            android:singleLine="true"
+                            android:textColor="@color/btn_bg_orange_hover"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <!-- </RelativeLayout> -->
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_below="@+id/rl_desc_msg"
+                    android:background="@color/gray_4" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_new_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray_4" />
+
+                <ListView
+                    android:id="@+id/lv_notify"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/theme_content_bg"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:listSelector="@color/theme_content_bg"
+                    android:scrollbars="none" />
+                <!-- 开关列表 -->
+
+                <LinearLayout
+                    android:id="@+id/switchList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/gray_4" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingEnd="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingStart="10dp" >
+
+                        <TextView
+                            android:id="@+id/switchText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="13dp"
+                            android:layout_marginTop="13dp"
+                            android:drawableLeft="@drawable/all_open"
+                            android:drawablePadding="6dp"
+                            android:drawableStart="@drawable/all_open"
+                            android:gravity="center_vertical"
+                            android:text="@string/send_msg_unfold"
+                            android:textColor="@color/default_green_2"
+                            android:textSize="14sp" />
+                        <!-- </LinearLayout> -->
+
+                        <LinearLayout
+                            android:id="@+id/llSendTiming"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/shape_cancle_yunhu_timing"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingEnd="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingStart="5dp"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:id="@+id/tvSetTimeSend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableEnd="@drawable/icon_yunhu_timing_cancle"
+                                android:drawablePadding="5dp"
+                                android:drawableRight="@drawable/icon_yunhu_timing_cancle"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/blue_7ad2ed"
+                                android:textSize="@dimen/word_size_10sp" />
+                        </LinearLayout>
+                        <!-- 巴枪扫描 -->
+
+                        <LinearLayout
+                            android:id="@+id/llGunScan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginStart="6dp"
+                            android:background="@drawable/shape_cancle_yunhu_timing"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingEnd="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingStart="5dp"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:id="@+id/tvGunScanHint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableEnd="@drawable/icon_yunhu_timing_cancle"
+                                android:drawablePadding="5dp"
+                                android:drawableRight="@drawable/icon_yunhu_timing_cancle"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:text="@string/send_msg_gunscan"
+                                android:textColor="@color/blue_7ad2ed"
+                                android:textSize="@dimen/word_size_10sp" />
+                        </LinearLayout>
+
+                        <!-- 失败自动云呼 -->
+
+                        <LinearLayout
+                            android:id="@+id/llAutoCloudCall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginStart="6dp"
+                            android:background="@drawable/shape_cancle_yunhu_timing"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingEnd="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingStart="5dp"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableEnd="@drawable/icon_yunhu_timing_cancle"
+                                android:drawablePadding="5dp"
+                                android:drawableRight="@drawable/icon_yunhu_timing_cancle"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp"
+                                android:singleLine="true"
+                                android:text="@string/send_msg_auto_cloudcall"
+                                android:textColor="@color/blue_7ad2ed"
+                                android:textSize="@dimen/word_size_10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/gray_4" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp" >
+
+            <ImageView
+                android:id="@+id/iv_MsgMenuIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/msg_menu_icon"
+                android:contentDescription="@string/send_msg_imgdes_menu_btn" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

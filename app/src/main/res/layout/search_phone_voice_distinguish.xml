@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <RelativeLayout
+        android:id="@+id/voice_record_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#f2f2f2"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/ivCloseAnim"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/record_anim_close" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rlAnim"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvTiShi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#99000000"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tvPhoneDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#99000000"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlAnim"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" >
+
+            <ImageView
+                android:id="@+id/ivSpeech"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/record_status_bg1"
+                android:visibility="visible" />
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/record_status"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/voice_recordinglight_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible"
+                android:layout_centerInParent="true" >
+
+                <ImageView
+                    android:id="@+id/voice_recordinglight_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:padding="100dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/voice_ugc_icon_recordinglight"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/voice_recordinglight_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:padding="100dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/voice_ugc_icon_recordinglight"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/voice_recordinglight_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerInParent="true"
+                    android:padding="100dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/voice_ugc_icon_recordinglight"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,1338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.kuaibao.skuaidi"
+          android:installLocation="preferExternal"
+          android:versionCode="66"
+          android:versionName="V5.1.0">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22"/>
+    <!-- 条码设备访问权限 -->
+    <uses-permission android:name="android.permission.BARCODE"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <!-- 荣信把枪权限 -->
+    <uses-permission android:name="android.permission.SERIAL_PORT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <!-- 定位包、导航包需要的额外权限（注：基础权限也需要) -->
+    <!-- 读取通讯录 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+
+    <!-- 容云 -->
+    <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.yuntongxun.ecdemo 替换为自己的包名 -->
+    <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+    <permission
+        android:name="com.kuaibao.skuaidi.permission.RECEIVE_MSG"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.kuaibao.skuaidi.permission.INCOMING_CALL"
+        android:protectionLevel="signature"/>
+    <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.yuntongxun.ecdemo 替换为自己的包名 -->
+    <uses-permission android:name="com.kuaibao.skuaidi.permission.RECEIVE_MSG"/>
+    <!-- 如果没有VOIP功能可以忽略 -->
+    <uses-permission android:name="com.kuaibao.skuaidi.permission.INCOMING_CALL"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <!-- GPS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 拨打电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <!-- 系统Dialog权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+
+    <!-- 蓝牙相关 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- 适配Android N系统必需的ContentProvider写权限声明，写权限包含应用包名 -->
+    <uses-permission android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.baidu.push.example"/>
+
+    <permission
+        android:name="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.baidu.push.example"
+        android:protectionLevel="normal"/>
+
+    <application
+        android:name=".application.SKuaidiApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+        <receiver android:name=".service.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".service.AlarmReceiver"
+            android:process=":alarm">
+            <intent-filter>
+                <action android:name="com.kuaibao.skuaidi.service.AlarmReceiver"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.SplashActivityNew"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Splash_Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="wx389287be6cfdb2fa"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 短信VIP特权开通协议【网页界面】 -->
+        <activity
+            android:name=".activity.VipPrerogativeWebViewActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 动态 启动页界面 -->
+
+        <activity
+            android:name=".activity.StartPageActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 短信VIP特权界面 -->
+        <activity
+            android:name=".activity.VIPPrivilegeActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 显示实名认证照片界面 -->
+        <activity
+            android:name=".activity.ShowImageActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 修改/取消定时发送短信界面 -->
+        <activity
+            android:name=".activity.TimingSendSmsCancelActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 修改/取消定时发送云呼界面 -->
+        <activity
+            android:name=".activity.TimingSendCloudCancelActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 财来网活动页面 -->
+        <activity
+            android:name=".activity.VASCaiLaiActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 添加增值业务详情 -->
+        <activity
+            android:name=".activity.VASAddDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 添加增值业务 -->
+        <activity
+            android:name=".activity.VASAddActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 增值业务界面 -->
+        <activity
+            android:name=".activity.VASActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 云呼记录搜索界面（编号搜索和手机号搜索） -->
+        <activity
+            android:name=".activity.CloudVoiceRecordSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTransparent"/>
+
+        <!-- 短信记录搜索界面（编号搜索和手机号搜索） -->
+        <activity
+            android:name=".activity.SmsRecordSearchActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTransparent"/>
+        <!-- 快递员注册时搜索快递公司 -->
+        <activity
+            android:name=".activity.SearchActivity1"
+            android:screenOrientation="portrait"/>
+        <!-- 二维码扫描界面 -->
+        <activity
+            android:name=".zxing.ui.PayScanQrcodeActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 收款界面 -->
+        <activity
+            android:name=".activity.MakeCollectionsActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 收款记录 -->
+        <activity
+            android:name=".activity.make.realname.CollectionRecordActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 二维码收款 -->
+        <activity
+            android:name=".activity.CollectionBy2DCodeActivity"
+            android:label="@string/title_activity_collection_by2_dcode"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.make.realname.CollectionDetailActivity"
+            android:label="@string/title_activity_collection_detail"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.CollectionAddExpressNoActivity"
+            android:label="@string/title_activity_collection_add_express_no"
+            android:screenOrientation="portrait"/>
+
+        <!-- 短信记录和云呼记录详情界面 -->
+        <activity
+            android:name=".activity.smsrecord.RecordDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <!-- 短信记录列表界面 -->
+        <activity
+            android:name=".activity.smsrecord.SmsRecordActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 发送短信界面 -->
+        <activity
+            android:name=".activity.sendmsg.SendMSGActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"/>
+        <!-- 云呼记录界面 -->
+        <activity
+            android:name=".activity.CloudVoiceRecordActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 添加云呼语音模板界面 -->
+        <activity
+            android:name=".activity.template.sms_yunhu.AddVoiceModelActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 云呼界面 -->
+        <activity
+            android:name=".activity.sendcloudcall.SendYunHuActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.YunhuOutNumSettingActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 历史订单 -->
+        <activity
+            android:name=".activity.HistoryOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.NoSignActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SignAgingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ExpressWayBillManageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.NoticeAddressorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SelectModeActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 分享成功后跳转的页面 -->
+        <activity
+            android:name=".activity.ShareCallbackActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- 添加订单 -->
+        <activity
+            android:name=".activity.AddOrderActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 业务更多 -->
+        <activity
+            android:name=".activity.MoreChannelActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SMSOperationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.MessageLogsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SMSDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.HurryOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".main.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.OrderCenterActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.CreateNewOrderActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.FollowersActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SendBulkSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.BanedRecordersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.MycustomCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.MycustomAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".activity.UpdateAddressorActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ContactActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ConversationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.MakeHelpActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.EthreeInfoAuditActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.EThreeInterfaceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.EThreeShowScanWaybillPicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.EthreeInfoScanActivity"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".sto.etrhee.activity.EThreeSysMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.SMSNotifySwitchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.EThreeCameraActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.ZTOutletsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".qrcode.E3ScanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.EThreeSysSweepRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.EthreeInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3InfoNumberActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3ProofActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3AlbumImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3ProofAddImgActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3AlbumSystemActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3ProofPhotoShowActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3ProofAudioActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3ProofAudioViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3ProofSMSActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.E3ProofSMSDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.OrderTypeInActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.DataScanSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ToolActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.AuditTypeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SelfAuditActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.QrcodeCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.LoadQrcodeCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.MyVantagesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.MyVantagesDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.LoadWebInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.OverareaQueryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.OverareaResultNoAddressActivity"
+            android:label="@string/title_activity_overarea_result_no_address"
+            android:parentActivityName=".activity.OverareaQueryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kuaibao.skuaidi.activity.OverareaQueryActivity"/>
+        </activity>
+        <activity
+            android:name=".activity.FindExpressActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <activity
+            android:name=".activity.ServiceStateActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.OverareaResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ExpressFirmActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ExpressFirmActivity2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.FindExpressResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.CopyOfFindExpressResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.FindExpressExceptionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.PrintBillActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SavePrintPermissionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.SelectCountyActivity"
+            android:screenOrientation="portrait"/>
+        <!-- XXX快递员+店铺名称 -->
+        <activity
+            android:name=".activity.expressShop.MyShopActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.BranchActiviy"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.OrderInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".business.order.OrderNotifyImgActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.PrintExpressBillActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.FindExpressHistoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.LoadWebActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".qrcode.CaptureActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".qrcode.E3ScanDeleteActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.LiuyanCenterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SkuaidiCabinetActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.CreateLiuyanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.LiuyanSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTransparent"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity
+            android:name=".activity.InformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ComplainCenterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ComplainSameOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.LiuyanDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateUnspecified|stateHidden"/>
+        <activity
+            android:name=".activity.LiuyanDetailUploadPicActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.LiuyanChooseMsgActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ChooseDeliveryManActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.DeliverymanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ChildWangdianActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.RoadNumbersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMenuStyleBottom"/>
+        <activity
+            android:name=".activity.FastReplyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMenuStyleBottom"/>
+        <activity
+            android:name=".activity.FunctionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.NoticeCenterActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.NoticeDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.CheckHelpActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 免费发送单条短信 -->
+        <activity
+            android:name=".activity.NotifyDetailSendSingleActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.NotifyImageShowActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.DisclaimerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.ModelActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.template.sms_yunhu.AddModelActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.TrackNoDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.PhoneContactsActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 模板列表拖曳界面 -->
+        <activity
+            android:name=".activity.ModelDragListActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 语音模板列表拖曳界面 -->
+        <activity
+            android:name=".activity.template.sms_yunhu.ModelVoiceDragListActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 快件查询输入单号界面 -->
+        <activity
+            android:name=".activity.FindExpressRuleActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 联系人搜索界面 -->
+        <activity
+            android:name=".activity.NotifySearchPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"/>
+
+        <!-- 快递圈吐槽详情界面 -->
+        <activity
+            android:name=".circle.CircleExpressDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <!-- 外块界面 -->
+        <activity
+            android:name=".activity.OutsideTheBlockActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 相册列表集界面 -->
+        <activity
+            android:name=".activity.AlbumSystemActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 照片列表界面 -->
+        <activity
+            android:name=".activity.AlbumImageActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 照片浏览 -->
+        <activity
+            android:name=".activity.PhotoShowActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 吐槽列表单张照片浏览 -->
+        <activity
+            android:name=".activity.ImagePagerActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 我的资金账户 -->
+        <activity
+            android:name=".activity.wallet.WalletMainActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.wallet.WalletFAQActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.wallet.FundDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 百度授权web界面 -->
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 支付、金额及补贴活动说明 -->
+        <activity
+            android:name=".activity.HuodongDescriptionActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 提现界面 -->
+        <!-- 派费 -->
+        <activity
+            android:name=".activity.DeliveryFeesActivity"
+            android:label="@string/title_activity_delivery_fees"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.DeliveryFeeMenuActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.DeliveryFeeSettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.CashActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- 账单详情 -->
+        <activity
+            android:name=".activity.BillDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 外单详情 -->
+        <activity
+            android:name=".activity.OutSideDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 添加店铺/抢地盘 -->
+        <activity
+            android:name=".activity.AddShopActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 其它店铺 -->
+        <activity
+            android:name=".activity.OutsideAnotherShopActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 人工注册说明界面 -->
+        <activity
+            android:name=".activity.FastRegistActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 显示服务器返回过来的短信通知-从发送短信界面进来 -->
+        <activity
+            android:name=".activity.NotifyShowBroadCastInfoActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 预览我的店铺 -->
+        <activity
+            android:name=".activity.PreviewShopActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 我的收件价格单 界面 -->
+        <activity
+            android:name=".activity.MyReceiptExpressPriceListActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 我的收件价格单添加图片 界面 -->
+        <activity
+            android:name=".activity.MyReceiptExpressPriceListAddImgActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 充值界面 -->
+        <!-- android:windowSoftInputMode="adjustPan" -->
+        <activity
+            android:name=".activity.wallet.TopUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 支付详情界面 -->
+        <activity
+            android:name=".activity.wallet.TopUpDetailActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 提供方法供微信调用 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!-- 微信注册 -->
+        <receiver android:name=".paywx.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
+            </intent-filter>
+        </receiver>
+        <!-- 超派查询-网点列表界面 -->
+        <activity
+            android:name=".activity.OverAreaListActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- 超派查询-网点查询结果界面 -->
+        <activity
+            android:name=".activity.LatticePointAreaActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 超派查询-添加评论界面 -->
+        <activity
+            android:name=".activity.AddCommentActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 超派查询-取派范围界面 -->
+        <activity
+            android:name=".activity.AreasActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.FinishOutSideBlockActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".web.view.WebLoadView"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.make.realname.CollectionAccountDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.make.realname.RealNameRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.make.realname.RealNameRecordSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTransparent"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+
+        <!-- <receiver -->
+        <!-- android:name=".service.WakeReceiver" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.wake.gray"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+        <service
+            android:name=".service.LanOrPieService"
+            android:exported="false"/>
+        <service
+            android:name=".service.OnlineService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":OnlineService"/>
+        <service
+            android:name=".service.OnlineService$GrayInnerService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":OnlineService"/>
+
+        <!-- <service -->
+        <!-- android:name="com.kuaibao.skuaidi.service.WakeReceiver$WakeNotifyService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" /> -->
+
+
+        <!-- <service -->
+        <!-- android:name="com.kuaibao.skuaidi.service.WakeReceiver$WakeGrayInnerService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" /> -->
+        <service android:name=".service.YuhuOutNumSettingStategetService"/>
+        <!-- 百度推送相关 -->
+        <!-- push service rich media display -->
+        <activity
+            android:name="com.baidu.android.pushservice.richmedia.MediaViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="MediaViewActivity"/>
+        <activity
+            android:name="com.baidu.android.pushservice.richmedia.MediaListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="MediaListActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".recorder.SoundRecorderPreferenceActivity"
+            android:label="@string/preferences_title"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.NoTitleBar"/>
+
+        <receiver android:name=".service.MyPushMessageReceiver">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.MESSAGE"/>
+                <action android:name="com.baidu.android.pushservice.action.RECEIVE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.CLICK"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.PushServiceReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.baidu.android.pushservice.action.notification.SHOW"/>
+                <action android:name="com.baidu.android.pushservice.action.media.CLICK"/>
+                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.baidu.android.pushservice.RegistrationReceiver"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.METHOD"/>
+                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.baidu.android.pushservice.PushService"
+            android:exported="true"
+            android:process=":bdservice_v1">
+            <intent-filter>
+                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.baidu.android.pushservice.CommandService"
+            android:exported="true"/>
+
+        <!-- 适配Android N系统必需的ContentProvider声明，写权限包含应用包名 -->
+        <provider
+            android:name="com.baidu.android.pushservice.PushInfoProvider"
+            android:authorities="com.baidu.push.example.bdpush"
+            android:exported="true"
+            android:protectionLevel="signature"
+            android:writePermission="baidu.push.permission.WRITE_PUSHINFOPROVIDER.com.baidu.push.example"/>
+
+        <service android:name=".service.BackgroundUploadService"/>
+
+        <!-- 支付宝支付 -->
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <!-- alipay sdk end -->
+
+
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="Sbp57irHBUAtarFiRMKpcbfM"/> -->
+
+
+        <!-- 友盟反馈 -->
+        <activity android:name="com.umeng.fb.ConversationActivity"/>
+        <activity android:name="com.umeng.fb.ContactActivity"/>
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <!-- <activity -->
+        <!-- android:name="com.umeng.socialize.view.ShareActivity" -->
+        <!-- android:configChanges="orientation|keyboard" -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- android:noHistory="true" -->
+        <!-- android:theme="@style/Theme.UMDialog" -->
+        <!-- android:windowSoftInputMode="stateVisible|adjustResize"/> -->
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent201181226"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 科大讯飞语音识别 -->
+        <!-- 唯一标识应用 -->
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="55e4fb78"/>
+        <!-- 科大讯飞语音识别统计渠道 -->
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="yingyonghui"/>
+
+        <!-- 友盟自动更新服务 -->
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:process=":DownloadingService"/>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 友盟APPKEY和渠道 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="${UMENG_APPKEY_VALUE}"/>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="9c757a194b9522d847ce579b1b52d501"/>
+
+        <service
+            android:name="com.amap.api.location.APSService"
+            android:enabled="true"
+            android:process=":remote"/>
+
+        <activity
+            android:name=".business.nettelephone.NetTelePhoneActivity"
+            android:label="@string/title_activity_net_tele_phone"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- <service android:name=".service.DialWheelService"/> -->
+
+
+        <!-- *****************************ECSDK核心服务类 （必须配置）Start******************************************** -->
+        <!-- SDK核心服务配置(必选配置) -->
+        <service
+            android:name="com.yuntongxun.ecsdk.ECClientService"
+            android:enabled="true"
+            android:process=":push"/>
+        <service
+            android:name="com.yuntongxun.ecsdk.ECClientService$InnerService"
+            android:enabled="true"
+            android:process=":push"/>
+        <!-- 以下两项为SDK事件提醒广播(必选配置) -->
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$AlarmReceiver"
+            android:process=":push"/>
+        <!-- v5.1.9r增加配置选项(必选配置) -->
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.Alarm"
+            android:exported="false"
+            android:process=":push"/>
+        <!-- SDK网络改变广播(必选配置) -->
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$ConnectionReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <!-- SDK广播通知配置（开机广播） -->
+        <!-- 可选广播、如果应用想做开机重启，可以实现该广播通知即可 -->
+        <receiver
+            android:name="com.yuntongxun.ecsdk.booter.CCPReceivers$BootReceiver"
+            android:process=":push">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <!-- 配置SDK消息通知广播 ,SDK通知会分三种提醒方式 -->
+        <!-- 1、直接通过设置的回调接口（OnChatReceiveListener）Push给应用 -->
+        <!-- 2、如果应用没有设置回调接口则采用（BroadcastReceiver）广播通知（v5.1.8版本）此时如果应用处于未运行状态则会直接唤醒应用处理 -->
+        <!-- 3、如果应用未处于运行状态并且不想被唤醒应用运行则采用状态栏通知处理（SDK直接提醒，不会通知应用）,比如调用 -->
+        <!-- ECDevice#logout(ECDevice.NotifyMode, ECDevice.OnLogoutListener)退出接口传入后台接收消息才会有提醒 -->
+        <!-- 注意：以上在a和b的场景下，SDK都会将消息直接给应用处理，只有在c的情况SDK才会直接处理消息提醒，所以应用需要处理a和b两种情况 -->
+        <!-- 声明自定义通知的广播接收器，第三方 APP 集成时，action 中的 com.yuntongxun.ecdemo 请替换为自己的包名 -->
+        <!-- 需要权限声明 <uses-permission android:name="com.yuntongxun.ecdemo.permission.RECEIVE_MSG"/> -->
+        <!-- 如果没有VOIP功能可以忽略 -->
+        <!-- 需要权限声明 <uses-permission android:name="com.yuntongxun.ecdemo.permission.INCOMING_CALL"/> -->
+
+
+        <!-- <receiver -->
+        <!-- android:name=".service.YuntxNotifyReceiver" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- 接收push消息 -->
+        <!-- action匹配规则{packageName + ".action" + "功能"} -->
+        <!-- <action android:name="com.yuntongxun.ecdemo.action.VOIP_CALL" /> -->
+        <!-- <action android:name="com.yuntongxun.ecdemo.action.MESSAGE" /> -->
+        <!-- <action android:name="com.yuntongxun.ecdemo.action.NOTIFICATION_CLICK" /> -->
+        <!-- <action android:name="com.yuntongxun.ecdemo.action.PERSON_VERSION" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- 应用处理程序逻辑服务 -->
+        <!-- <service android:name=".service.YuntxNotifyReceiver$NotifyService" /> -->
+        <!-- *****************************ECSDK核心服务类 End******************************************* -->
+        <activity
+            android:name=".business.nettelephone.SKuaidiVoIPCallActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/title_activity_skuaidi_vo_ipcall"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name=".business.nettelephone.calllog.SKuaidiNetCallLogActivity"
+            android:label="@string/title_activity_skuaidi_net_call_log"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.AdsShowActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.DispatchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.AddTagActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.DispatchSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTransparent"/>
+
+        <service
+            android:name=".service.MyAudioCheckService"
+            android:exported="false"/>
+        <service
+            android:name=".service.SplashVersionCheckService"
+            android:exported="false"/>
+        <service
+            android:name=".service.AudioOnLinePlayService"
+            android:exported="false"/>
+
+        <!-- 友盟统计渠道 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}"/>
+
+        <!-- android:theme="@style/AppCompatActivity" -->
+        <activity
+            android:name=".activity.recordcount.sms_yunhu.CountRecordsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.recordcount.sms_yunhu.OldRecordsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.recordcount.sms_yunhu.OldRecordsListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".application.DexActivity"
+            android:launchMode="singleTask"
+            android:process=":dex"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeBlue"/>
+        <activity
+            android:name=".dispatch.activity.SignActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.ThirdSignActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".dispatch.activity.ProblemActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.LanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.etrhee.activity.PieActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.AddMultiplePhoneNumberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".dispatch.activity.AddSinglePhoneNumberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <!-- 云呼显号设置修改号码界面 -->
+        <activity
+            android:name=".activity.YunhuOutNumSettingModifyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.recordcount.sms_yunhu.OldRecordsDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.ZTSignActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.ZTSingleSignActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 【短信记录】发送失败和未取件记录界面 -->
+        <activity
+            android:name=".activity.smsrecord.RecordSmsSendFailAndNoReceiveActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 【短信记录】选择发送失败和未取件记录重发短信或去呼界面 -->
+        <activity android:name=".activity.smsrecord.RecordSendSmsSelectActivity"/>
+        <activity
+            android:name=".sto.etrhee.sysmanager.BanchWeighingActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 【云呼记录】发送失败和未取件记录界面 -->
+        <activity android:name=".activity.cloudcallrecord.RecordCloudCallSendFailAndNoReceiveActivity"/>
+        <!-- 【云呼记录】选择发送失败和未取件记录重发短信或去呼界面 -->
+        <activity android:name=".activity.cloudcallrecord.RecordCloudCallSelectActivity"/>
+        <!-- 【批量签收发短信】 -->
+        <activity android:name=".activity.sendmsg.SendMsgBachSignActivity"/>
+        <activity
+            android:name=".dispatch.activity.SignWithScanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.ZTSignPicPreviewActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 上传云呼语音界面 -->
+        <activity
+            android:name=".activity.template.sms_yunhu.UploadTemplateCloudCallActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.setting.accountmanager.AccountManagerActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 设置短信模板类型界面-短信类型保存 -->
+        <activity android:name=".activity.sendmsg.SettingTemplatePasswordTypeActivity"/>
+        <!-- 设置短信模板密码界面-输入密码 -->
+        <activity android:name=".activity.sendmsg.SettingTemplatePasswordActivity"/>
+        <!-- 派件发云呼功能界面 -->
+        <activity
+            android:name=".activity.sendcloudcall.SendCloudCallBachSignActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".personal.setting.accountmanager.AddAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.ethree2.E3ZTAccountLoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.ethree2.E3ZTRegActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".sto.ethree2.E3StoChooseAccountActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 云呼历史记录查询列表 -->
+        <activity
+            android:name=".activity.recordcount.sms_yunhu.HistoryCloudCallListActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 云呼历史记录查询详情 -->
+        <activity
+            android:name=".activity.recordcount.sms_yunhu.HistoryCloudCallDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.make.realname.RealNameInputActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.picksendmapmanager.PickAndSendMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing"/>
+        <activity
+            android:name=".activity.picksendmapmanager.ReviewAllPointActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.CommonWebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".customer.MyCustomManageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".customer.MyCustomCheckActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".customer.BanedRecordersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+
+        <service
+            android:name=".customer.service.CustomService"
+            android:exported="false"/>
+
+        <activity
+            android:name=".personal.personinfo.ReviewInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.personinfo.UpdateInfoStep1Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.setting.SettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.setting.aboutus.AboutusAcitivty"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.setting.aboutus.ContactUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.setting.TelePreferActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.personinfo.RegisterOrModifyInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.setting.accountsecurity.AccountSecurityActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.setting.accountsecurity.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"/>
+        <activity
+            android:name=".activity.scan_mobile.tesseract.ui.TesseractMobileActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.personinfo.CompleteUserInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.personinfo.authentication.RealNameAuthActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".dispatch.activity.ShowSignResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.personinfo.IQRCodeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.personinfo.ISignActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".readidcard.IDCardInfoReaderActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".readidcard.PreviewActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".dispatch.activity.PackageMapActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.personinfo.register.RegisterSuccessActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".personal.personinfo.querybranch.SelectBranchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".business.order.RecordOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.scan_mobile.GunScanActivity"
+            android:screenOrientation="portrait"/>
+        <!--<activity-->
+            <!--android:name=".circle.PostMomentActivity"-->
+            <!--android:screenOrientation="portrait"/>-->
+        <activity
+            android:name=".circle.PostMomentActivityV2"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".activity.make.realname.RealNameInputLocalActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.ShopMigrateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTransparent"/>
+        <activity
+            android:name=".business.nettelephone.calllog.ICallLogManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <receiver android:name=".service.NetWorkStateReceiver">
+                 
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.make.realname.CollectionDetailOfflineActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".main.PermissionGuideActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+    </application>
+
+</manifest>

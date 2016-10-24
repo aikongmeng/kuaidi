@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarStyle="outsideInset"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/ll_common_title"
+        layout="@layout/comm_title2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/ll_common_title"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+            <TextView
+                android:id="@+id/tv_info_tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/gray_2"
+                android:text="方式一：手动输入完善信息"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_info_type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_info_tag1"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="立即创建"
+                android:drawablePadding="8dp"
+                android:textColor="@color/gray_2"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/create_order_icon"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/iv_line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/tv_info_type1"
+                android:src="@drawable/line_icon"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/tv_info_tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/iv_line1"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/gray_2"
+                android:text="方式二：邀请客户完善信息"
+                android:textSize="16sp"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_info_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/tv_info_tag2"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/tv_info_weixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/gray_1"
+                    android:text="微信好友"
+                    android:gravity="center"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@drawable/order_wechat_icon"/>
+
+                <TextView
+                    android:id="@+id/tv_info_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:layout_toRightOf="@id/tv_info_weixin"
+                    android:textSize="12dp"
+                    android:textColor="@color/gray_1"
+                    android:text="手机QQ"
+                    android:gravity="center"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@drawable/order_qq_icon"/>
+
+                <TextView
+                    android:id="@+id/tv_info_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_info_qq"
+                    android:textSize="12dp"
+                    android:textColor="@color/gray_1"
+                    android:text="短信"
+                    android:gravity="center"
+                    android:drawablePadding="8dp"
+                    android:drawableTop="@drawable/order_message_icon"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/rl_info_tag"
+                android:src="@drawable/line_icon"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/tv_info_tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@id/iv_line2"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/gray_2"
+                android:text="方式三：用户面对面完善信息"
+                android:textSize="16sp"/>
+
+            <include
+                android:id="@+id/ll_qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/tv_info_tag3"
+                android:layout_centerHorizontal="true"
+                layout="@layout/show_qrcode_window_layout"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_qrcode"
+                android:textColor="@color/gray_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"
+                android:text="请客户扫描上方二维码并填写"/>
+
+            </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

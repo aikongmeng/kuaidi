@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_order_info"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_orderitem_bg"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/fl_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pai_qipao"
+            android:padding="7dip"
+            android:text="@string/tv_des"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fl_des" >
+
+        <!-- 是否签收标记按钮 -->
+        <ImageView
+            android:id="@+id/imv_service_icon"
+            android:layout_width="42dip"
+            android:layout_height="42dip"
+            android:layout_centerVertical="true"
+             />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imv_service_icon"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tv_deliver_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/etc"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/tv_deliver_no"
+                android:text="@string/ordernumber_one"
+                android:textColor="@color/text_sender_adress"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_deliver_no"
+                android:layout_below="@+id/tv_deliver_no"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/ordernumber_two"
+                android:textColor="@color/text_sender_adress"
+                android:textSize="12sp" />
+            
+            <TextView 
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_status"
+                android:text="@string/status_get"
+                android:layout_marginRight="5dp"
+                android:textSize="12sp"
+                android:layout_alignBottom="@+id/iv_status"/>
+
+            <ImageView 
+                android:id="@+id/iv_status"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tv_time"
+                android:layout_alignBottom="@+id/tv_mobile"
+                android:background="@drawable/select_deliver_gou_cu"
+                android:layout_alignParentRight="true"  />
+            
+            <TextView
+                android:id="@+id/tv_status2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_mobile"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/dash_line"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

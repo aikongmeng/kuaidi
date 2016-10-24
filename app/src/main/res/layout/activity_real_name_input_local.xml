@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:notify="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_real_name_input_local"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/comm_title2"/>
+
+    <com.kuaibao.skuaidi.common.view.SkuaidiNotifyTextVIew
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:textColor="@color/gray_1"
+        android:textSize="12sp"
+        notify:leftDrawable="@drawable/icon_warning_notify"
+        notify:notify="实名寄递信息已对接国家邮政总局实名信息数据库"
+        notify:rightDrawable="@null"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/gray_4"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/tv_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="运&#160;&#160;单&#160;&#160;号"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray_2"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/et_order"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:textColor="@color/gray_1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@color/white"
+            android:layout_toRightOf="@+id/tv_order_title"
+            android:layout_toEndOf="@+id/tv_order_title"
+            android:layout_toLeftOf="@+id/iv_scan"
+            android:layout_toStartOf="@+id/iv_scan"/>
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/icon_scan2"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_gather_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份信息"
+            android:textColor="@color/gray_2"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_gather_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@+id/tv_gather_title"
+            android:layout_toEndOf="@+id/tv_gather_title"
+            android:textColor="@color/gray_1"/>
+
+        <ImageView
+            android:id="@+id/iv_gather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/icon_camera"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <include
+            layout="@layout/view_next"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reply_list">
+        <item>9:00-12:00取件</item>
+        <item>15:00-19:00取件</item>
+        <item>19:00-21:00取件</item>
+    </string-array>
+    
+</resources>

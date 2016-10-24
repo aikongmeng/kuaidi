@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:progressActivity="http://schemas.android.com/apk/res-auto"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_poi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建滔商业广场"
+            android:textColor="@color/text_black"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_poi_descrition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长宁区"
+            android:layout_marginTop="2dp"
+            android:singleLine="true"
+            android:textColor="@color/gray_3"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <com.vlonjatg.progressactivity.ProgressActivity
+        android:id="@+id/progress_delete_poi"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:gravity="center"
+        progressActivity:loadingProgressBarWidth="30dp"
+        progressActivity:loadingProgressBarHeight="30dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/takerange_cancle_map"/>
+    </com.vlonjatg.progressactivity.ProgressActivity>
+
+
+</LinearLayout>

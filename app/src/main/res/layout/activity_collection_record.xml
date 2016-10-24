@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/comm_title2" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_fee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tv_pay_collection_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:text="上缴收件费"
+            android:textColor="@color/text_green_one"
+            android:drawableLeft="@drawable/icon_question_upload_other"
+            android:drawablePadding="8dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@id/rl_pay_fee"
+        android:background="@color/gray_5"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_collection_times"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="@string/text_collection_times"
+            android:textColor="@color/gray_1"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_collection_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:paddingRight="5dp"
+            android:text="@string/text_collection_amount"
+            android:textColor="@color/gray_1"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_online_collection_times"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:paddingRight="5dp"
+            android:text="@string/text_online_collection_times"
+            android:textColor="@color/gray_1"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tv_online_collection_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|right"
+            android:paddingRight="5dp"
+            android:text="@string/text_online_collection_amount"
+            android:textColor="@color/gray_1"
+            android:textSize="12dp" />
+    </LinearLayout>
+      <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@id/ll_bottom"
+            android:background="@color/gray_4" />
+    
+    <com.kuaibao.skuaidi.activity.view.PullToRefreshView
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view1"
+        android:layout_below="@id/layout_title"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/btn_gray1"
+            android:dividerHeight="0.5dp"
+            android:listSelector="#00000000" />
+    </com.kuaibao.skuaidi.activity.view.PullToRefreshView>
+
+</RelativeLayout>

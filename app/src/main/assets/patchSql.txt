@@ -1,0 +1,6 @@
+alter table circleexpresstucaoinfo add message varchar
+alter table circleexpresstucaoinfo add pic varchar
+alter table CallRecordingMp3 add cacheOrderId integer
+alter table CustomerCallLog add isCanAddOrder integer
+alter table CustomerCallLog add isCanAddMSG integer
+

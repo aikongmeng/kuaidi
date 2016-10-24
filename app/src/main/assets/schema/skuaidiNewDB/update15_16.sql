@@ -1,0 +1,1 @@
+alter table E3_order add phone_number varchar;

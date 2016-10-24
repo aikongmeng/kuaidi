@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register_success"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kuaibao.skuaidi.personal.personinfo.register.RegisterSuccessActivity">
+    <include layout="@layout/comm_title"
+             android:id="@+id/include"/>
+    <ScrollView
+        android:layout_below="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_5"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="49dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="恭喜您!"
+                    android:textColor="@color/default_green_2"
+                    android:textSize="18sp"
+                    android:drawablePadding="20dp"
+                    android:drawableTop="@drawable/icon_register_success"
+                    />
+                <TextView
+                    android:id="@+id/tv_register_phone"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13661964640注册成功!"
+                    android:textColor="@color/gray_2"
+                    android:textSize="15sp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="100dp"
+                    android:paddingRight="100dp"
+                    android:paddingTop="20dp">
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selector_base_green_reg_zt"
+                        android:padding="10dp"
+                        android:text="去首页"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/gray_4"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <LinearLayout
+                    android:id="@+id/tv_go_picksend"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置取派范围"
+                        android:drawableTop="@drawable/icon_register_success_send"
+                        android:drawablePadding="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/gray_1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置后,方便客户找到您"
+                        android:textSize="12sp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/gray_3"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="立即设置"
+                        android:textSize="12sp"
+                        android:drawableRight="@drawable/arrow_right_1"
+                        android:drawablePadding="4dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/default_green_2"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_4"/>
+
+                <LinearLayout
+                    android:id="@+id/tv_go_realname"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="实名认证"
+                        android:drawableTop="@drawable/icon_register_success_realname"
+                        android:drawablePadding="15dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/gray_1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="认证成功后,账号更安全"
+                        android:textSize="12sp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/gray_3"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="立即认证"
+                        android:textSize="12sp"
+                        android:drawableRight="@drawable/arrow_right_1"
+                        android:drawablePadding="4dp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/default_green_2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_4"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

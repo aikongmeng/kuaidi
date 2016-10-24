@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.OverareaQueryActivity" >
+    <include layout="@layout/comm_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+ <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+        <LinearLayout
+            android:id="@+id/ll_area"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            android:onClick="chooseArea"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_location_big"
+                android:scaleType="centerInside"
+                />
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@null"
+                android:textColorHint="@color/gray_3"
+                android:hint="@string/choose_area"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_overarea_query"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/finish_outside_jiantou_right" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+
+       <!--  <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_morebg_bottom"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/icon_dizi"
+                android:scaleType="centerInside"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:hint="@string/fill_adress"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/bt_delete_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/et_address"
+                    android:layout_alignRight="@+id/et_address"
+                    android:layout_alignTop="@+id/et_address"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_btn_delete"
+                    android:onClick="deleteAddress"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout> -->
+
+       <com.kuaibao.skuaidi.common.view.SkuaidiButton
+            android:id="@+id/bt_overarea_query"
+            custom_atts:isClickedChangeBackground="true" 
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            custom_atts:coners="coners_all"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+             android:background="@drawable/selector_base_green_qianse1"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:onClick="overareaQuery"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/query"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+    
+    
+
+</LinearLayout>

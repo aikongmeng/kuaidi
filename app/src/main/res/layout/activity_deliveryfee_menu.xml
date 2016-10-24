@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_5">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/comm_title2" />
+
+    <LinearLayout
+        android:id="@+id/ll_top_total"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_below="@id/layout_title"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_zongbu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/headquarters_icon"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/iv_zongbu"
+                android:layout_marginLeft="15dp">
+            <TextView
+                android:id="@+id/tv_zong_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="今日总部直发"
+                android:textSize="14sp"
+                android:textColor="@color/gray_1"/>
+
+            <TextView
+                android:id="@+id/tv_today_zong_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_zong_fee"
+                android:layout_marginTop="6dp"
+                android:text="0.00"
+                android:textSize="12dp"
+                android:textColor="@color/gray_3"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="80dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_wangdian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/branch_icon"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_wangdian"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_wangdian_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="今日网点直发"
+                android:textSize="14sp"
+                android:textColor="@color/gray_1"/>
+
+            <TextView
+                android:id="@+id/tv_today_wangdian_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_wangdian_fee"
+                android:layout_marginTop="6dp"
+                android:text="0.00"
+                android:textSize="12sp"
+                android:textColor="@color/gray_3"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_zong_detail"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/ll_top_total"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总部直发清单"
+            android:textSize="15sp"
+            android:textColor="@color/gray_1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/finish_outside_jiantou_right"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wangdian_detail"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="1dp"
+        android:padding="15dp"
+        android:layout_below="@id/rl_zong_detail"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网点直发清单"
+            android:textSize="15sp"
+            android:textColor="@color/gray_1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/finish_outside_jiantou_right"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_check_detail"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginTop="1dp"
+        android:padding="15dp"
+        android:layout_below="@id/rl_wangdian_detail"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="派费对账单"
+            android:textSize="15sp"
+            android:textColor="@color/gray_1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/finish_outside_jiantou_right"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_delivery_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="派费说明"
+            android:textSize="12sp"
+            android:textColor="@color/light_green1"/>
+
+    </RelativeLayout>
+</RelativeLayout>

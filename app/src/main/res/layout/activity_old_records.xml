@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_5"
+              android:orientation="vertical"
+              tools:context="com.kuaibao.skuaidi.activity.recordcount.sms_yunhu.OldRecordsActivity">
+
+    <include layout="@layout/comm_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF3BB"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingEnd="0dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="0dp"
+        android:paddingStart="15dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/icon_jinggao"/>
+
+        <TextView
+            android:id="@+id/tv_count_record_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/count_record_des"
+            android:textColor="#333333"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginBottom="15dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_records_starttime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_listitem_common"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_records_starttime_titile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="选择时间"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_records_starttime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_toEndOf="@+id/tv_records_starttime_titile"
+                android:layout_toRightOf="@+id/tv_records_starttime_titile"
+                android:gravity="center_vertical|end"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:drawableRight="@drawable/finish_outside_jiantou_right"
+                android:drawableEnd="@drawable/finish_outside_jiantou_right"
+                android:drawablePadding="15dp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_records_etphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_records_etphone_titile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="客户手机号码    "
+                android:textColor="@color/gray_2"
+                android:textSize="15sp"
+                />
+
+            <EditText
+                android:id="@+id/tv_records_etphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toEndOf="@+id/tv_records_etphone_titile"
+                android:layout_toRightOf="@+id/tv_records_etphone_titile"
+                android:background="@null"
+                android:hint="请输入要查询的手机号码"
+                android:inputType="phone"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/gray_1"
+                android:textColorHint="@color/gray_3"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_records_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@null"
+        android:clickable="true">
+
+        <Button
+            android:id="@+id/bt_chaxun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_base_green_reg_zt"
+            android:padding="10dp"
+            android:text="查询"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+</LinearLayout>

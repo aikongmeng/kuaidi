@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+              xmlns:skin="http://schemas.android.com/android/skin"
+              android:id="@+id/ll_title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/theme_content_bg"
+              android:orientation="vertical">
+
+    <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+        android:id="@+id/srlTitle2"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@color/title_bg"
+        skin:enable="true">
+
+        <com.kuaibao.skuaidi.common.view.SkuaidiImageView
+            xmlns:skin="http://schemas.android.com/android/skin"
+            android:id="@+id/iv_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_icon_back"
+            android:onClick="back"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/icon_back"
+            custom_atts:isClickedChangeBackground="true"
+            skin:enable="true"/>
+
+        <TextView
+            android:id="@+id/tv_title_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="15"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <ImageView
+            android:id="@+id/title_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_title_des"
+            android:layout_toEndOf="@+id/tv_title_des"
+            android:layout_toRightOf="@+id/tv_title_des"
+            android:background="@drawable/icon_vip"
+            android:visibility="gone"/>
+
+        <com.kuaibao.skuaidi.common.view.SkuaidiTextView
+            xmlns:skin="http://schemas.android.com/android/skin"
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_icon_back"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_more"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            custom_atts:isClickedChangeBackground="true"
+            skin:enable="true"/>
+    </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+</LinearLayout>

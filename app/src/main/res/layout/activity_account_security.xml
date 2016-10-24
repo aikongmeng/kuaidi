@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_content_bg"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/comm_title2"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray_4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_account_tel"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp"
+                android:text="账号"/>
+
+            <TextView
+                android:id="@+id/tv_account_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:textSize="16sp"
+                android:textColor="@color/gray_3"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_real_info"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingLeft="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp"
+                android:text="实名信息"/>
+
+            <ImageView
+                android:id="@+id/iv_array_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/finish_outside_jiantou_right"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/tv_real_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_array_right"
+                android:layout_centerVertical="true"
+                android:textSize="16sp"
+                android:textColor="@color/gray_3"
+                android:text="未认证"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_5"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:textSize="12sp"
+            android:textColor="@color/gray_3"
+            android:text="实名认证后可大幅提高账户的安全性"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_change_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingLeft="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp"
+                android:text="修改登录密码"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/finish_outside_jiantou_right"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_destroy_account"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingLeft="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp"
+                android:text="注销账户"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/finish_outside_jiantou_right"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+    </LinearLayout>
+
+</LinearLayout>

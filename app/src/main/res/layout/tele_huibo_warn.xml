@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:paddingTop="10dp"
+              android:paddingBottom="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/huibo_warn_title"
+    android:textSize="16sp"
+    android:textColor="@color/gray_2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/huibo_warn_description"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/gray_3"/>
+    <CheckBox
+        android:layout_gravity="right"
+        android:id="@+id/select_no_warn_again"
+        style="@style/CustomCheckboxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="  不再提示"
+        android:textColor="@color/red"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_terminal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/express_icon"/>
+
+        <TextView
+            android:id="@+id/tv_terminal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="货站名称"
+            android:textSize="16sp"
+            android:textColor="@color/gray_1"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/iv_terminal_name"
+            android:layout_toEndOf="@+id/iv_terminal_name" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"
+        android:layout_marginLeft="45dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iv_terminal_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@drawable/address_icon"/>
+
+        <TextView
+            android:id="@+id/tv_terminal_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_terminal_address"
+            android:layout_centerVertical="true"
+            android:text="货站地址"
+            android:textSize="14sp"
+            android:textColor="@color/gray_2"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"
+        android:layout_marginLeft="15dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:orientation="horizontal">
+        
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+            
+            <ImageView
+                android:id="@+id/iv_terminal_address_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/big_red_icon"/>
+
+            <TextView
+                android:id="@+id/tv_terminal_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/iv_terminal_address_big"
+                android:layout_centerHorizontal="true"
+                android:text="有少量空间"
+                android:textSize="10sp"
+                android:textColor="@color/gray_2"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="18dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iv_terminal_address_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/centre_red_icon"/>
+
+            <TextView
+                android:id="@+id/tv_terminal_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/iv_terminal_address_middle"
+                android:layout_centerHorizontal="true"
+                android:text="有少量空间"
+                android:textSize="10sp"
+                android:textColor="@color/gray_2"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="18dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iv_terminal_address_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/small_red_icon"/>
+
+            <TextView
+                android:id="@+id/tv_terminal_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/iv_terminal_address_small"
+                android:layout_centerHorizontal="true"
+                android:text="有少量空间"
+                android:textSize="10sp"
+                android:textColor="@color/gray_2"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="18dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/iv_terminal_address_micro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/micro_red_icon"/>
+
+            <TextView
+                android:id="@+id/tv_terminal_micro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/iv_terminal_address_micro"
+                android:layout_centerHorizontal="true"
+                android:text="有少量空间"
+                android:textSize="10sp"
+                android:textColor="@color/gray_2"/>
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gray_5"/>
+
+
+</LinearLayout>

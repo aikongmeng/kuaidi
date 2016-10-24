@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_post_moment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.kuaibao.skuaidi.circle.PostMomentActivityV2">
+    <include
+        android:id="@+id/title"
+        layout="@layout/comm_title2" />
+    <EditText
+        android:id="@+id/et_add_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/white"
+        android:gravity="left"
+        android:hint="@string/et_add_content"
+        android:maxLength="250"
+        android:padding="15dp"
+        android:textColor="@color/text_gray3"
+        android:layout_below="@id/title"
+        android:textSize="16sp" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/et_add_content"
+        android:id="@+id/recyclerView_nine_img"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:spanCount="3"
+        tools:listitem="@layout/list_item_image"/>
+</RelativeLayout>

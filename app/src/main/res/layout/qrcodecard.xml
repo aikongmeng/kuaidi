@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- @author 顾冬冬 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/comm_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 模块1 -->
+
+            <RelativeLayout
+                android:id="@+id/ll_more_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="15dp" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_head"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true" >
+
+                    <ImageView
+                        android:id="@+id/imv_defalt_head"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                    <!--<com.kuaibao.skuaidi.activity.view.CircularImage-->
+                        <!--android:id="@+id/ci_user_photo"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent" />-->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_more_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dip"
+                    android:layout_toRightOf="@+id/rl_head"
+                    android:textColor="@color/text_black"
+                    android:textSize="18sp" />
+                <!-- 二维码名片访问量&收藏量 -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_more_user_name"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dip"
+                    android:layout_toRightOf="@+id/rl_head"
+                    android:gravity="clip_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_tip_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/my_card_access"
+                            android:textColor="@color/text_hint"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_fangwen_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_tip_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/my_card_collection"
+                            android:textColor="@color/text_hint"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_shoucang_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 二维码图片 -->
+
+            <RelativeLayout
+                android:layout_width="220dip"
+                android:layout_height="250dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_white"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_qrcodecard"
+                    android:layout_width="match_parent"
+                    android:layout_height="219dip"
+                    android:layout_marginTop="1dp" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/iv_qrcodecard"
+                    android:gravity="center"
+                    android:textColor="@color/title_bg"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <!-- 按钮 -->
+
+            <LinearLayout
+                android:layout_width="220dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/bt_qrcodecard3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/selector_button_green_all"
+                    android:onClick="service_description"
+                    android:padding="10dip"
+                    android:text="@string/qrcode_button3"
+                    android:textColor="@drawable/selector_button_green_text"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/bt_qrcodecard4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/selector_button_green_all"
+                    android:onClick="delivery_range"
+                    android:padding="10dip"
+                    android:text="@string/qrcode_button4"
+                    android:textColor="@drawable/selector_button_green_text"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/bt_qrcodecard1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/selector_button_green_all"
+                    android:onClick="qrcodeinfo"
+                    android:padding="10dip"
+                    android:text="@string/qrcode_button1"
+                    android:textColor="@drawable/selector_button_green_text"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/bt_qrcodecard2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dip"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/selector_button_green_all"
+                    android:onClick="download_qrcode"
+                    android:padding="10dip"
+                    android:text="@string/qrcode_button2"
+                    android:textColor="@drawable/selector_button_green_text"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

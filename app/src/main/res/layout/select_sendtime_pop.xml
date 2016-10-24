@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_popupwindow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- 取消定时发送时间 -->
+
+        <Button
+            android:id="@+id/btn_deselect_sendTime"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_white_item_clickcolor"
+            android:text="取消定时发送"
+            android:textColor="@color/text_gray3"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_gray" />
+        <!-- 重置发送时间 -->
+
+        <Button
+            android:id="@+id/btn_exchange_sendTime"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_white_item_clickcolor"
+            android:text="重置定时发送时间"
+            android:textColor="@color/text_gray3"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

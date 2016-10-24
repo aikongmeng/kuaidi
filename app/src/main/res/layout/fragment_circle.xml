@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+                xmlns:skin="http://schemas.android.com/android/skin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+        android:id="@+id/rl_circle_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bg"
+        skin:enable="true">
+
+        <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+            android:id="@+id/rl_online_server"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_icon_back"
+            android:paddingLeft="10dp"
+            custom_atts:isClickedChangeBackground="true"
+            skin:enable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/online_customer_server_icon"
+                android:text="@string/tv_online_customer"
+                android:textColor="@color/white"/>
+        </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/circle_express"
+            android:textColor="@color/white"
+            android:textSize="19sp"/>
+
+        <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+            android:id="@+id/rl_add_saysay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_icon_back"
+            android:paddingRight="10dp"
+            custom_atts:isClickedChangeBackground="true"
+            skin:enable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/say_tag_img"
+                android:text="@string/tv_tucao"
+                android:textColor="@color/white"/>
+        </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+    </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_circle_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/circles_drop_down_menu"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_circle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

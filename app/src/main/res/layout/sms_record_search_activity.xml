@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ededed"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="8dp" >
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="30dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/goback_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fram"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@+id/tvSearch"
+            android:layout_toRightOf="@+id/back"
+            android:layout_toStartOf="@+id/tvSearch"
+            android:layout_toEndOf="@+id/back"
+            android:padding="1dp"
+            android:background="@drawable/shape_white" >
+
+            <RelativeLayout
+                android:id="@+id/select"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="9dp"
+                android:paddingRight="5dp"
+                android:paddingStart="9dp"
+                android:paddingEnd="5dp"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/selectConditions"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="手机号"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray_1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/selectConditions"
+                    android:layout_toEndOf="@+id/selectConditions"
+                    android:background="@drawable/drop_down_arrow" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/select"
+                android:layout_toEndOf="@+id/select"
+                android:background="@color/gray_4" />
+
+            <EditText
+                android:id="@+id/etInputNo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/line"
+                android:layout_toEndOf="@+id/line"
+                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
+                android:background="@color/white"
+                android:drawablePadding="9dp"
+                android:hint="输入手机号/手机尾号搜索"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="9dp"
+                android:paddingStart="9dp"
+                android:paddingEnd="9dp"
+                android:singleLine="true"
+                android:textColor="@color/gray_1"
+                android:textColorHint="@color/gray_7"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fram"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/fram"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/gray_2"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+
+    <LinearLayout
+        android:id="@+id/llSmsRecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.kuaibao.skuaidi.activity.view.PullToRefreshView
+            android:id="@+id/pull_refresh_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/lvSmsRecord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:scrollbars="none" />
+        </com.kuaibao.skuaidi.activity.view.PullToRefreshView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ll_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_5"
+        android:text="无结果"
+        android:gravity="center"
+        android:textColor="@color/gray_3"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

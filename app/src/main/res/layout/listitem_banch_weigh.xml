@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="8dp">
+
+    <ImageView
+        android:id="@+id/selected_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentLeft="true"
+        android:padding="10dp"
+        android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="229316008642"
+            android:textColor="@color/gray_1"
+            android:layout_toRightOf="@id/selected_weight"
+            android:layout_centerVertical="true"
+            android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_banchweigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:text=""
+        android:width="60dp"
+        android:textColorHint="@color/gray_3"
+        android:gravity="center"
+        android:background="@drawable/bg_status_normal"
+        android:textColor="@color/gray_1"
+        android:inputType="numberDecimal"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/tv_wupinleibie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wupinleibie_huoyang"
+        android:layout_toLeftOf="@id/et_banchweigh"
+        android:drawableRight="@drawable/icon_switch_state"
+        android:drawablePadding="4dp"
+        android:layout_marginRight="24dp"
+        android:layout_centerVertical="true"
+        android:padding="4dp"
+        android:textColor="@color/gray_1"
+        android:textSize="15sp" />
+</RelativeLayout>

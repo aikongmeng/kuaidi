@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+        android:id="@+id/rl_comm_title"
+        android:layout_width="fill_parent"
+        skin:enable="true"
+        android:layout_height="45dp"
+        android:background="@color/title_bg" >
+
+        <LinearLayout
+            android:id="@+id/ll_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_white3"
+            android:orientation="horizontal">
+
+            <TextView
+                xmlns:skin="http://schemas.android.com/android/skin"
+                android:id="@+id/tv_cabinet_item1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_segment_choice"
+                android:enabled="false"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:text="丰巢管家"
+                android:textColor="@color/title_bg"
+                android:textSize="15sp"
+                skin:enable="true"/>
+
+            <TextView
+                xmlns:skin="http://schemas.android.com/android/skin"
+                android:id="@+id/tv_cabinet_item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_segment_choice"
+                android:enabled="true"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="4dp"
+                android:text="格格货栈"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                skin:enable="true"/>
+        </LinearLayout>
+
+        <com.kuaibao.skuaidi.common.view.SkuaidiImageView
+            custom_atts:isClickedChangeBackground="true"
+            android:id="@+id/iv_click_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+            android:onClick="back"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/icon_back" />
+    </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+    <WebView
+        android:id="@+id/wv_cabinet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

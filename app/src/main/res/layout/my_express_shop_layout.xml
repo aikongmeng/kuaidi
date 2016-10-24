@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- title -->
+
+    <include layout="@layout/comm_title2" />
+
+    <!-- header -->
+
+    <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+        xmlns:skin="http://schemas.android.com/android/skin"
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:background="@color/title_bg"
+        android:gravity="center_horizontal"
+        skin:enable="true"
+        android:paddingBottom="10dp" >
+
+        <!-- 二维码名片显示区 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_qrcode"
+            android:layout_width="94dp"
+            android:layout_height="94dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/iv_qrcodecard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <!-- 下载二给码名片按钮 -->
+
+        <com.kuaibao.skuaidi.common.view.SkuaidiTextView
+            android:id="@+id/tv_download_qrcodecard"
+            android:layout_width="94dp"
+            android:layout_height="21dp"
+            android:layout_below="@+id/rl_qrcode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="下载高清二维码"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            custom_atts:frames="dottedLine"
+            custom_atts:isClickedChangeBackground="true" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_download_qrcodecard"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="你可以把二维码印在名片上，客户可以直接给你下单哦~"
+            android:textColor="@color/gray_8"
+            android:textSize="10sp" />
+    </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp" >
+
+        <!-- 总访问量 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tvCountFW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="总访问量"
+                android:textColor="@color/gray_2"
+                android:textSize="12sp" />
+
+            <!-- 显示访问量数 -->
+
+            <TextView
+                android:id="@+id/tv_fangwen_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCountFW"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp" />
+        </RelativeLayout>
+        <!-- 总访问量与总收藏量中间竖着的线 -->
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="34dp"
+            android:background="@color/gray_4" />
+        <!-- 总收藏量 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <!-- 显示总收藏量 -->
+
+            <TextView
+                android:id="@+id/tvCountSC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="总收藏量"
+                android:textColor="@color/gray_2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_shoucang_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCountSC"
+                android:layout_centerHorizontal="true"
+                android:text="0"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_4" />
+
+            <RelativeLayout
+                android:id="@+id/preview_my_express_shop"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/selector_white_gray_02_btn"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_desc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="预览快店"
+                        android:textColor="@color/gray_1"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tishi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="店铺太简陋?点击下面按钮装修一下"
+                        android:textColor="@color/gray_3"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/jiantou_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/express_shop_preview_shop_icon" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.NoScrollGridView
+                android:id="@+id/gv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/theme_content_bg"
+                android:gravity="center"
+                android:horizontalSpacing="1.0dp"
+                android:isScrollContainer="false"
+                android:listSelector="@color/text_gray2"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="1.0dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

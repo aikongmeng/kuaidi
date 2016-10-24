@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+           tools:shrinkMode="strict"
+           tools:keep="@layout/umeng_socialize_shareboard_item, @drawable/umeng_socialize_wechat,
+           @drawable/umeng_socialize_wxcircle, @drawable/umeng_socialize_qq, @drawable/umeng_socialize_qzone,
+           @drawable/umeng_socialize_sina, @drawable/umeng_socialize_sms, @drawable/umeng_socialize_gmail"/>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/animation_enter_jiantou"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@drawable/icon_guider_come1"
+        android:duration="300"/>
+    <item
+        android:drawable="@drawable/icon_guider_come2"
+        android:duration="300"/>
+    <item
+        android:drawable="@drawable/icon_guider_come3"
+        android:duration="300"/>
+    <item
+        android:drawable="@drawable/icon_guider_come4"
+        android:duration="300"/>
+
+</animation-list>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kuaibao.skuaidi.activity.sendcloudcall.SendCloudCallBachSignActivity">
+
+    <include
+        layout="@layout/comm_title2"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/gray_4"/>
+
+    <!-- 更换模板点击按钮 -->
+
+    <RelativeLayout
+        android:id="@+id/btn_add_cloud_voice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:drawableLeft="@drawable/notify_addmodel_cloud_icon"
+            android:drawableStart="@drawable/notify_addmodel_cloud_icon"
+            android:drawableRight="@drawable/finish_outside_jiantou_right"
+            android:drawableEnd="@drawable/finish_outside_jiantou_right"
+            android:drawablePadding="5dp"
+            android:text="@string/send_cloud_selectmodel"
+            android:textColor="@color/default_green_2"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"/>
+
+    <LinearLayout
+        android:id="@+id/ll_voice_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_white_item_clickcolor"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_vocie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/send_cloud_voicetitle"
+            android:drawableRight="@drawable/finish_outside_jiantou_right"
+            android:drawableEnd="@drawable/finish_outside_jiantou_right"
+            android:textColor="@color/gray_1"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll_play_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="start"
+                android:paddingBottom="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="15dp" >
+
+                <ImageView
+                    android:id="@+id/iv_play_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/send_cloud_voice_play"
+                    android:background="@drawable/cloud_play_stop" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ll_play_icon"
+                android:layout_toEndOf="@+id/ll_play_icon"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="0dp"
+                android:paddingStart="0dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_rec_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/send_cloud_voice_time" />
+
+                <ProgressBar
+                    android:id="@+id/voice_record_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="6dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toLeftOf="@+id/tv_rec_total_time"
+                    android:layout_toRightOf="@+id/tv_rec_time"
+                    android:layout_toStartOf="@+id/tv_rec_total_time"
+                    android:layout_toEndOf="@+id/tv_rec_time"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/cloud_player_progress_bar_bg" />
+
+                <TextView
+                    android:id="@+id/tv_rec_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/send_cloud_voice_time" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:background="@color/theme_content_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:descendantFocusability="beforeDescendants"
+        android:listSelector="@color/theme_content_bg"
+        android:scrollbars="none" />
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/comm_title2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="20dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/gray_1"
+            android:text="注意事项:"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:textSize="14sp"
+            android:textColor="@color/gray_3"
+            android:text="1、文件格式必须为编码8k、16位的wav音频文件。\n2、语音文件大小不超过3M。"/>
+
+
+        <com.kuaibao.skuaidi.common.view.DrawableLeftWithTextViewCenter
+            android:id="@+id/select_audio"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="6dp"
+            android:textSize="15sp"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/dotted_line"
+            android:textColor="@color/default_green_2"
+            android:text="选择语音文件"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/shape_btn_gray1"
+        android:text="上传"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/format"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

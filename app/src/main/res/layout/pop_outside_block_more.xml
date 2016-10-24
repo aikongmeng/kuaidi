@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="70dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical" >
+        <!-- 抢地盘 -->
+        <LinearLayout
+            android:id="@+id/ll_rob_territory"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_zlrz_identity"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="抢地盘"
+                android:textSize="18sp"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        <View
+            android:layout_width="165dip"
+            android:layout_height="1dip"
+            android:background="@color/item_bg" />
+        <!-- 其他店铺 -->
+        <LinearLayout
+            android:id="@+id/ll_other_shop"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_popu_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_zlrz_identity"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="其他店铺"
+                android:textSize="18sp"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        <View
+            android:layout_width="165dip"
+            android:layout_height="1dip"
+            android:background="@color/item_bg" />
+
+        <!-- 邀请朋友 -->
+        <LinearLayout
+            android:id="@+id/ll_invite_friends"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_popu_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_zlrz_identity"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="邀请客户"
+                android:textSize="18sp"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+        
+        <View
+            android:layout_width="165dip"
+            android:layout_height="1dip"
+            android:background="@color/item_bg" />
+        
+        <!-- 邀请同事 -->
+        <LinearLayout
+            android:id="@+id/ll_invite_colleague"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:src="@drawable/icon_zlrz_identity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="邀请同事"
+                android:textSize="18sp"
+                android:textColor="@color/text_black" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

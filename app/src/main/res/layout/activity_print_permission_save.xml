@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_content_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/comm_title"/>
+
+    <TextView
+        android:id="@+id/tv_cus_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:text="客户简称"
+        android:textColor="@color/text_gray3"
+        android:textSize="14sp"/>
+
+    <com.kuaibao.skuaidi.activity.view.SkuaidiEditText
+        android:id="@+id/et_simple_name"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:hint="请输入申请电子面单时填写的客户简称"
+        android:textColor="@color/gray_1"
+        android:textColorHint="@color/gray_3"
+        android:lines="1"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        android:paddingRight="15dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_wangdian_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:text="所属网点"
+        android:textColor="@color/text_gray3"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_choose_wangdian"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_choose_wangdian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="请输入所属网点编号"
+            android:textColor="@color/gray_3"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/finish_outside_jiantou_right"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_pwd_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:text="客户密码"
+        android:textColor="@color/text_gray3"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.kuaibao.skuaidi.activity.view.SkuaidiEditText
+            android:id="@+id/et_print_pwd"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="49dp"
+            android:paddingLeft="10dp"
+            android:hint="请输入申请电子面单时填写的密码"
+            android:textColor="@color/gray_1"
+            android:textColorHint="@color/gray_3"
+            android:background="@color/white"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/iv_pwd_eye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/eye_close_icon"
+            android:layout_gravity="center_vertical"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_save_info"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_btn_gray1"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="save"
+        android:singleLine="true"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mark_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="请严格按照申请时输入的信息填写，避免信息错误不能打印"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="5dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/text_gray3"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <LinearLayout
+        android:id="@+id/ll_time_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/sms_tv_time_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_msg_time"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sms_rl_receive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dip"
+            android:layout_marginTop="20dip"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/sms_imv_header_receive"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/icon_yonghu" />
+
+            <RelativeLayout
+                android:id="@+id/sms_rl_content_bg_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dip"
+                android:layout_toRightOf="@+id/sms_imv_header_receive"
+                android:background="@drawable/selector_receive_message"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <!-- <TextView
+                    android:id="@+id/sms_tv_user_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:text="135131"
+                    android:textColor="@color/gray_line"
+                    android:textSize="12sp" />  -->
+
+                <TextView
+                    android:id="@+id/sms_tv_content_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingBottom="3dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:text="13531358"
+                    android:textColor="@color/gray_bg"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/sms_imv_voice_content_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/y_yuyinbg3"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sms_tv_record_time_receive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/sms_rl_content_bg_receive"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/sms_rl_content_bg_receive"
+                android:padding="8dp"
+                android:text="0&apos;"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sms_rl_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dip"
+            android:layout_marginTop="20dip"
+            android:paddingLeft="10dp" >
+
+            <ImageView
+                android:id="@+id/sms_imv_header_send"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/icon_yonghu" />
+
+            <RelativeLayout
+                android:id="@+id/sms_rl_content_bg_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/sms_imv_header_send"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/sms_imv_header_send"
+                android:background="@drawable/selector_send_message"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <TextView
+                    android:id="@+id/sms_tv_content_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="6dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="4dip"
+                    android:text="13246135413513"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/sms_imv_voice_content_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingBottom="3dip"
+                    android:paddingLeft="8dip"
+                    android:paddingRight="8dip"
+                    android:paddingTop="3dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/y_yuyinbg_bai3"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_record_time_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/sms_rl_content_bg_send"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/sms_rl_content_bg_send"
+                android:padding="8dp"
+                android:text="0&apos;"
+                android:textColor="@color/text_black"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

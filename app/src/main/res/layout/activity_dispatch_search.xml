@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#ededed"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="30dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/goback_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fram"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@+id/tvSearch"
+            android:layout_toRightOf="@+id/back"
+            android:background="@drawable/shape_white"
+            android:padding="1dp">
+
+            <com.kuaibao.skuaidi.activity.view.ClearEditText
+                android:id="@+id/etInputNo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:background="@color/white"
+                android:drawablePadding="9dp"
+                android:hint="输入单号/单号尾号搜索"
+                android:imeOptions="actionSearch"
+                android:paddingEnd="9dp"
+                android:longClickable="false"
+                android:paddingLeft="9dp"
+                android:paddingStart="9dp"
+                android:singleLine="true"
+                android:textColor="@color/gray_1"
+                android:textColorHint="@color/gray_7"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvSearch"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/fram"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/fram"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="@color/gray_2"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rlSearch"
+        android:background="@color/gray_4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line1"
+        android:orientation="vertical">
+
+        <se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/rl_bottom_select"
+            android:background="@color/white"
+            android:scrollbars="vertical"
+            android:divider="#00000000"
+            android:listSelector="@android:color/transparent"
+            android:dividerHeight="0.5dp"
+            android:visibility="gone">
+        </se.emilsjolander.stickylistheaders.ExpandableStickyListHeadersListView>
+
+        <include
+            android:id="@+id/empty_view"
+            layout="@layout/emptyview_dispatch_search"
+            />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/rl_bottom_select"
+        layout="@layout/layout_bottom_select" />
+</RelativeLayout>

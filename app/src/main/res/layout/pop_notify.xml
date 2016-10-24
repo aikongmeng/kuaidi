@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_function"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_notify_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bg"
+        
+        android:paddingBottom="12dp"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/more_minus" />
+
+    <TextView
+        android:id="@+id/tv_notify_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bg"
+   
+        android:drawableTop="@drawable/more_tongxun"
+        android:paddingBottom="4dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="4dip"
+        android:text="通讯录"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_notify_revise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bg"
+    
+        android:drawableTop="@drawable/more_xiugai"
+        android:paddingBottom="4dip"
+        android:paddingLeft="7dip"
+        android:paddingRight="7dip"
+        android:paddingTop="4dip"
+        android:text="修改手机"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_notify_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bg"
+
+        android:drawableTop="@drawable/more_delete"
+        android:paddingBottom="4dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="4dip"
+        android:text="  删除"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+</LinearLayout>

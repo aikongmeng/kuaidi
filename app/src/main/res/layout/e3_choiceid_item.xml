@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:padding="15dp"
+              >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/rad_nocheck"
+            android:text="@string/branch_tag"
+            android:textColor="@color/text_black"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/rad_baqiang_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="对应把枪账号1"
+            android:textColor="@color/gray_3"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/courier_latticepoint"
+        android:layout_marginLeft="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="网点：西藏拉萨申通"
+        android:textColor="@color/gray_1"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/courier_job_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="工号：0026"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/gray_1"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/courier_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="5dp"
+        android:text="姓名：令狐冲"
+        android:textColor="@color/gray_1"
+        android:textSize="15sp"/>
+
+</LinearLayout>

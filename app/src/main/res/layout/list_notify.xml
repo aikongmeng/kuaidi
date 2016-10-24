@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_del"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/white"
+        android:paddingLeft="15dp"
+        android:clickable="true" >
+
+        <!-- 编号框 -->
+        <TextView
+            android:id="@+id/tv_notify_num"
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_circle_background"
+            android:gravity="center"
+            android:text="1"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:textSize="12sp" />
+
+		<!-- 手机号输入框 -->
+        <TextView
+            android:id="@+id/tv_notify_phone"
+            android:layout_width="160dip"
+            android:layout_height="33dip"
+            android:layout_toRightOf="@id/tv_notify_num"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_white"
+            android:gravity="center_vertical"
+            android:hint=""
+            android:paddingLeft="3dip"
+            android:singleLine="true"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+        
+        <!-- 运单号输入框 -->
+        <TextView
+            android:id="@+id/tv_notify_order"
+            android:layout_width="wrap_content"
+            android:layout_height="33dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:paddingLeft="3dip"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/shape_white"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_notify_phone"
+            android:layout_toLeftOf="@+id/iv_notify_add"
+            android:textColor="@color/text_black" />
+
+        <TextView
+            android:id="@+id/tv_notify_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:background="@color/title_bg"
+            android:clickable="true"
+            android:padding="10dip"
+            android:text="@string/tv_notify_ok"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_notify_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/title_bg"
+            android:clickable="true"
+            android:padding="10dip"
+            android:src="@drawable/more_add"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_function"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_notify_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg"
+                android:clickable="true"
+                android:paddingBottom="12dp"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/more_minus" />
+
+            <TextView
+                android:id="@+id/tv_notify_liuzhuan_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/more_liuzhuan_info"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="4dip"
+                android:text="@string/liuyan_detail_btn"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_notify_liuyan_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/more_liuyan_detail"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="4dip"
+                android:text="@string/liuyan_detail"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_notify_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/more_tongxun"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="4dip"
+                android:text="@string/phone_list"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_notify_revise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/more_xiugai"
+                android:paddingBottom="4dip"
+                android:paddingLeft="7dip"
+                android:paddingRight="7dip"
+                android:paddingTop="4dip"
+                android:text="@string/tv_notify_revise"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_notify_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/title_bg"
+                android:clickable="true"
+                android:drawableTop="@drawable/more_delete"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="4dip"
+                android:text="@string/tv_notify_del"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_list_notify_err"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:textColor="@color/red" />
+
+</LinearLayout>

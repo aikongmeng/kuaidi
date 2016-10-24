@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/call_head"
+    android:layout_width="match_parent"
+   android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_phoneing_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:paddingTop="10dp"
+        android:paddingLeft="15dp"
+        android:visibility="gone"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/icon_back"/>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_marginTop="60dp"
+       android:gravity="center_horizontal">
+       <TextView
+           android:id="@+id/layout_call_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="未知联系人"
+           android:textColor="@color/white"
+           android:textSize="30sp"
+           android:visibility="visible" />
+
+       <TextView
+           android:id="@+id/layout_call_number"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           />
+
+       <TextView
+           android:id="@+id/layout_call_msg"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:lines="2"
+           android:lineSpacingExtra="8dp"
+           android:gravity="center_horizontal"
+           android:textColor="@color/white"
+           android:textSize="15sp"
+           android:layout_marginTop="30dp"
+           android:visibility="visible"/>
+
+       <Chronometer
+           android:id="@+id/chronometer"
+           android:layout_width="wrap_content"
+           android:layout_height="40.0dip"
+           android:textColor="#39b54a"
+           android:textSize="16.0sp"
+           android:textStyle="normal"
+           android:layout_marginTop="20dp"
+           android:visibility="gone" />
+   </LinearLayout>
+
+</LinearLayout>

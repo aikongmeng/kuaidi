@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/more_scan"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <RelativeLayout
+                android:id="@+id/rl_cap_title"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:background="@color/touming1" >
+
+                <ImageView
+                    android:id="@+id/iv_title_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_scan_back"
+                    android:onClick="back"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    android:src="@drawable/icon_back" />
+
+                <TextView
+                    android:id="@+id/tv_flashlight_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/icon_sign_flashlight_closed"
+                    android:drawablePadding="4dp"
+                    android:onClick="openFlashLight"
+                    android:text="@string/scan_open"
+                    android:textColor="@color/white"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/tv_cap_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:clickable="true"
+                    android:onClick="finish"
+                    android:padding="10dp"
+                    android:text="@string/finish"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tips1"
+                android:layout_width="fill_parent"
+                android:layout_height="95dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_input3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/touming1"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_input"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_icon_input"
+                        android:onClick="manualInput" />
+
+                    <TextView
+                        android:id="@+id/tv_input1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_input"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="手动输入"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_input_bluetooth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/touming1"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:id="@+id/iv_input_bluetooth"
+                        android:layout_width="58dp"
+                        android:layout_height="58dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_icon_input_bluetooth"
+                        android:onClick="bluetoothInput" />
+
+                    <TextView
+                        android:id="@+id/tv_input_bluetooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_input_bluetooth"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/scan_gun_input"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/uid_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:layout_above="@id/ll_tips1"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/line"
+                android:dividerHeight="0.5dp"
+                android:minHeight="110dp"
+                android:transcriptMode="alwaysScroll" >
+            </ListView>
+
+            <com.kuaibao.skuaidi.activity.view.ViewfinderView
+                android:id="@+id/viewfinder_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

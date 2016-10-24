@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 快速注册发送短信界面 -->
+    
+    <include 
+        layout="@layout/comm_title"/>
+    
+    <LinearLayout 
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:orientation="vertical">
+        
+        <!-- 说明 -->
+        
+        <TextView
+            android:id="@+id/tv_show_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white"
+            android:padding="10dp"
+            android:lineSpacingExtra="6dp"
+            android:textSize="14sp"
+            android:text=""
+            android:textColor="@color/gray_2" />
+        
+        <EditText 
+            android:id="@+id/et_edit_pwd"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            android:textColor="@color/gray_2"
+            android:background="@drawable/shape_white"
+            android:hint="@string/update_pass"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+        
+        <!-- 发送按钮 -->
+        <Button 
+            android:id="@+id/btn_send_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/immediately_send"
+            android:textColor="@color/theme_content_bg"
+            android:background="@drawable/selector_btn_green1"/>
+    </LinearLayout>
+
+</LinearLayout>

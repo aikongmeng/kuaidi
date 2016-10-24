@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_content_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_custom_meng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/customer_meng"
+        android:visibility="gone" >
+    </RelativeLayout>
+    <include layout="@layout/comm_title2" />
+
+    <RelativeLayout
+        android:id="@+id/ll_none_datas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/iv_none_baned_recorder_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/none_baned_recorder_icon" />
+
+        <TextView
+            android:id="@+id/tv_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_none_baned_recorder_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="没有禁止录音的号码"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_add_ban_recorder_cus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_flag"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/big_button_selector"
+            android:onClick="addBanRecorderCustomer"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="添加禁止录音的号码"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_have_datas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_content_bg"
+        android:orientation="vertical" >
+
+        <com.kuaibao.skuaidi.activity.view.ClearEditText
+            android:id="@+id/filter_edit"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/search_bar_edit_selector"
+            android:drawableLeft="@drawable/search_bar_icon_normal"
+            android:hint="搜索客户（姓名或者号码）"
+            android:singleLine="true"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lv_mycustom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/order_list_divider"
+                android:dividerHeight="0.5dp"
+                android:listSelector="#00000000"/>
+
+            <TextView
+                android:id="@+id/dialog"
+                android:layout_width="80.0dp"
+                android:layout_height="80.0dp"
+                android:layout_gravity="center"
+                android:background="@drawable/show_head_toast_bg"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="30.0dp"
+                android:visibility="invisible" />
+
+            <com.kuaibao.skuaidi.activity.view.SideBar
+                android:id="@+id/sidrbar"
+                android:layout_width="30.0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom_add_baned_recorder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/text_hint" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

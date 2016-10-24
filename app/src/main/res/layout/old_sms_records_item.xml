@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="12dp">
+
+    <ImageView
+        android:id="@+id/iv_status_qujian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/message_notsign_icon"/>
+
+    <ImageView
+        android:id="@+id/redPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/iv_status_qujian"
+        android:layout_toEndOf="@+id/iv_status_qujian"
+        android:background="@drawable/business_red_circle"/>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_sms_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toRightOf="@id/iv_status_qujian"
+        android:layout_toEndOf="@+id/iv_status_qujian"
+        android:layout_toLeftOf="@+id/llCall"
+        android:layout_toStartOf="@+id/llCall"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvNo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12345"
+                android:textColor="@color/gray_1"
+                android:textSize="15sp"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_4"/>
+
+            <TextView
+                android:id="@+id/tvMobilePhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:paddingLeft="12dp"
+                android:text="13088880000"
+                android:textColor="@color/gray_1"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvLastUpdateTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="16:30"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+            <!-- 最后一条客户回复内容 -->
+            <TextView
+                android:id="@+id/tvCmContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:singleLine="true"
+                android:text="我是测试的啊卡洛斯地方你阿道夫哈哈地方很近活动就差不多吧"
+                android:textColor="@color/gray_3"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tvSmsSendStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="已收到"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 拨打电话区域 -->
+
+    <RelativeLayout
+        android:id="@+id/llCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingRight="0dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/icon_msg_yunhu_call" />
+    </RelativeLayout>
+
+</RelativeLayout>

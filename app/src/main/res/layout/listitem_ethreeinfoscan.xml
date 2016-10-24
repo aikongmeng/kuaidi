@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/selector_orderitem_bg">
+
+
+    <ImageView
+        android:id="@+id/iv_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        android:src="@drawable/select_edit_identity" />
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@id/iv_checkBox">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tv_listitem_ethreeinfoscan_order"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="1234567894561"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/tv_listitem_ethreeinfoscan_order"
+                android:layout_marginTop="1dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_express_status_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="最新状态："
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_express_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/bg_status_normal"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    tools:text="到件"
+                    android:textColor="@color/gray_3"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/fl_infoscan_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_centerVertical="true">
+            <TextView
+                android:id="@+id/tv_wupinleibie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wupinleibie_huoyang"
+                android:drawableRight="@drawable/icon_switch_state"
+                android:drawablePadding="4dp"
+                android:padding="8dp"
+                android:visibility="invisible"
+                android:textColor="@color/gray_1"
+                android:textSize="15sp" />
+            <ImageView
+                android:id="@+id/e3_waybill_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="15dp"
+                android:visibility="gone"
+                android:src="@drawable/icon_delete"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_listitem_ethreeinfoscan_question_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/fl_infoscan_right"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/e3_question_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_listitem_ethreeinfoscan_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/fl_infoscan_right"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/e3_type_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:drawableRight="@drawable/e3_modifytype_icon"
+                android:maxEms="6"
+                android:singleLine="true"
+                android:text="@string/select_type"
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_badCause_qf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:maxEms="6"
+                android:singleLine="true"
+                android:text="@string/select_type"
+                android:textSize="13sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/rl_top_content"
+        android:layout_below="@id/rl_top_content"
+
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_bad_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="问题件原因："
+            android:textSize="13sp" />
+
+        <com.kuaibao.skuaidi.texthelp.TextMarquee
+            android:id="@+id/tv_bad_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+
+            android:singleLine="true"
+            android:textColor="@color/gray_2"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/rl_top"
+        android:layout_below="@id/rl_top"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+
+        <View
+            android:id="@+id/line_error"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/shape_dashed"
+            android:layerType="software" />
+
+
+        <TextView
+            android:id="@+id/tv_incorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_error"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_incorrect"
+            android:text="错误"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <com.kuaibao.skuaidi.texthelp.TextMarquee
+            android:id="@+id/tv_error_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_incorrect"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_incorrect"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/gray_3"
+            android:textSize="12sp"
+            tools:text="hhhhhhhh" />
+    </RelativeLayout>
+</RelativeLayout>

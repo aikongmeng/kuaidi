@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_save_upload"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:background="@color/gray_5"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_lan_zt">
+
+    <LinearLayout
+        android:id="@+id/ll_save"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/selector_button_save"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/bg_save"
+            android:drawablePadding="10dp"
+            android:text="保存"
+            android:textColor="@color/default_green_2"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/gray_5" />
+
+    <LinearLayout
+        android:id="@+id/ll_upload"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_weight="1"
+        android:background="@drawable/selector_button_save"
+        android:clickable="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/tv_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/bg_upload"
+            android:drawablePadding="10dp"
+            android:gravity="center_horizontal"
+            android:text="上传"
+            android:textColor="@color/default_green_2"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>
+
+
+

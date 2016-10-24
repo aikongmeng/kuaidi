@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/gray_5"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/comm_title" />
+
+    <com.kuaibao.skuaidi.activity.view.VerticalScrollview
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/dispatch_data_container" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_4" />
+
+            <TextView
+                android:id="@+id/tv_add_sign_type"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/icon_dis_addsigntype"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:text="添加签收人"
+                android:textColor="@color/default_green_2"
+                android:textSize="14sp"
+
+                />
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0.5dp"-->
+                <!--android:background="@color/gray_4" />-->
+
+            <include layout="@layout/layout_pic_sign" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_4" />
+
+            <include layout="@layout/zt_sign_footerview" />
+
+        </LinearLayout>
+    </com.kuaibao.skuaidi.activity.view.VerticalScrollview>
+
+    <include
+
+        layout="@layout/zt_sign_bottom_menu" />
+</LinearLayout>

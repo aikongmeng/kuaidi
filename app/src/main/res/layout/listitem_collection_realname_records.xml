@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_listitem_msg"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/theme_content_bg"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/text_gray3"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ll_date"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/tv_cus_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="张三"
+            android:textColor="@color/gray_1"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_ticket_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1235245522452"
+            android:textColor="@color/gray_3"
+            android:textSize="13sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="11:02"
+            android:textColor="@color/gray_3"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bg"
+        android:paddingBottom="5dip"
+        android:paddingTop="5dip" >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="back"
+            android:padding="10dip"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_regist_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/vetify_mobile"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_get_vertify"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_shape_right_blue_gray1"
+                android:onClick="getCheckCode"
+                android:padding="8dp"
+                android:text="@string/vetify"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/et_vertify_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/btn_get_vertify"
+                android:background="@drawable/shape_white"
+                android:hint="@string/vetify_mobile_tip1"
+                android:inputType="number"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/text_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imv_verify_mobile_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/et_vertify_mobile"
+                android:layout_alignRight="@id/et_vertify_mobile"
+                android:layout_alignTop="@id/et_vertify_mobile"
+                android:layout_marginRight="8dip"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_icon_close" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_mobile_error_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/vetify_mobile_tip2"
+            android:textColor="@color/text_hint"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_check_code"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/et_verify_check_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_white"
+                    android:hint="@string/check_code_tip1"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_black"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imv_verify_checkcode_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/et_verify_check_code"
+                    android:layout_alignRight="@id/et_verify_check_code"
+                    android:layout_alignTop="@id/et_verify_check_code"
+                    android:layout_marginRight="8dip"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/selector_icon_close"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_get_checkcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/selector_shape_orange"
+                android:onClick="getCheckCode"
+                android:padding="8dp"
+                android:text="@string/get_check_code1"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_vertify_error_tip"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_shape_orange"
+            android:onClick="next"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_checkcode_error_tip"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:padding="10dp"
+            android:text="@string/vetify_mobile_tip3"
+            android:textColor="@color/text_hint"
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/bt_stepover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:onClick="stepover"
+                android:padding="5dp"
+                android:text="@string/step_over"
+                android:textColor="@color/text_blue"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

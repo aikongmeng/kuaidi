@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kuaibao.skuaidi.activity.view.SquareLayoutShopImageItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" >
+<ImageView
+        android:id="@+id/item_grid_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+         />
+        <ImageView 
+            android:id="@+id/iv_checked_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/batch_add_checked"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="top|right"
+            android:visibility="gone"/>
+    </FrameLayout>
+    
+
+</com.kuaibao.skuaidi.activity.view.SquareLayoutShopImageItem>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_model"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/mode_meng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mode_meng"
+        android:clickable="false"
+        android:visibility="gone" >
+    </RelativeLayout>
+    
+    <include 
+        android:id="@+id/layout_no_mode"
+        layout="@layout/layout_no_mode"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- title -->
+
+        <include
+            android:id="@+id/rl_title"
+            layout="@layout/comm_title5" />
+        <!-- body -->
+
+        <LinearLayout
+            android:id="@+id/ll_models"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <!-- model list -->
+
+            <ListView
+                android:id="@+id/lv_model"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:dividerHeight="10dp"
+                android:footerDividersEnabled="true"
+                android:listSelector="#00000000"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <!-- 添加模板按钮 -->
+
+        <LinearLayout
+            android:id="@+id/btn_add_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_4" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_white_item_clickcolor"
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_addModel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/default_green_2"
+                    android:text="新增短信模板" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

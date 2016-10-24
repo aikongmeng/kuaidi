@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_5"
+    android:orientation="vertical"
+    tools:context="com.kuaibao.skuaidi.activity.picksendmapmanager.ReviewAllPointActivity">
+    <include layout="@layout/comm_title2" />
+    <TextView
+        android:id="@+id/tv_points_decription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:textSize="13sp"
+        android:textColor="@color/gray_3"
+        android:text="共标记取派点：18个"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+</LinearLayout>

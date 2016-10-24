@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.kuaibao.skuaidi.activity.recordcount.sms_yunhu.CountRecordsActivity">
+
+    <include
+        android:id="@+id/records_title"
+        layout="@layout/comm_title"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshPinnedSectionListView
+        android:id="@+id/records_count_pulllist"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/records_title"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:divider="@color/gray_4"
+        android:dividerHeight="0.5dp"
+        ptr:ptrHeaderTextColor="#999999"
+        android:cacheColorHint="#00000000"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:smoothScrollbar="true"
+        />
+
+    <!--<TextView
+        android:gravity="center"
+        android:id="@+id/records_text_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:textColor="@color/text_sender_adress"
+        android:text="无统计数据"
+        android:visibility="gone"/>-->
+</RelativeLayout>

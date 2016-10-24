@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/business_meng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#60000000"
+        android:clickable="false"
+        android:gravity="center"
+        android:visibility="gone">
+
+    </RelativeLayout>
+
+    <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+        android:id="@+id/rl_common_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/title_bg"
+        skin:enable="true">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:text="业务"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <RelativeLayout xmlns:skin="http://schemas.android.com/android/skin"
+            android:id="@+id/business_invite_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_icon_back"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:visibility="visible"
+            skin:enable="true">
+
+            <ImageView
+                android:id="@+id/tv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/my_shop_name_white" />
+
+            <TextView
+                android:id="@+id/tv_invite_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_tag"
+                android:text="快递店铺"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+    <!--<View-->
+        <!--android:id="@+id/view_split_line"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.5dp"-->
+        <!--android:background="@color/default_green_shen"-->
+        <!--skin:enable="true" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rl_qunfa_duanxin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_business_sendmessage_bg"
+            android:orientation="vertical"
+            custom_atts:isClickedChangeBackground="true"
+            skin:enable="true"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/business_manual_input_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:text="发短信"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+        <!-- 云呼 -->
+        <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rl_business_btn_yunhu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_business_sendmessage_bg"
+            android:orientation="vertical"
+            android:visibility="visible"
+            custom_atts:isClickedChangeBackground="true"
+            skin:enable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/business_manual_cloud_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/business_btn_txt_yunhu"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+
+        <!--<com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout xmlns:custom_atts="http://schemas.android.com/apk/res-auto"-->
+            <!--android:id="@+id/rl_shoushu_duanxin"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/selector_business_sendmessage_bg"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="gone"-->
+            <!--custom_atts:isClickedChangeBackground="true"-->
+            <!--skin:enable="true">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:src="@drawable/business_manual_input_icon" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:text="发短信"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:textSize="16sp" />-->
+            <!--</LinearLayout>-->
+        <!--</com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>-->
+
+        <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rl_e3_entrance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_business_sendmessage_bg"
+            android:onClick="e3Entrance"
+            android:orientation="vertical"
+            custom_atts:isClickedChangeBackground="true"
+            skin:enable="true">
+
+            <LinearLayout
+                android:id="@+id/ll_e3main_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/e3_main_icon" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:text="巴枪扫描"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_toRightOf="@id/ll_e3main_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@drawable/shape_number_circle"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginLeft="-12dp"
+                android:visibility="gone"
+                android:layout_marginTop="24dp"/>
+        </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/theme_content_bg" />
+
+        <com.kuaibao.skuaidi.common.view.DragGridView.DragGrid
+            android:id="@+id/gv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/theme_content_bg"
+            android:gravity="center"
+            android:horizontalSpacing="0.2dip"
+            android:listSelector="@color/text_gray2"
+            android:numColumns="3"
+            android:isScrollContainer="true"
+            android:scrollbars="none"
+            android:verticalSpacing="0.2dip">
+        </com.kuaibao.skuaidi.common.view.DragGridView.DragGrid>
+    </LinearLayout>
+
+</LinearLayout>

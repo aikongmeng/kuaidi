@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_common_title"
+    android:layout_width="fill_parent"
+    android:layout_height="45dp"
+    android:background="@color/title_bg" >
+	
+    <ImageButton
+            android:id="@+id/ib_title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+            android:onClick="back"
+            android:paddingBottom="15dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="15dip"
+            android:src="@drawable/icon_back" 
+            android:visibility="gone"
+            />
+    
+    
+    <TextView
+        android:id="@+id/tv_title_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:text="业务"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title_more"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+        android:gravity="center_vertical"
+        android:paddingRight="10dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/my_shop_name_white" />
+
+        <TextView
+            android:id="@+id/tv_invite_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tv_tag"
+            android:text="快递店铺"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

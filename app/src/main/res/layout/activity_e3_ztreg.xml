@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_5"
+    android:orientation="vertical"
+    tools:context="com.kuaibao.skuaidi.sto.ethree2.E3ZTRegActivity">
+    <include layout="@layout/comm_title"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/gray_4"/>
+    <RelativeLayout
+        android:id="@+id/rl_choose_wangdian"
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_lattice_point_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请选择网点编号"
+                android:textColor="@color/gray_1"
+                android:textColorHint="@color/gray_3"
+                android:textSize="15sp"/>
+            <TextView
+                android:id="@+id/tv_lattice_point_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_2"
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_choose_lattice_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/finish_outside_jiantou_right"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_base_green_reg_zt"
+            android:padding="10dp"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

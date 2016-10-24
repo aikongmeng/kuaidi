@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+                xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+
+    <FrameLayout
+        android:id="@+id/fl_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </android.support.v4.view.ViewPager>
+
+        <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+            android:id="@+id/photo_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/title_bg" >
+
+            <com.kuaibao.skuaidi.common.view.SkuaidiImageView
+                android:id="@+id/photo_bt_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+                android:paddingBottom="15dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:paddingTop="15dip"
+                android:src="@drawable/icon_back"
+                custom_atts:isClickedChangeBackground="true" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="1/3"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                 />
+
+            <ImageView
+                android:id="@+id/photo_bt_del"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_close"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:button="@null"
+                android:checked="true"
+                android:src="@drawable/checked_ok" />
+
+            <com.kuaibao.skuaidi.common.view.SkuaidiImageView
+                android:id="@+id/photo_bt_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+                android:paddingBottom="10dip"
+                android:paddingLeft="20dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:src="@drawable/delete"
+                custom_atts:isClickedChangeBackground="true" />
+        </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+    </FrameLayout>
+    
+    <RelativeLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#90f2f2f2"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/btn_confir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_base_green_qianse1"
+            android:onClick="confir"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="确定"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

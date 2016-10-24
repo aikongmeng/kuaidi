@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_qrcode_title"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/theme_content_bg"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_get_qrcode"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_right_blue"
+        android:padding="5dp" >
+
+        <Button
+            android:id="@+id/btn_get_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="@string/scan_qrcode"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imv_get_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/pai_saotiaoma" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/et_qrcode"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/rl_get_qrcode"
+        android:background="@drawable/shape_left_white_with_stroke"
+        android:drawableLeft="@drawable/pai_soso"
+        android:drawablePadding="8dp"
+        android:hint="@string/mannul_input_tip"
+        android:padding="5dp"
+        android:textSize="16dp" />
+
+</RelativeLayout>

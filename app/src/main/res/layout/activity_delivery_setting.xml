@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_4"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/setting_title"
+        layout="@layout/comm_title2" />
+
+    <WebView
+        android:id="@+id/wv_delivery_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/setting_title"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_delivery_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/setting_title">
+
+        <RelativeLayout
+            android:id="@+id/ll_per_fee"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_pai_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="派费金额 (元)"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"
+                android:textColor="@color/gray_1"/>
+
+            <EditText
+                android:id="@+id/et_per_fee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_pai_fee"
+                android:layout_centerVertical="true"
+                android:textColor="@color/gray_1"
+                android:textColorHint="@color/gray_3"
+                android:textSize="16sp"
+                android:inputType="numberDecimal"
+                android:background="@color/white"
+                android:hint="请输入派费金额/票"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_submit_fee"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/selector_base_green_qianse1"
+            android:layout_below="@id/ll_per_fee"
+            android:clickable="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_submit_fee"
+            android:layout_marginTop="30dp"
+            android:padding="15dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="派费设置说明"
+                android:textColor="@color/gray_1"
+                android:textSize="15sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_4"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="1、现阶段设置的派费金额仅用于对账"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2、请如实填写自己的全额派费"
+                android:textColor="@color/gray_3"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

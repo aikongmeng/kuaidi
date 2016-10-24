@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/click_to_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/popup_bg"
+        >
+
+        <LinearLayout
+            android:id="@+id/popup_anima"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_5"
+            >
+            <TextView
+                android:id="@+id/tx_1"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="删除账号"
+                android:textColor="@color/gray_1"
+                android:background="@color/white"
+                android:textSize="15sp"/>
+            <include layout="@layout/comm_line" />
+            <TextView
+                android:id="@+id/tx_2"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:textColor="@color/gray_1"
+                android:textSize="15sp"
+                android:background="@color/white"
+                android:visibility="gone"
+                android:text="删除账号和本地记录"/>
+            <include layout="@layout/comm_line" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:visibility="invisible"
+                android:layout_marginTop="10dp"/>
+            <include layout="@layout/comm_line" />
+            <TextView
+                android:id="@+id/tx_3"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:background="@color/white"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp"
+                android:text="取消"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

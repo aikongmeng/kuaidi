@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_exception_sameorder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_content_bg" >
+
+    <include
+        android:id="@+id/rl_title"
+        layout="@layout/comm_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_phone_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_top_white_with_stroke"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/ll_order_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
+
+            <TextView
+                android:id="@+id/tv_title_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_1"
+                 android:textSize="14sp"
+                android:text="运单号  366957472821" />
+
+            <Button
+                android:id="@+id/btn_FlowExpressNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_btn_orange"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="运单跟踪"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/ll_order_no"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray_4" />
+
+        <RelativeLayout
+            android:id="@+id/ll_phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/tv_title_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:textColor="@color/gray_1"
+                 android:textSize="14sp"
+                android:text="手机号  13500001111" />
+
+            <ImageView
+                android:id="@+id/iv_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/call_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_exception_deal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@id/rl_phone_order"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/theme_content_bg"
+        android:dividerHeight="0.5dp"
+        android:listSelector="#00000000"
+        android:transcriptMode="alwaysScroll" />
+
+    <View
+        android:id="@+id/view_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/rl_bottom"
+        android:background="@color/gray_line" />
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="3dp" >
+
+            <ImageButton
+                android:id="@+id/imb_input_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:background="@null"
+                android:scaleType="centerInside" />
+
+            <ImageView
+                android:id="@+id/iv_pic_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/icon_guestbook_image"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_send_msg_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_pic_upload"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <Button
+                    android:id="@+id/imb_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:scaleType="centerInside"
+                    android:text="@string/send" />
+
+                <EditText
+                    android:id="@+id/tv_content_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imb_send"
+                    android:background="@drawable/edittext_bg"
+                    android:textSize="14sp"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/btn_record_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/imb_send"
+                    android:gravity="center"
+                    android:text="@string/record"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

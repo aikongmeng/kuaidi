@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="80dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="15dip"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="165dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_top" >
+
+            <TextView
+                android:id="@+id/all"
+                android:layout_width="165dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pop_top"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/lycenter_search_by_all"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/pop_choose_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="165dip"
+            android:layout_height="1dip"
+            android:background="@color/item_bg" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_popu_bg" >
+
+            <TextView
+                android:id="@+id/by_time"
+                android:layout_width="165dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_popu_bg"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/lycenter_search_by_time"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/pop_choose_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="165dip"
+            android:layout_height="1dip"
+            android:background="@color/item_bg" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_popu_bg" >
+
+            <TextView
+                android:id="@+id/by_phone"
+                android:layout_width="165dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_popu_bg"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/lycenter_search_by_phone"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/pop_choose_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="165dip"
+            android:layout_height="1dip"
+            android:background="@color/item_bg" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_popu_bg" >
+
+            <TextView
+                android:id="@+id/by_add_numbers"
+                android:layout_width="165dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/lycenter_search_by_odd_numbers"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_add_numbers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/pop_choose_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+        
+        <View
+            android:layout_width="165dip"
+            android:layout_height="1dip"
+            android:background="@color/item_bg" />
+		<!-- 未读按钮 -->
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_bottom" >
+
+            <TextView
+                android:id="@+id/by_unread"
+                android:layout_width="165dip"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/lycenter_search_by_unread"
+                android:textColor="@color/text_black"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/iv_unread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:src="@drawable/pop_choose_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

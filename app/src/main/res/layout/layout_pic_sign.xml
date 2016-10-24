@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_sign_photo"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@color/white"
+    android:paddingLeft="30dp"
+    >
+    <!--tools:showIn="@layout/activity_sign"-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+
+    <TextView
+        android:id="@+id/tv_pic_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="拍照签收"
+        android:textColor="@color/gray_1"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tv_pic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_pic_title"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:textColor="@color/gray_2"
+        android:textSize="14sp"
+        tools:text="2046.jpg" />
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/tv_pic_name"
+        android:paddingLeft="10dp"
+        android:src="@drawable/icon_delete"
+
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/iv_take_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/scan_camera" />
+
+
+</RelativeLayout>
+
+            

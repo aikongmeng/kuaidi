@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/comm_title2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/gray_4" />
+        <!-- 业务名称 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tvBusinessNameTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="业务名称"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etBusinessName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tvBusinessNameTag"
+                android:background="@color/white"
+                android:hint="送货上门 (点击编辑名称,限6字)"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/gray_4" />
+        <!-- 参考价格 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/white"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tvPriceTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="参考价格"
+                android:textColor="@color/gray_2"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etPrice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tvPriceTag"
+                android:background="@color/white"
+                android:hint="请输入参考价格"
+                android:numeric="decimal"
+                android:singleLine="true"
+                android:textColor="@color/gray_1"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/gray_4" />
+        <!-- 业务详细说明 -->
+
+        <EditText
+            android:id="@+id/etEditDetail"
+            android:layout_width="match_parent"
+            android:layout_height="108dp"
+            android:background="@color/white"
+            android:gravity="top|left"
+            android:hint="非电梯房4层以上可以送货上门，送到4层5元，每增加一层加1元。\n\n无需送货上门请自提。"
+            android:padding="10dp"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+        <!-- 提交按钮 -->
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_btn_gray1"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="增值业务说明"
+                    android:textColor="@color/default_green"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="1.增值业务是帮助快递员增加收入的一种方式，快递员可以通过编辑自定义增值服务\n2.快递员添加的增值业务将显示在快店的主页上，微快递用户在找附近快递员时会查看你的主页，选择不同的增值业务。\n3.快递员通过分享快店主页可以提升快店的曝光"
+                    android:textColor="@color/gray_2"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

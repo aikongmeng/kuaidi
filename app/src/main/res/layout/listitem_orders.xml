@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_listitem_order"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme_content_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_content_bg"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="2014-07-10"
+        android:textColor="@color/gray_2"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+
+    <RelativeLayout
+        android:id="@+id/rl_order_info"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="@drawable/selector_orderitem_bg" >
+
+        <ImageView
+            android:id="@+id/imv_service_icon"
+            android:layout_width="58dip"
+            android:layout_height="58dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:paddingLeft="15dp"
+            android:src="@drawable/icon_user_order" />
+
+        <ImageView
+            android:id="@+id/tv_new_im"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/imv_service_icon"
+            android:layout_alignTop="@+id/imv_service_icon"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/liuyan_red_circle"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:id="@+id/rl_icons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:text="09:35"
+                android:textColor="@color/text_sender_adress"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                android:layout_below="@id/tv_data"
+                android:text="@string/finished_order"
+                android:textColor="@color/click_red_1"
+                android:textSize="14sp"/>
+
+
+            <ImageView
+                android:id="@+id/imv_phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="10dip"
+                android:scaleType="centerInside"
+                android:visibility="gone"/>
+
+            <CheckBox
+                android:id="@+id/ckbox_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/selector_ck_delete"
+                android:button="@null"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="15dp"
+            android:layout_toRightOf="@+id/imv_service_icon"
+            android:layout_toLeftOf="@id/rl_icons">
+
+            <TextView
+                android:id="@+id/tv_order_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dip"
+                android:layout_marginRight="15dp"
+                android:singleLine="true"
+                android:text="@string/tv_order_phone"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_order_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_order_phone"
+                android:layout_marginBottom="7dip"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/userinfo_name"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_order_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_phone"
+                android:layout_marginLeft="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/shanghai"
+                android:textColor="@color/gray_3"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+create table draft_box	(id integer primary key autoincrement,
+draft_id varchar,
+draft_save_time varchar,
+sms_content varchar,
+sms_status varchar,
+sms_id varchar,
+send_timing varchar,
+number varchar,
+phone_number varchar,
+order_number varchar,
+isgunscan varchar,
+user_phoneNum varchar);

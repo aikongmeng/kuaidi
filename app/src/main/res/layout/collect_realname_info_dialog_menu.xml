@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_white_item_clickcolor"
+        android:gravity="center"
+        android:text="身份证拍摄采集"
+        android:textColor="@color/gray_1"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+
+    <TextView
+        android:id="@+id/manual_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_white_item_clickcolor"
+        android:gravity="center"
+        android:text="手动输入采集"
+        android:textColor="@color/gray_1"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_white_item_clickcolor"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/gray_1"
+        android:textSize="16sp" />
+
+</LinearLayout>

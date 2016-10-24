@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:orientation="horizontal"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:paddingTop="12dp"
+              android:paddingBottom="12dp"
+              android:gravity="center_vertical">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_tele_type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直拨"
+                android:layout_alignParentLeft="true"
+                android:textSize="16sp"
+                android:textColor="@color/title_bg"/>
+            <TextView
+                android:id="@+id/tv_tele_type_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_tele_type_title"
+                android:textColor="@color/gray_3"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:text="6分/每分钟,通话消耗流量"/>
+            <TextView
+                android:id="@+id/tv_tele_type_title_descrition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="直接拨打被叫号码"
+                android:textColor="@color/gray_2"
+                android:layout_toRightOf="@id/tv_tele_type_title"
+                android:layout_marginLeft="16dp"
+                android:layout_above="@id/tv_tele_type_description"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/select_tele_type_selected"
+        style="@style/CustomCheckboxTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:layout_gravity="center_vertical|right"
+        android:textSize="16sp" />
+
+</LinearLayout>

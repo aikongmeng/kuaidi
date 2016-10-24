@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_show_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tabbg"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/ll_business_tab_parent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.david.gradientuilibrary.GradientIconView
+                android:id="@+id/giv_business_icon"
+                app:bottom_icon="@drawable/bottom_menu_business_default"
+                android:layout_centerHorizontal="true"
+                android:layout_width="36dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:id="@+id/iv_red_icon_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/giv_business_icon"
+                android:layout_marginTop="4dp"
+                android:scaleType="center"
+                android:src="@drawable/business_red_circle"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <com.david.gradientuilibrary.GradientTextView
+                android:id="@+id/giv_business_tv"
+                android:layout_below="@id/giv_business_icon"
+                app:bottom_text_color="@color/tab_text_gray"
+                app:text="@string/tab_business_title"
+                android:layout_centerHorizontal="true"
+                app:text_size="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_circle_tab_parent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_red_icon_2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@id/giv_circle_icon"-->
+                <!--android:scaleType="center"-->
+                <!--android:src="@drawable/business_red_circle"-->
+                <!--android:visibility="gone"-->
+                <!--tools:visibility="visible" />-->
+
+            <com.david.gradientuilibrary.GradientIconView
+                android:id="@+id/giv_circle_icon"
+                app:bottom_icon="@drawable/bottom_menu_circle_default"
+                android:layout_centerHorizontal="true"
+                android:layout_width="36dp"
+                android:layout_height="40dp"/>
+
+            <com.david.gradientuilibrary.GradientTextView
+                android:id="@+id/giv_circle_tv"
+                app:bottom_text_color="@color/tab_text_gray"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/giv_circle_icon"
+                app:text="@string/tab_circle_title"
+                app:text_size="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_personal_tab_parent"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.david.gradientuilibrary.GradientIconView
+                android:id="@+id/giv_personal_icon"
+                app:bottom_icon="@drawable/bottom_menu_personal_default"
+                android:layout_centerHorizontal="true"
+                android:layout_width="36dp"
+                android:layout_height="40dp" />
+
+            <ImageView
+                android:id="@+id/iv_red_icon_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/business_red_circle"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/giv_personal_icon"/>
+            <com.david.gradientuilibrary.GradientTextView
+                android:id="@+id/giv_personal_tv"
+                app:bottom_text_color="@color/tab_text_gray"
+                android:layout_below="@id/giv_personal_icon"
+                app:text="@string/tab_personal_title"
+                app:text_size="12sp"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+</LinearLayout>
+</LinearLayout>

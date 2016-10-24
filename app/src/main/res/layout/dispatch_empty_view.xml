@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!-- listView 列表数据为空时显示的内容，这里单独创建一个xml 文件是为了方便复用，当列表为空时显示的内容比较复杂时，方便管理 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_no_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="今日无记录"
+        android:textColor="@color/gray_3"
+        android:textSize="16sp" />
+</RelativeLayout>

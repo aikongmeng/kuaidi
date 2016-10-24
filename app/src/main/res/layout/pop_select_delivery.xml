@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="70dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="15dp"
+        android:gravity="right"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_top" >
+
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/status_all"
+                 android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="165dp"
+            android:layout_height="1dp"
+            android:background="@color/item_bg" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_top"
+             >
+
+            <TextView
+                android:id="@+id/tv_send_failed"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_popu_bg"
+                android:gravity="center_horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/status_send_failed"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_send_failed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/select_deliver_warning_cu"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="165dp"
+            android:layout_height="1dp"
+            android:background="@color/item_bg" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_popu_bg" >
+
+            <TextView
+                android:id="@+id/tv_sent"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:background="@drawable/selector_popu_bg"
+                android:text="@string/status_sent"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/select_deliver_send_cu"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="165dp"
+            android:layout_height="1dp"
+            android:background="@color/item_bg" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_top" >
+
+            <TextView
+                android:id="@+id/tv_get"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_popu_bg"
+                android:gravity="center_horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/status_get"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/pop_choose_icon"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="165dp"
+            android:layout_height="1dp"
+            android:background="@color/item_bg"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_top"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_seen"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_popu_bg"
+                android:gravity="center_horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/status_seen"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_seen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/select_deliver_read"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="165dp"
+            android:layout_height="1dp"
+            android:background="@color/item_bg" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_top" >
+
+            <TextView
+                android:id="@+id/tv_replied"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_popu_bg"
+                android:gravity="center_horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/status_replied"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_replied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/select_deliver_replied_cu"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <View
+            android:layout_width="165dp"
+            android:layout_height="1dp"
+            android:background="@color/item_bg" />
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pop_bottom" >
+
+            <TextView
+                android:id="@+id/tv_unsignin"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pop_bottom"
+                android:gravity="center_horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/status_unsignin"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_unsignin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/select_deliver_unsignin_cu"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

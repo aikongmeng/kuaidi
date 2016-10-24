@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="25dp">
+
+    <TextView
+        android:id="@+id/tv_question_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:textSize="14sp"
+        android:drawableLeft="@drawable/asterisk_icon"
+        android:drawablePadding="5dp"
+        android:text="拒单后该订单将会被重新分配"
+        android:textColor="@color/gray_2"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/et_input_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_question_desc"
+        android:background="@drawable/shape_white"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="6dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="12dp"
+        android:paddingTop="12dp"
+        android:textColorHint="@color/gray_3"
+        android:textColor="@color/gray_1"
+        android:textSize="16sp"
+        android:maxLength="15"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:singleLine="true"
+        android:hint="不超过15字"/>
+
+    <TextView
+        android:id="@+id/tv_attention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_input_reason"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="13sp"
+        android:text="拒单原因不能为空"
+        android:textColor="@color/red_f74739"
+        android:visibility="gone"/>
+
+</RelativeLayout>

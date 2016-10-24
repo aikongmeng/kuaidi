@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_white"
+    android:minWidth="280dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_dialog_ethreeinfotype_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="@string/tv_dialog_ethreeinfotype"
+        android:textColor="@color/text_green_four"
+        android:textSize="22sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_green_four" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <RadioGroup
+            android:id="@+id/rg_dialog_ethreeinfotype"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:singleLine="true"
+                android:text="@string/rb_dialog_ethreeinfotype1"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype2"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype3"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype4"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype5"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype5"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype6"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype6"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype7"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype7"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype8"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype8"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype9"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype9"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype10"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype11"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype12"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype13"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype14"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype14"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype15"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype15"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype16"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype16"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype17"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype17"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype18"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype18"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype19"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype19"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype20"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype20"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype21"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype21"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype22"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype22"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype23"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype23"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype24"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype24"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype25"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype25"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype26"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype26"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype27"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype27"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype28"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype28"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype29"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype29"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype30"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype30"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype31"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype31"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype32"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype32"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype33"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype33"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype34"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype34"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype35"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype35"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype36"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype36"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype37"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype37"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype38"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype38"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype39"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype39"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype40"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype40"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="5dp"
+                android:background="@color/text_green_four" />
+
+            <RadioButton
+                android:id="@+id/rb_dialog_ethreeinfotype41"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_ethreescan_radio"
+                android:drawablePadding="10dp"
+                android:text="@string/rb_dialog_ethreeinfotype41"
+                android:textColor="@color/text_black" >
+            </RadioButton>
+        </RadioGroup>
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_green_four" />
+
+    <LinearLayout
+        android:id="@+id/btn_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_dialog_ethreeinfotype_del"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/delete"
+            android:textColor="@color/text_green_four"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/tv_dialog_ethreeinfotype_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/certain"
+            android:textColor="@color/text_green_four"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+</LinearLayout>

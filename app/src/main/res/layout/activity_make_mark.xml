@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_sto"
+        layout="@layout/comm_title" />
+
+    <ListView
+        android:id="@+id/lv_tags"
+        android:choiceMode="multipleChoice"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingLeft="10dp"
+        android:divider="#ededed"
+        android:dividerHeight="0.5dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:enabled="false"
+        android:background="@drawable/shape_btn_gray1"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_waybillNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="338956649085"
+            android:textColor="@color/gray_1"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"/>
+        <ImageView
+            android:id="@+id/iv_lan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tag_lan_icon"/>
+        <ImageView
+            android:id="@+id/iv_huo"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tag_huo_icon"/>
+        <ImageView
+            android:id="@+id/iv_su"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tag_su_icon"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_package_address"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上海市长宁区通协路269号建滔广场6号楼"
+        android:maxWidth="240dp"
+        android:textColor="@color/gray_2"
+        android:textSize="12sp"
+        android:layout_marginLeft="15dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_package_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签收"
+            android:drawableTop="@drawable/icon_dis_sign"
+            android:drawablePadding="8dp"
+            android:gravity="center_horizontal"
+            android:textSize="11sp"
+            android:textColor="@color/gray_3"/>
+
+        <TextView
+            android:id="@+id/tv_package_problem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="做问题件"
+            android:textSize="11sp"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/icon_dis_problem"
+            android:drawablePadding="8dp"
+            android:layout_marginLeft="45dp"
+            android:textColor="@color/gray_3"/>
+
+        <TextView
+            android:id="@+id/tv_package_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发短信"
+            android:textSize="11sp"
+            android:layout_marginLeft="45dp"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/icon_dis_sms"
+            android:drawablePadding="8dp"
+            android:textColor="@color/gray_3"/>
+
+    </LinearLayout>
+
+</LinearLayout>

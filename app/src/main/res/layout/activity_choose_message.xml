@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:notify="http://schemas.android.com/apk/res/com.kuaibao.skuaidi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/choose_title"
+        layout="@layout/comm_title2" />
+
+    <com.kuaibao.skuaidi.common.view.SkuaidiNotifyTextVIew
+        android:id="@+id/liuyan_title_notify"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:clickable="true"
+        android:layout_below="@+id/choose_title"
+        android:textColor="@color/gray_1"
+        android:textSize="12sp"
+        notify:notify="只能对最近一周的留言进行分配"
+        notify:leftDrawable="@drawable/icon_guestbook_annotation"
+        android:visibility="gone"
+        />
+
+    <com.kuaibao.skuaidi.activity.view.PullToRefreshView
+        android:id="@+id/pullto_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/liuyan_title_notify"
+        android:layout_marginBottom="49dp"
+        android:orientation="vertical">
+        <!--
+                <ListView
+                    android:id="@+id/lv_exception_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@color/order_list_divider"
+                    android:dividerHeight="0.5dp"
+                    android:listSelector="#00000000" />-->
+
+        <ListView
+            android:id="@+id/lv_message_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/order_list_divider"
+            android:dividerHeight="0.5dp"
+            android:listSelector="#00000000"
+            android:visibility="visible"/>
+    </com.kuaibao.skuaidi.activity.view.PullToRefreshView>
+
+
+    <include
+        android:id="@+id/rl_bottom_select"
+        layout="@layout/layout_bottom_select" />
+
+</RelativeLayout>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/comm_title2"/>
+
+    <!-- 云呼去电显设置第一步 -->
+
+    <LinearLayout
+        android:id="@+id/setting_step1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:text="@string/yunhu_callphone_hint"
+            android:textColor="@color/text_hint"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp">
+
+            <!--当前去电显示号码提示文字-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="@string/yunhu_callphone_current_telephyon_number_hint"
+                android:textColor="@color/text_black"/>
+            <!--当前去电显示号码-->
+            <TextView
+                android:id="@+id/step1_currentNum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="2.5"
+                android:text="@string/yunhu_callphone_current_telephyon_number"
+                android:textColor="@color/status_green"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+                <!--当前去电显示号码开关-->
+                <ImageView
+                    android:id="@+id/setting_driver_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/yunhu_callphone_switch"
+                    android:background="@drawable/icon_push_open"
+                    android:visibility="visible"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_step1_flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/step1_myPhoneNum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:text="@string/yunhu_callphone_my_telephyon_number"
+                android:textColor="@color/text_black"/>
+
+            <!--当前去电显示号码-->
+            <TextView
+                android:id="@+id/new_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="2.5"
+                android:text="@string/yunhu_callphone_current_telephyon_number"
+                android:textColor="@color/gray_1"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end|center_vertical"
+                android:orientation="horizontal">
+<!--去电新手机号码开启状态-->
+                <TextView
+                    android:id="@+id/step1_setting_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yunhu_callphone_no_setting"
+                    android:textColor="@color/text_hint"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- 开启 -->
+
+        <TextView
+            android:id="@+id/step1_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_base_green_qianse1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="@string/yunhu_callphone_showphonenumber_open"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <!-- 云呼去电显示设置第二步 -->
+
+    <LinearLayout
+        android:id="@+id/setting_step2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- 最顶端提示 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="@string/yunhu_callphone_showphonenumber_hint"
+            android:textColor="@color/text_hint"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_icon_setting_flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_icon_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:background="@color/gray_4"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/setting_split_line1"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:layout_weight="1"
+                        android:background="@color/green_39b54a"/>
+
+                    <View
+                        android:id="@+id/setting_split_line2"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="2"
+                        android:background="@color/green_39b54a"
+                        />
+
+                    <View
+                        android:id="@+id/setting_split_line3"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginEnd="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_weight="1"
+                        android:background="@color/green_39b54a"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/icon_setting1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginStart="45dp"
+                    android:contentDescription="@string/yunhu_callphone_imgdes_circle"
+                    android:src="@drawable/icon_setting1_out"/>
+
+                <ImageView
+                    android:id="@+id/icon_setting2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/yunhu_callphone_imgdes_circle"
+                    android:src="@drawable/icon_setting1_in"/>
+
+                <ImageView
+                    android:id="@+id/icon_setting3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="45dp"
+                    android:layout_marginRight="45dp"
+                    android:contentDescription="@string/yunhu_callphone_imgdes_circle"
+                    android:background="@drawable/icon_setting1_default"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_setting1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_icon_setting"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/yunhu_callphone_receive_caller"
+                android:textColor="@color/green_39b54a"/>
+
+            <TextView
+                android:id="@+id/tv_setting2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_icon_setting"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/yunhu_callphone_operition"
+                android:textColor="@color/green_39b54a"/>
+
+            <TextView
+                android:id="@+id/tv_setting3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/rl_icon_setting"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/yunhu_callphone_setting_success"
+                android:textColor="@color/text_hint"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/step2_textFlag1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/yunhu_callphone_your_telephyon_number"
+                android:textColor="@color/text_black"/>
+
+            <TextView
+                android:id="@+id/step2_textFlag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/yunhu_callphone_setting_success"
+                android:textColor="@color/text_black"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/step2_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_base_green_qianse1"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

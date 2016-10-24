@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+ <include
+        android:id="@+id/rl_orderinfo_title"
+        layout="@layout/comm_title" />
+ 
+ <WebView 
+     android:layout_below="@+id/rl_orderinfo_title"
+     android:id="@+id/wv_order_notice"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     
+     />
+</RelativeLayout>

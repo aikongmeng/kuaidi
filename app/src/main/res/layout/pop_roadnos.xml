@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/shape_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_roadname_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/gray_1"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_4" />
+
+    <TextView
+        android:id="@+id/tv_roadnos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/white"
+        android:gravity="center_horizontal"
+        android:lineSpacingMultiplier="1.5"
+        android:maxLines="10"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:textColor="@color/gray_1"
+        android:textSize="14sp"
+        android:background="@drawable/selector_white_item_clickcolor" />
+
+</LinearLayout>

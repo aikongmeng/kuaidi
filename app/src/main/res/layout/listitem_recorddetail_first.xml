@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_order_info_outside"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/theme_content_bg" >
+
+        <RelativeLayout
+            android:id="@+id/rl_order_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_top_white_with_stroke"
+            android:gravity="center_vertical" >
+
+            <!-- 运单模块 -->
+
+            <RelativeLayout
+                android:id="@+id/rlExpressNo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tvExpressNoTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/liuyan_detail_express_no_tag"
+                    android:textColor="@color/gray_1"
+                    android:textSize="14sp" />
+                <!-- 运单号 -->
+
+                <TextView
+                    android:id="@+id/tvExpressNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tvExpressNoTag"
+                    android:layout_alignTop="@+id/tvExpressNoTag"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toLeftOf="@+id/tvFlowExpressNo"
+                    android:layout_toEndOf="@+id/tvExpressNoTag"
+                    android:layout_toRightOf="@+id/tvExpressNoTag"
+                    android:layout_toStartOf="@+id/tvFlowExpressNo"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/gray_1"
+                    android:textSize="14sp" />
+                <!-- 运单跟踪按钮 -->
+
+                <TextView
+                    android:id="@+id/tvFlowExpressNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/selector_btn_orange"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:text="单号跟踪"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/rlExpressNo"
+                android:background="@color/gray_4"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlPHoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/line" >
+
+                <TextView
+                    android:id="@+id/tvSendNameTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/liuyan_detail_mobile_tag"
+                    android:textColor="@color/gray_1"
+                    android:textSize="14sp" />
+                <!-- 手机号 -->
+
+                <TextView
+                    android:id="@+id/tvSendPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tvSendNameTag"
+                    android:layout_alignTop="@+id/tvSendNameTag"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_toRightOf="@+id/tvSendNameTag"
+                    android:layout_toEndOf="@+id/tvSendNameTag"
+                    android:text=""
+                    android:textColor="@color/gray_1"
+                    android:textSize="14sp" />
+                <!-- 打电话区域 -->
+
+                <RelativeLayout
+                    android:id="@+id/llPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <!-- 电话按钮 -->
+
+                    <ImageView
+                        android:id="@+id/ivCall"
+                        android:layout_width="25dip"
+                        android:layout_height="25dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="end"
+                        android:src="@drawable/call_icon" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_signed_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_order_info"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:background="@color/gray_4"/>
+
+            <TextView
+                android:id="@+id/tv_signed_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/green_39b54a"
+                android:textSize="14sp"
+                android:text="取件时间：00-00 00:00"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:background="@color/gray_4"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

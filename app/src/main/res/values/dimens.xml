@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="business_gridview_itemSize">140dp</dimen>
+
+    <!-- pickerview -->
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">44dp</dimen>
+    <!-- 顶部按钮paddingLeft -->
+    <dimen name="pickerview_topbar_paddingleft">15dp</dimen>
+    <!-- 顶部按钮paddingRight -->
+    <dimen name="pickerview_topbar_paddingright">30dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">15sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">21sp</dimen>
+
+
+    <!--<dimen name="tele_cell_height">64dp</dimen>-->
+
+    <!-- 字体大小 -->
+    <dimen name="word_size_10sp">10sp</dimen>
+
+    <dimen name="recyle_divider_size">0.5dp</dimen>
+    <dimen name="recyle_divider_leftmargin">8dp</dimen>
+    <dimen name="recyle_divider_rightmargin">8dp</dimen>
+    <!--重写pickview内容文字大小-->
+    <dimen name="pickerview_textsize">18sp</dimen>
+
+    <dimen name="dialog_gray_content_size">16sp</dimen>
+</resources>

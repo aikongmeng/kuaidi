@@ -1,0 +1,1 @@
+alter table draft_box add user_phoneNum varchar;

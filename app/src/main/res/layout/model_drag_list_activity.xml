@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <include
+        android:id="@+id/title"
+        layout="@layout/comm_title2" />
+
+    <com.kuaibao.skuaidi.activity.view.SkuaidiDragListView
+        android:id="@+id/drag_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/title"
+        android:dividerHeight="10dp"
+        android:divider="@color/gray_5"
+        android:cacheColorHint="#00000000" />
+    
+    <RelativeLayout 
+        android:id="@+id/meng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/meng_model_drag_list"
+        android:visibility="gone"/>
+
+</RelativeLayout>

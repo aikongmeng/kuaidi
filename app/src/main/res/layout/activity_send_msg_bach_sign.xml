@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kuaibao.skuaidi.activity.sendmsg.SendMsgBachSignActivity">
+
+    <include
+        layout="@layout/comm_title2"/>
+
+    <!-- 短信编辑和短信模板点击按钮区 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_marginTop="12dp"
+        android:background="@color/gray_4"/>
+
+    <!-- 按钮说明 -->
+
+    <TextView
+        android:id="@+id/hint_addModel"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        android:drawableEnd="@drawable/sendmsg_next"
+        android:drawableLeft="@drawable/notify_addmodel_cloud_icon"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/sendmsg_next"
+        android:drawableStart="@drawable/notify_addmodel_cloud_icon"
+        android:gravity="center_vertical"
+        android:paddingEnd="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp"
+        android:text="@string/send_msg_addmodel"
+        android:textColor="@color/default_green_2"
+        android:textSize="15sp"/>
+
+    <include
+        android:id="@+id/line"
+        layout="@layout/line_marginleft15"/>
+
+    <TextView
+        android:id="@+id/tv_show_model"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:gravity="top|center_vertical"
+        android:hint="@string/model_des1"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLength="129"
+        android:paddingBottom="10dp"
+        android:paddingEnd="15dp"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/gray_1"
+        android:textSize="15sp"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/gray_4"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:background="@color/theme_content_bg"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:listSelector="@color/theme_content_bg"
+        android:scrollbars="none" />
+
+</LinearLayout>

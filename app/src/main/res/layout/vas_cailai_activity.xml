@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/comm_title2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/gray_4" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="财来网活动设置"
+                android:textColor="@color/gray_1"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/cl_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/icon_push_close" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+<ScrollView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/caiLaiTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="财来网活动说明"
+                android:textColor="@color/default_green"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/caiLaiDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/gray_2"
+                android:text="推荐用户注册财来网帐号，赢取奖励。奖励规则：\n\n
+1. 快递员作为推荐人，需要以与快递员APP注册帐号相同的手机号码在财来网注册，并实名认证\n
+2. 被推荐人需通过推荐人的快递店铺进入财来网注册，并实名认证，每推荐一个用户，获得5元奖励\n
+3. 快递员需在财来网发起申请提取奖金，发起申请后，最晚30分钟内发放到其所开通的汇付天下账户中\n
+4. 快递员在其汇付天下账户中的资金，可用于投资财来网上的标的，也可以直接提现到本人借记卡\n
+5. 活动时间从即日起至2016年2月6号止，或见另行通知\n
+6. 本次活动奖励总额不超过20万，额满即止\n
+7. 本活动由上海财来金融信息服务股份有限公司提供，所有奖励的核实、兑现由该公司负责，最终解释权归该公司，快递员APP不参与"/>
+        </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

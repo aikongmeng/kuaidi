@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_marker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/marker_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+			  android:paddingLeft="20dp"
+			  android:paddingRight="20dp"
+    >
+
+
+
+    <TextView
+        android:id="@+id/tv_marker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:text="上海市"
+        android:textSize="15sp"
+        />
+
+    <View
+        android:id="@+id/iv_marker"
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:background="@color/background_gray"
+         />
+	<RelativeLayout 
+	    android:id="@+id/rl_right_body"
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent"
+	    android:paddingLeft="15dp"
+	    android:paddingRight="15dp"
+	    >
+	    <ImageView 
+	        android:id="@+id/iv_take_range_cancel_map"
+	        android:layout_centerHorizontal="true"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content"
+	        android:src="@drawable/takerange_cancle_map"
+	        />
+	     <TextView
+	        android:id="@+id/tv_marker_right"
+	        android:layout_below="@id/iv_take_range_cancel_map"
+	        android:layout_width="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_height="wrap_content"
+	        android:singleLine="false"
+	        android:textSize="13sp"
+	        android:textColor="@color/text_black"
+	         />
+    </RelativeLayout>
+</LinearLayout>

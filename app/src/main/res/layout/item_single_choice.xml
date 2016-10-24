@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ctv_sortItem"
+    android:layout_width="match_parent"
+    android:layout_height="39dp"
+    android:background="@drawable/background_item"
+
+    android:gravity="center_vertical"
+    android:paddingLeft="15dp"
+    android:textColor="@color/gray_2"
+    android:textSize="14sp"
+    tools:text="距离最近" />

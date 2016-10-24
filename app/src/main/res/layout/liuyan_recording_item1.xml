@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+   >
+    <RelativeLayout
+        android:id="@+id/recording_center_view_liuyan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/call_recording_item_liuyan_shape" >
+
+        <TextView
+            android:id="@+id/playorpause_liuyan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/record_play_small" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/playorpause_liuyan"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/recording_palying_duration_liuyan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_item_phone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_index_liuyan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical" >
+
+           <!--  <TextView
+                android:id="@+id/recording_date_liuyan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_item_phone" /> -->
+
+            <TextView
+                android:id="@+id/recording_duration_liuyan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="@color/text_item_phone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

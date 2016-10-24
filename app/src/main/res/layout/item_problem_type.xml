@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_select"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@color/white"
+    android:clickable="true"
+    android:paddingLeft="30dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <CheckBox
+            android:id="@+id/rd_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:button="@drawable/select_edit_identity" />
+
+        <TextView
+            android:id="@+id/tv_problem_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/rd_select"
+            android:lines="1"
+            android:text="本人签收"
+            android:textColor="@color/gray_1"
+            android:textSize="15sp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_problem_type"
+            android:layout_below="@id/tv_problem_type"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:text="xxxxxxxxxx"
+            android:textColor="@color/gray_3"
+            android:textSize="13sp"
+
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/tv_action"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="15dp"
+        android:text="发起留言"
+        android:textColor="@color/gray_1"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_4" />
+</RelativeLayout>

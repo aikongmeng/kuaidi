@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom_atts="http://schemas.android.com/apk/res-auto"
+              xmlns:skin="http://schemas.android.com/android/skin"
+              android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/line_bottom1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_order_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_bottom1"
+            android:background="@color/theme_content_bg"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_order_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_2"
+                android:textSize="14sp"
+                android:text="今日订单："/>
+
+            <TextView
+                android:id="@+id/tv_order_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_order_tag"
+                android:textColor="@color/gray_2"
+                android:text="0"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line_bottom2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/rl_order_num"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_create_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_below="@id/line_bottom2"
+            android:padding="15dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_create_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/create_icon"
+                android:drawablePadding="8dp"
+                android:textColor="@color/green_39b54a"
+                android:textSize="16sp"
+                android:text="创建订单"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom_selection"
+        android:orientation="vertical">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout
+            android:id="@+id/rl_common_title"
+            android:layout_width="fill_parent"
+            skin:enable="true"
+            android:layout_height="45dp"
+            android:background="@color/title_bg" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:text="@string/order_center"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_white3"
+                android:orientation="horizontal">
+
+                <TextView
+                    xmlns:skin="http://schemas.android.com/android/skin"
+                    android:id="@+id/tv_today_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_segment_choice"
+                    android:enabled="false"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:text="今日订单"
+                    android:textColor="@color/title_bg"
+                    android:textSize="15sp"
+                    skin:enable="true"/>
+
+                <TextView
+                    xmlns:skin="http://schemas.android.com/android/skin"
+                    android:id="@+id/tv_histroy_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_segment_choice"
+                    android:enabled="true"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="4dp"
+                    android:text="历史订单"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    skin:enable="true"/>
+            </LinearLayout>
+
+            <com.kuaibao.skuaidi.common.view.SkuaidiImageView
+                custom_atts:isClickedChangeBackground="true"
+                android:id="@+id/click_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+                android:onClick="back"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/icon_back" />
+
+            <com.kuaibao.skuaidi.common.view.SkuaidiTextView
+                android:id="@+id/tv_selete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                xmlns:skin="http://schemas.android.com/android/skin"  android:background="@drawable/selector_icon_back"  skin:enable="true"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scaleType="centerInside"
+                android:text="筛选"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                custom_atts:isClickedChangeBackground="true" />
+        </com.kuaibao.skuaidi.common.layout.SkuaidiRelativeLayout>
+        
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_blue_divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/text_blue"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/gray_2"
+            android:visibility="gone"/>
+    <com.kuaibao.skuaidi.activity.view.PullToRefreshView
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/order_list_divider"
+            android:dividerHeight="0.5dp"
+            android:listSelector="#00000000" />
+    </com.kuaibao.skuaidi.activity.view.PullToRefreshView>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/order_list_meng"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/meng_order"
+        android:clickable="false"
+        android:visibility="gone" >
+    </RelativeLayout>
+</RelativeLayout>

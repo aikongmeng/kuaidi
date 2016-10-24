@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/comm_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/gray_4" />
+
+    <RelativeLayout
+        android:id="@+id/ll_switch_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tv_title_fc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="签收扫描后自动通知收件人"
+            android:textColor="@color/gray_1"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/functional_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_push_close" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/gray_4" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="短信通知内容"
+        android:textColor="@color/gray_1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/tv_template"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:textColor="@color/gray_2"
+        android:textSize="15sp"
+        tools:text="示例：您好，您的快递已经完成签收。感谢您对我们的支持，祝您生活愉快！" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_4"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:text="注：系统仅对自动获取到手机号的单号进行收件人通知（约80%的单号），最终是否通知成功以是否存在对应的短信记录为准。"
+        android:textColor="@color/gray_3"
+        android:textSize="12sp"
+
+        />
+
+</LinearLayout>

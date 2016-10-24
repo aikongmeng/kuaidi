@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/dlg_common_title"/>
+
+    <com.kuaibao.skuaidi.activity.view.TopUpButtonView
+        android:id="@+id/view_pay_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.kuaibao.skuaidi.activity.view.TopUpButtonView>
+
+    <com.kuaibao.skuaidi.activity.view.TopUpButtonView
+        android:id="@+id/view_pay_quick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.kuaibao.skuaidi.activity.view.TopUpButtonView>
+
+    <com.kuaibao.skuaidi.activity.view.TopUpButtonView
+        android:id="@+id/view_pay_wx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.kuaibao.skuaidi.activity.view.TopUpButtonView>
+
+    <com.kuaibao.skuaidi.activity.view.TopUpButtonView
+        android:id="@+id/view_pay_cash_to_consumption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.kuaibao.skuaidi.activity.view.TopUpButtonView>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#e6f6f6f6"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/tab_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/tab_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tab_image"
+            android:layout_marginTop="4dip"
+            android:layout_toRightOf="@+id/tab_image"
+            android:src="@drawable/business_red_circle"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/tab_notify_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tab_image"
+            android:layout_marginLeft="70dip"
+            android:layout_marginTop="4dip"
+            android:src="@drawable/business_red_circle"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_checkBox_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/select_edit_identity"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_content_bg"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/text_gray3"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/order_list_divider" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_orderitem_bg">
+
+        <ImageView
+            android:id="@+id/iv_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/select_edit_identity"
+            android:visibility="gone"
+            tools:visibility="visible"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/repeat"
+            android:visibility="gone"
+            tools:visibility="visible"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_checkBox"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+
+                <RelativeLayout
+                    android:id="@+id/rl_line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_waybill_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:singleLine="true"
+                            tools:text="568007150032"
+                            android:textColor="@color/text_black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_waybill_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/bg_status"
+                            android:gravity="center"
+                            android:maxEms="6"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            tools:text="签收件"
+                            android:textColor="@color/default_orange_btn"
+                            android:textSize="12sp"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_waybill_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text=""
+                        tools:text="12:52"
+                        android:textColor="@color/text_hint"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_picSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_line1"
+                    android:layout_marginTop="4dp">
+
+                    <!-- L:图片R:图片签收提示 -->
+
+                    <TextView
+                        android:id="@+id/tv_actiondesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/text_back_hover"
+                        android:textSize="13sp" />
+                    <!-- 查看图片 -->
+
+                    <Button
+                        android:id="@+id/check_pic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tv_actiondesc"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/tv_actiondesc"
+                        android:background="@null"
+                        android:drawableLeft="@drawable/check_pic"
+                        android:text="查看图片"
+                        android:textColor="#009fff"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+
+                        />
+                </RelativeLayout>
+
+                <!-- 删除按钮 -->
+
+                <ImageView
+                    android:id="@+id/e3_waybill_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/rl_line1"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/icon_delete"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+
+                    />
+
+                <LinearLayout
+                    android:id="@+id/ll_bad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_picSign"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_bad_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="问题件原因:"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_bad_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        tools:text="ggggggg"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_message_failed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="! 留言失败"
+                        android:textColor="@color/red"
+                        android:visibility="gone"
+                        tools:visibility="visible"
+
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/rl_center"
+                android:layout_below="@id/rl_center"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                >
+                <View
+                    android:id="@+id/line_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/shape_dashed" />
+                <TextView
+                    android:id="@+id/tv_incorrect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line_error"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_incorrect"
+                    android:text="错误"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_error_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_incorrect"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/tv_incorrect"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:lines="1"
+                    android:marqueeRepeatLimit="marquee_forever"
+                     />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@color/white"
+    android:paddingLeft="45dp"
+    >
+
+    <CheckBox
+        android:id="@+id/ctv_signType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/selector_list_item_checked"
+        android:drawablePadding="7dp"
+        android:textColor="@color/gray_2"
+        android:button="@null"
+        android:textSize="15sp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_centerVertical="true"
+        tools:text="张国里" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_4" />
+</RelativeLayout>

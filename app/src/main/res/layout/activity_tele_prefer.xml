@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_5"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/top_title_des"
+        layout="@layout/comm_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_tele_show"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingLeft="15dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp"
+                android:text="网络电话去电显示"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/finish_outside_jiantou_right"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/devide_line1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_auto_record"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingLeft="15dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp"
+                android:text="来去电自动录音"/>
+
+            <ImageView
+                android:id="@+id/iv_auto_record_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/icon_push_close"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/devide_line2"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_from_notice"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:paddingLeft="15dp"
+            android:background="@color/white"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_1"
+                android:textSize="16sp"
+                android:text="来去电悬浮窗"/>
+
+            <ImageView
+                android:id="@+id/iv_from_notice_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/icon_push_close"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4"/>
+
+        </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="11sp"
+        android:textColor="@color/gray_3"
+        android:text="来去电时是否弹出悬浮窗,关闭则无法使用录音功能"/>
+
+</LinearLayout>

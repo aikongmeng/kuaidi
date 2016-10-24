@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_package_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kuaibao.skuaidi.dispatch.activity.PackageMapActivity">
+    <include layout="@layout/comm_title"/>
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_below="@id/ll_common_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.amap.api.maps2d.MapView>
+    <ImageView
+        android:id="@+id/iv_locate_now"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="54dp"
+        android:src="@drawable/icon_coordinate"/>
+</RelativeLayout>

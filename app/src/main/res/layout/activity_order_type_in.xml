@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:editText="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/rl_orderinfo_title"
+        layout="@layout/comm_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_orderinfo_title" >
+
+        <RelativeLayout
+            android:id="@+id/rl_addressor_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_orderinfo_title"
+            android:background="@color/white" >
+
+            <!--
+     <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+            -->
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_4" />
+
+            <!--
+              <com.kuaibao.skuaidi.common.view.EditTextWithTitle 
+             android:id="@+id/send_site"
+             android:layout_below="@id/view_line"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:inputType="text"
+             editText:editText_title="寄件网点"
+            editText:notNull="true"
+             />
+             
+           <View
+            android:id="@+id/view_line1"
+              android:layout_below="@id/send_site"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+
+       
+         
+         <com.kuaibao.skuaidi.common.view.EditTextWithTitle 
+             android:id="@+id/type_in_person"
+             android:layout_below="@id/view_line1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:inputType="text"
+             editText:editText_title="录入人"
+             editText:notNull="true"
+             />  
+             
+            
+           <View
+            android:id="@+id/view_line2"
+            android:layout_below="@id/type_in_person"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+
+       
+         
+         <com.kuaibao.skuaidi.common.view.EditTextWithTitle 
+             android:id="@+id/register_site"
+             android:layout_below="@id/view_line2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:inputType="text"
+             editText:editText_title="录入网点"
+             editText:notNull="true"
+             />  
+             
+           <View
+            android:id="@+id/view_line3"
+            android:layout_below="@id/register_site"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray_4" />
+
+       
+         
+         <com.kuaibao.skuaidi.common.view.EditTextWithTitle 
+             android:id="@+id/dispatch_site"
+             android:layout_below="@id/view_line3"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:inputType="text"
+             editText:editText_title="派件网点"
+             editText:notNull="true"
+             />  
+             
+          <View
+            android:id="@+id/view_line4"
+            android:layout_below="@id/dispatch_site"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/gray_4" />
+            -->
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/person_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                editText:editText_title="发件人" />
+
+            <View
+                android:id="@+id/view_line5"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/person_send"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/address_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line5"
+                android:inputType="text"
+                editText:editText_title="发件地址" />
+
+            <View
+                android:id="@+id/view_line6"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/address_send"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/phone_send"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line6"
+                android:inputType="phone"
+                editText:addTextWatcher="true"
+                editText:editText_title="手机号码" />
+
+            <View
+                android:id="@+id/view_line20"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/phone_send"
+                android:background="@color/gray_4" />
+
+            <View
+                android:id="@+id/view_line7"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/view_line20"
+                android:background="@color/gray_5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/view_line7"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line7"
+                android:inputType="text"
+                 editText:editText_title="收件人" />
+
+            <View
+                android:id="@+id/view_line8"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/receiver"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/address_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line8"
+                android:inputType="text"
+                 editText:editText_title="收件地址" />
+
+            <View
+                android:id="@+id/view_line9"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/address_receiver"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/phone_receiver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line9"
+                android:inputType="phone"
+                editText:addTextWatcher="true"
+                 editText:editText_title="手机号码" />
+
+            <View
+                android:id="@+id/view_line21"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/phone_receiver"
+                android:background="@color/gray_4" />
+
+            <View
+                android:id="@+id/view_line10"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@id/view_line21"
+                android:background="@color/gray_5" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/view_line10"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line10"
+                android:inputType="numberDecimal"
+                editText:notNull="true"
+                 editText:editText_title="结算重量"
+                editText:unit="Kg" />
+
+            <View
+                android:id="@+id/view_line11"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/weight"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/freight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line11"
+                android:inputType="numberDecimal"
+                editText:notNull="true"
+                 editText:editText_title="运费"
+                editText:unit="元" />
+
+            <View
+                android:id="@+id/view_line12"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/freight"
+                android:background="@color/gray_4" />
+
+            <com.kuaibao.skuaidi.common.view.EditTextWithTitle
+                android:id="@+id/topayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_line12"
+                android:inputType="numberDecimal"
+                editText:notNull="true"
+                 editText:editText_title="到付款"
+                editText:unit="元" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/topayment"
+                android:background="@color/gray_4" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
